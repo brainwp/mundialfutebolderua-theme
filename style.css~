@@ -117,6 +117,7 @@ body {
 	line-height: 1.5;
 	margin: 0;
 	padding: 0;
+	background: url("images/bg-site-bege.jpg") repeat scroll center top rgba(0, 0, 0, 0);
 }
 .fonte-roxa {
 	color: #4d449b;	
@@ -618,7 +619,7 @@ textarea {
 /* Links */
 
 a {
-	color: #4d4899;
+	color: #C63F28;
 	text-decoration: none;
 }
 
@@ -728,8 +729,8 @@ a:active {
 /* =Header
 ----------------------------------------------- */
 #masthead {
-    background: none repeat scroll 0 0 #E6E6E6;
-    min-height: 100px;
+    background: none repeat scroll 0 0 #2F2C2E;
+    min-height: 110px;
     margin: 0 auto;
     max-width: 1280px;
     overflow: hidden;
@@ -763,9 +764,9 @@ a:active {
 #logo {
 	width: 173px;
 	height: 90px;
-	background: url(images/logo-topo-menu.png) 1px 0px no-repeat;
+	background: url(images/logo-topo-menu-escuro.png) 1px 0px no-repeat;
 	float: left;
-	margin: 25px 0 10px 35px;
+	margin: 10px 0 10px 35px;
 }
 #logo:hover {
 	background-position: 1px 1px;
@@ -815,6 +816,8 @@ a:active {
     margin: 0 10px 0 0;
 	font-size: 1.1em;
     text-decoration: none;
+	font-weight: bold;
+	color: #FFFFFF;
 }
 
 .navigation-main ul ul, .navigation-main-interno ul ul {
@@ -838,7 +841,7 @@ a:active {
 .navigation-main ul ul li, .navigation-main-interno ul ul li {
 }
 .navigation-main li:hover > a, .navigation-main-interno li:hover > a {
-	color: #4D449C;
+	color: #D06433;
 }
 .navigation-main ul ul :hover > a, .navigation-main-interno ul ul :hover >a {
 }
@@ -1450,7 +1453,7 @@ height: 70px;
 
 .sub-content h1, .sub-content h2, .sub-content h3, .sub-content h4, .sub-content h5, .sub-contenth6 {
 
-	color: #4D449C;
+	color: #C63F28;
 
 }
 
@@ -1540,8 +1543,12 @@ height: 100%;
 }
 
 .imagens-post {
-	float: left;
-	margin: 0;
+    float: left;
+    margin: 0;
+    max-height: 130px;
+    max-width: 200px;
+    overflow: hidden;
+    width: 100%;
 }
 
 .content-premios {
@@ -1603,7 +1610,7 @@ height: 100%;
 }
 
 .esquerda-contatos {
-    color: #4D449D;
+    color: #D67852;
     float: left;
     font-size: 1.1em;
     margin: 0 0 20px;
@@ -1612,7 +1619,7 @@ height: 100%;
 }
 
 .direita-contatos {
-    color: #4D449D;
+    color: #D67852;
     float: left;
     font-size: 1.1em;
     margin: 0 0 20px;
@@ -1717,10 +1724,10 @@ height: 100%;
 text-decoration: none;
 }
 .data-cada-noticia {
-    background: #4D4899;
+    background: #C63F28;
     color: #FFFFFF;
     height: 50px;
-    margin: 25px 0 0 -20px;
+    margin: 0;
     padding: 10px;
     position: absolute;
     text-align: center;
@@ -1769,13 +1776,13 @@ text-decoration: none;
     width: auto;
 }
 .mais-cada-noticia {
-    background: none repeat scroll 0 0 #4D4899;
-    border-radius: 50px 50px 50px 50px;
+    background: none repeat scroll 0 0 #C63F28;
+    border-radius: 4px;
     color: #FFFFFF;
     float: right;
     font-weight: bold;
     overflow: hidden;
-    padding: 0px 7px;
+    padding: 0px 6px;
 	margin-top: 5px;
 }
 .mais-cada-noticia a{
@@ -2673,7 +2680,7 @@ object {
 }
 
 .footer {
-    background: none repeat scroll 0 0 #E5E5E5;
+    background: none repeat scroll 0 0 #2F2C2E;
     height: 70px;
     margin: 0;
     max-width: 1190px;
@@ -2689,7 +2696,7 @@ object {
     margin: 25px 0 0;
 }
 .infos-rodape {
-    color: #000000;
+    color: #FFF;
     float: left;
     font-weight: 300;
     margin: 20px 0 0 10px;

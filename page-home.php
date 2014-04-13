@@ -143,7 +143,7 @@ get_header( 'home' ); ?>
     
 
     
-<!-- Notícias -->
+<!-- Notícias 
 
 	<div class="sub-content" id="nav-noticias">
 
@@ -151,46 +151,47 @@ get_header( 'home' ); ?>
 			
 		<div class="header-sub-content">
 	<div class="seta-header"></div>
-    <div class="titulo-header-noticias"> <h2>Noticias</h2><span><a href="<?php echo home_url('/noticias'); ?>">Ver todas</a></span></div>
+    <div class="titulo-header-noticias"> <h2>Noticias</h2><span><a href="<?php // echo home_url('/noticias'); ?>">Ver todas</a></span></div>
 		</div>
 
 					<div class="todas-noticias">
-					<?php $custom_query = new WP_Query('posts_per_page=2');
-                    while($custom_query->have_posts()) : $custom_query->the_post(); ?>
+					<?php // $custom_query = new WP_Query('posts_per_page=2');
+                    // while($custom_query->have_posts()) : $custom_query->the_post(); ?>
                     
                     <div class="cada-noticia">
-						<a href="<?php the_permalink(); ?>">						
+						<a href="<?php // the_permalink(); ?>">						
 						<div class="data-cada-noticia">
                         <?php
-						$mes = get_the_date( 'M' );
-						$dia = get_the_date( 'd' );
+						// $mes = get_the_date( 'M' );
+						// $dia = get_the_date( 'd' );
 						?>
-						<p class="p-mes"><?php echo $mes; ?></p>
-                        <p class="p-dia"><?php echo $dia; ?></p>
-            			</div><!-- .data-cada-noticia -->
+						<p class="p-mes"><?php // echo $mes; ?></p>
+                        <p class="p-dia"><?php // echo $dia; ?></p>
+            			</div>
 						</a>
                         
                         <div class="thumb-cada-noticia">
-                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'thumb-projetos' ); ?></a>
-            			</div><!-- .thumb-cada-noticia -->
+                        <a href="<?php // the_permalink(); ?>"><?php the_post_thumbnail( 'thumb-projetos' ); ?></a>
+            			</div>
                         
-						<a class="titulo-cada-noticia" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+						<a class="titulo-cada-noticia" href="<?php // the_permalink(); ?>"><?php // the_title(); ?></a>
 						<div class="clear"></div>                        
 						<div class="content-cada-noticia">
-						<?php limit_words(get_the_excerpt(), '20'); ?>...
-			            </div><!-- .content-cada-noticia -->
+						<?php // limit_words(get_the_excerpt(), '20'); ?>...
+			            </div>
                         
                         <div class="footer-cada-noticia">
-                        <div class="categorias-cada-noticia"><?php the_category(' | '); ?></div>
-						<div class="mais-cada-noticia"><a href="<?php the_permalink(); ?>">+</a></div>
-			            </div><!-- .footer-cada-noticia -->
-                    </div><!-- .cada-noticia -->
-					<?php endwhile; ?>
-                    <?php wp_reset_postdata(); // reset the query ?>  
-					</div><!-- .todas-noticia -->
-			</div><!-- .center -->
+                        <div class="categorias-cada-noticia"><?php // the_category(' | '); ?></div>
+						<div class="mais-cada-noticia"><a href="<?php // the_permalink(); ?>">+</a></div>
+			            </div>
+                    </div>
+					<?php // endwhile; ?>
+                    <?php // wp_reset_postdata(); // reset the query ?>  
+					</div>
+			</div>
 					
-    </div><!-- .sub-content -->
+    </div>
+-->
 <!-- Final Notícias -->
 
    	<!-- Contatos -->
