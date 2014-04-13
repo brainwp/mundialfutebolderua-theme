@@ -20,56 +20,16 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic' rel='stylesheet' type='text/css'>
+<!-- <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'> -->
+<!-- <link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic' rel='stylesheet' type='text/css'> -->
 <!--[if lt IE 9 ]><script src="/lib/respond.min.js"></script><![endif]-->
 <?php wp_head(); ?>
-<script type="text/javascript">
-    jQuery(function() {
-	    if (jQuery('.scroll-pane').length)
-	        jQuery('.scroll-pane').jScrollPane();
-	    if (jQuery('.scroll-panes').length)
-            jQuery('.scroll-panes').jScrollPane();
-    });
 
-    jQuery.fn.toggleText = function(a,b) {
-	    return this.html(this.html().replace(new RegExp("("+a+"|"+b+")"),function(x){return(x==a)?b:a;}));
-	}
-
-	jQuery(document).ready(function(){
-	    jQuery('.tgl').before('<span class="link-tgl">Acesso Restrito</span>');
-	    jQuery('.tgl').css('display', 'none')
-	    jQuery('span', '#link-login').click(function() {
-	        jQuery(this).next().slideToggle('slow')
-                .siblings('.tgl:visible')
-                .slideToggle('fast');
-            // aqui começa o funcionamento do plugin
-	        jQuery(this).toggleText('Acesso Restrito','Fechar')
-	            .siblings('span').next('.tgl:visible').prev()
-	            .toggleText('Acesso Restrito','Fechar')
-	    });
-    });
-</script>
 </head>
-
-<?php
-	global $current_user;
-	get_currentuserinfo();
-	if ( is_user_logged_in() ) {
-		$d = 'ol&aacute;, '.  $current_user->user_login .'!';
-	} else {
-		$d = 'acesso restrito';
-	}
-?>
 
 <body <?php body_class(); ?>>
 
 <div id="page" class="hfeed site site-home">
-
-	<div class="barra-portfolio">
-		<a class="etiqueta-barra-portfolio" href="<?php echo home_url('index.php/portfolio'); ?>">
-		</a>
-	</div>
 
 	<header id="masthead" class="site-header" role="banner">
 		        
@@ -77,76 +37,39 @@
         	<a class="a-logo" href="javascript:scroll_to('#page');"></a>
         </div><!-- #logo -->
                 
-    <div class="area-4-header">
-        <div id="link-login">
-        	<div id="cadeado"></div><!-- #cadeado -->
-			<div id="form-login" class="tgl">	
-				<?php if (!(current_user_can('level_0'))){ ?>
-				<form action="<?php bloginfo( 'home' ); ?>/wp-login.php" method="post">
-				<div class="linha-form">
-					<div class="linha-form-a-login">Login</div>
-					<div class="linha-form-b"><input type="text" name="log" id="log" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" size="20" />
-					</div>
-				</div>
-
-				<div class="linha-form">
-					<div class="linha-form-a-senha">Senha</div>
-					<div class="linha-form-b"><input type="password" name="pwd" id="pwd" size="15" /><input type="submit" name="submit" value="ok" class="button" /></div>
-				</div>
-					<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>" />
-				</form>
-				<a href="<?php bloginfo( 'home' ); ?>/wp-login.php?action=lostpassword">Esqueceu a Senha?</a>
-				<?php } else { ?>
-				<div class="linha-form-logada">				
-				<a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Sair">Sair</a>
-				<a href="<?php bloginfo( 'home' ); ?>/wp-admin/">Admin</a>
-				</div>
-				<?php }?>
-			</div><!-- #form-login -->
-        </div><!-- #link-login -->
-    </div><!-- .area-4-header -->
 		
 	<div class="area-3-header">
-        <div id="redes">
-        	<div id="facebook">
-            	<a class="a-redes" href="<?php echo get_option( 'mo_facebook' ); ?>"></a>
-            </div><!-- #facebook -->
-            
-            <div id="linkedin">
-            	<a class="a-redes" href="<?php echo get_option( 'mo_linkedin' ); ?>"></a>
-		    </div><!-- #linkedin -->
-        </div><!-- #redes -->
-        
-        <div id="linguas">
-        	<div id="en">
-            	<a class="a-linguas" href=""></a>
-		    </div><!-- #en -->
-            
-            <div id="pt">
-				<a class="a-linguas" href=""></a>	
-		    </div><!-- #pt -->
-        </div><!-- #linguas -->
-    </div><!-- .area-3-header -->
-		
+
 		
 			<nav id="site-navigation" class="navigation-main" role="navigation">
 				<?php  // wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul class="menu"><li class="first-menu-item"></li>%3$s</ul>' ) ); ?>
 		
 				<ul class="menu">
-					<li class="first-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-336" id="menu-item-336"><a href="javascript:scroll_to('#nav-quem-somos');">Quem Somos</a></li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-1327"><a href="<?php echo home_url('index.php/portfolio'); ?>">Portf&oacute;lio</a></li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-30"><a href="javascript:scroll_to('#nav-premios');">Pr&ecirc;mios</a></li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28" id="menu-item-28"><a href="javascript:scroll_to('#nav-clientes-parceiros');">Clientes e Parceiros</a></li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-288" id="menu-item-288"><a href="javascript:scroll_to('#nav-noticias');">Not&iacute;cias</a></li>
-					<li class="last-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-29" id="menu-item-29"><a href="javascript:scroll_to('#nav-contatos');">Contatos</a></li>
+					<li class="first-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-336" id="menu-item-336"><a href="javascript:scroll_to('#nav-quem-somos');">Sobre</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-30"><a href="javascript:scroll_to('#nav-metodologia');">Metodologia</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32" id="menu-item-32"><a href="javascript:scroll_to('#nav-paises');">Paises</a></li>		
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28" id="menu-item-28"><a href="javascript:scroll_to('#nav-aconteceu');">Historico</a></li>
+					<li class="last-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-29" id="menu-item-29"><a href="javascript:scroll_to('#nav-contatos');">Contatos</a></li>		
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28" id="menu-item-28"><a href="javascript:scroll_to('#nav-patrocinadores-parceiros');">Patrocinadores</a></li>
+<!--	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-288" id="menu-item-288"><a href="javascript:scroll_to('#nav-noticias');">Not&iacute;cias</a></li> -->
 				</ul>
 		
 			</nav><!-- #site-navigation -->
+
+		
+    </div><!-- .area-3-header -->
+
+	<div id="linguas">
+        	<div id="en">
+            	<a class="a-linguas" href=""></a>
+		    </div><!-- #en -->
+			<div id="es">
+            	<a class="a-linguas" href=""></a>
+            <div id="pt">
+				<a class="a-linguas" href=""></a>	
+		    </div><!-- #pt -->
+        </div><!-- #linguas -->
 			
-	<div class="botao-portfolio-menu">
-		<a class="etiqueta-barra-botao-portfolio-menu" href="<?php echo home_url('index.php/portfolio'); ?>">
-		</a>
-	</div>
         
 	</header><!-- #masthead -->
 

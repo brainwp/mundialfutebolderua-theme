@@ -272,7 +272,7 @@ a.comment-reply-link > span {
 .commentlist > li.bypostauthor .comment-meta a:focus, .commentlist > li.bypostauthor .comment-meta a:active, .commentlist > li.bypostauthor .comment-meta a:hover {
 }
 .commentlist > li.bypostauthor:before {
-    content: url("images/comment-arrow-bypostauthor.png");
+    content: url("images/artunlimited/comment-arrow-bypostauthor.png");
 }
 .commentlist .children > li.bypostauthor {
     background: none repeat scroll 0 0 #DDDDDD;
@@ -761,15 +761,14 @@ a:active {
 	height: 48px;
 }
 #logo {
-	min-width: 17%;
-	min-width: 267px;
-	height: 48px;
-	background: url(images/img-sprite.png) 1px 0px no-repeat;
+	width: 173px;
+	height: 90px;
+	background: url(images/logo-topo-menu.png) 1px 0px no-repeat;
 	float: left;
 	margin: 25px 0 10px 35px;
 }
 #logo:hover {
-	background-position: 1px -48px;
+	background-position: 1px 1px;
 }
 .a-logo {
 	position: absolute;
@@ -787,9 +786,9 @@ a:active {
 .navigation-main {
 	display: block;
 	float: left;
-	width: 47%;
+	width: auto;
 	font-family: 'Roboto', Arial, sans-serif;
-	font-size: 0.85em;
+	font-size: 1em;
 	margin: 50px 5px 0 10px;
 }
 .navigation-main-interno {
@@ -800,10 +799,11 @@ a:active {
 	text-transform: lowercase;
 }
 .navigation-main ul, .navigation-main-interno ul {
-	list-style: disc;
+	list-style: none outside none;
 	color: #4D449C;
 	margin: 0;
 	padding-left: 0;
+	text-transform: uppercase;
 }
 .navigation-main li, .navigation-main-interno li {
     float: left;
@@ -871,7 +871,7 @@ nav select {
 
 /* Area 3 Header */
 .area-3-header {
-	float: right;
+	float: left;
 	width: auto;
 }
 
@@ -893,7 +893,7 @@ nav select {
 }
 
 #facebook {
-	background: url(images/img-sprite.png) -269px 0 no-repeat;
+	background: url(images/artunlimited/img-sprite.png) -269px 0 no-repeat;
 }
 
 
@@ -908,7 +908,7 @@ nav select {
 
 #linkedin {
 
-	background: url(images/img-sprite.png) -310px 0 no-repeat;
+	background: url(images/artunlimited/img-sprite.png) -310px 0 no-repeat;
 
 	margin-left: 5px;
 
@@ -935,15 +935,15 @@ nav select {
 
 
 #linguas {
-	width: 36px;
+	width: auto;
 	height: 35px;
-	float: left;
-	margin: 35px 5px 0 0;
+	float: right;
+	margin: 35px 30px 0 0;
 }
 
 
 
-#en, #pt {
+#en, #pt, #es {
 	width: 36px;
 	height: 34px;
 	-webkit-border-radius: 3px;
@@ -955,7 +955,7 @@ nav select {
 
 
 #en {
-	background: url(images/img-sprite.png) -350px -2px no-repeat;
+	background: url(images/artunlimited/img-sprite.png) -350px -2px no-repeat;
 }
 
 
@@ -978,7 +978,7 @@ nav select {
 
 #pt {
 
-	background: url(images/img-sprite.png) -391px -2px no-repeat;
+	background: url(images/artunlimited/img-sprite.png) -391px -2px no-repeat;
 	display: none;
 	margin-left: 5px;
 
@@ -992,142 +992,20 @@ nav select {
 
 }
 
+#es {
 
-
-/* Area 4 Header */
-
-.area-4-header {
-	min-width: 13%;
-	float: right;
-	margin-right: 50px;
-}
-
-#link-login {
-	width: 150px;
-	height: auto;
-	overflow: hidden;
-	margin: 33px 0 0 5px;
-	float:left;
-}
-
-
-
-#link-login a {
-    color: #b0e3ff;
-    font-size: 0.8em;
-    margin: 0;
-    font-style: italic;
-	margin: 0 5px 0 0;
-}
-
-
-
-#link-login a:hover {
-	color: #FFF;
-}
-
-
-
-#cadeado {
-	float: left;
-	width: 30px;
-	height: 34px;
-	background: url(images/img-sprite.png) -430px 0 no-repeat;
-	margin: 0 5px 0 0;
-}
-
-
-
-.a-login {
-	margin: 7px 0 0 0;
-	display: block;
-}
-
-
-
-.link-tgl {
-    color: #0077B6;
-    cursor: pointer;
-    display: block;
-    font-size: 0.9em;
-    margin: 15px 0 15px;
-}
-
-
-
-.link-tgl:hover {
-	color: #0d519b;
-}
-
-
-
-#form-login {
-
-	background: #0077b6;
-    color: #FFFFFF;
-    display: none;
-    height: auto;
-    margin: 0 0 0 -115px;
-    max-width: 300px;
-    overflow: hidden;
-    padding: 10px;
-    position: fixed;
-    z-index: 999999;
-	-webkit-box-shadow: 0px 2px 6px rgba(50, 50, 50, 0.5);
-	-moz-box-shadow:    0px 2px 6px rgba(50, 50, 50, 0.5);
-	box-shadow:         0px 2px 6px rgba(50, 50, 50, 0.5);
-
-}
-
-.linha-form {
-    overflow: hidden;
-    width: 100%;
-	margin: 0 0 5px 0;
-}
-
-.linha-form-logada {
-	font-size: 1.2em;
-    overflow: hidden;
-    width: 100%;
-	margin: 0 0 5px 0;
-}
-
-.linha-form-a-login {
-
-	float: left;
-	margin: 0 15px 0 0;
-
-}
-
-.linha-form-a-senha {
-
-	float: left;
-	margin: 0 11px 0 0;
+	background: url(images/artunlimited/img-sprite.png) -391px -2px no-repeat;
+	margin-left: 5px;
 
 }
 
 
-.linha-form-b {
-    float: left;
+
+#es:hover {
+
+	background-position: -391px -38px;
 
 }
-
-.linha-form input[type="submit"] {
-
-	background: none repeat scroll 0 0 #CCCCCC;
-    border: 0 none;
-    color: #666666;
-    cursor: pointer;
-    font-size: 1em;
-    line-height: 1;
-    margin: 0 0 0 5px;
-    padding: 0.2em 0.7em;
-	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
-	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
-	
-}
-
-
 
 /* =Home
 
@@ -1144,56 +1022,6 @@ nav select {
 .top-barra:hover {
 	background-position: -50px 20px;
 }
-.etiqueta-barra-portfolio-archive {
-    background: url("images/escrita-portfolio.png") no-repeat scroll 0 -20px #4D449B;
-    height: 4000px;
-    margin: 230px 0 0;
-    width: 50px;
-}
-.a-etiqueta a {
-	line-height: 50px;
-    height: 400px;
-    width: 50px;
-}
-.barra-portfolio {
-	    background-color: #4D449B;
-	    height: 100%;
-	    position: absolute;
-	    right: 0;
-	    width: 50px;
-	-webkit-box-shadow: -7px 0px 6px rgba(50, 50, 50, 0.27);
-	-moz-box-shadow:    -7px 0px 6px rgba(50, 50, 50, 0.27);
-	box-shadow:         -7px 0px 6px rgba(50, 50, 50, 0.27);
-	z-index: 99999;
-}
-
-.etiqueta-barra-portfolio {
-	background: url("images/escrita-portfolio.png") no-repeat scroll center top #4D449B;
-	width: 50px;
-	height: 210px;
-	position: fixed;
-	display: block;
-}
-
-
-.botao-portfolio-menu {
-   	background-color: #4D449B;
-   	height: 40px;
-   	position: absolute;
-    	right: 0;
-	bottom:0;
-   	width: 45%;
-	z-index: 99999;
-	display: none;
-}
-
-.etiqueta-barra-botao-portfolio-menu {
-	background:  url("images/escrita-portfolio-horizontal.png")  no-repeat scroll 0 0;
-	width: 155px;
-	height: 40px;
-	position: absolute;
-}
-
 
 .title-home {
 	position: absolute;
@@ -1274,7 +1102,7 @@ nav select {
 	margin: 10px 14px 10px 0;
 	float: left;
 	height: 56px;
-	background: url("images/img-sprite.png") no-repeat scroll -605px 0 transparent;
+	background: url("images/artunlimited/img-sprite.png") no-repeat scroll -605px 0 transparent;
 }
 
 .seta-page-404 {
@@ -1282,7 +1110,7 @@ nav select {
 	margin: 82px 14px 10px 0;
 	float: left;
 	height: 56px;
-	background: url("images/img-sprite.png") no-repeat scroll -605px 0 transparent;
+	background: url("images/artunlimited/img-sprite.png") no-repeat scroll -605px 0 transparent;
 }
 .titulo-page {
 	width: 70%;
@@ -1359,30 +1187,30 @@ nav select {
 /* =Slider Home - Orbit Slider
 ----------------------------------------------- */
 #slider {
-	max-width: 1230px;
+	max-width: 1280px;
 	margin-top: 100px;
 	height: 100%;
-	margin-right:50px;
+	margin-right:0;
 	font-family: 'Gentium Book Basic', serif;
 	max-height: 650px;
-	/* background: url(images/slider-provisorio.jpg) center top;*/
+	/* background: url(images/artunlimited/slider-provisorio.jpg) center top;*/
 }
 
 div.slider-nav span.left {
-	background: url("images/setas.png") no-repeat scroll -5px center transparent !important;
+	background: url("images/artunlimited/setas.png") no-repeat scroll -5px center transparent !important;
 }
 
 div.slider-nav span.right {
-	background: url("images/setas.png") no-repeat scroll -75px center transparent !important;
+	background: url("images/artunlimited/setas.png") no-repeat scroll -75px center transparent !important;
 }
 
 
 div.slider-nav span.left {
-    background: url("images/left-arrow.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("images/artunlimited/left-arrow.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
     left: 0;
 }
 div.slider-nav span.left {
-    background: url("images/setas.png") no-repeat scroll -5px center rgba(0, 0, 0, 0) !important;
+    background: url("images/artunlimited/setas.png") no-repeat scroll -5px center rgba(0, 0, 0, 0) !important;
 }
 
 
@@ -1676,7 +1504,7 @@ height: 100%;
 	margin: 10px 0 0 0;
 	float: left;
 	height: 56px;
-	background: url("images/img-sprite.png") no-repeat scroll -605px 0 transparent;
+	background: url("images/artunlimited/img-sprite.png") no-repeat scroll -605px 0 transparent;
 
 }
 
@@ -1690,10 +1518,10 @@ height: 100%;
 
 
 #thumbs-quem-somos {
-	width: 150%;
-	margin: 0 auto;
-	height: 180px;
-	overflow:hidden;
+   height: 130px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 150%;
 }
 
 .seta-quem-somos {
@@ -1701,7 +1529,7 @@ height: 100%;
 	margin: 50px 0 0 50px;
 	float: left;
 	height: 56px;
-	background: url("images/img-sprite.png") no-repeat scroll -605px 0 transparent;
+	background: url("images/artunlimited/img-sprite.png") no-repeat scroll -605px 0 transparent;
 }
 
 .content-quem-somos {
@@ -1712,8 +1540,12 @@ height: 100%;
 }
 
 .imagens-post {
-	float: left;
-	margin: 0;
+    float: left;
+    margin: 0;
+    max-height: 130px;
+    max-width: 200px;
+    overflow: hidden;
+    width: 100%;
 }
 
 .content-premios {
@@ -1737,13 +1569,7 @@ height: 100%;
 	width: 100%;
 	overflow: hidden;
 }
-.seta-header {
-	width: 56px;
-	margin: 40px 0 10px 40px;
-	float: left;
-	height: 56px;
-	/*background: url("images/img-sprite.png") no-repeat scroll -605px 0 transparent;*/
-}
+
 .titulo-header {
     float: left;
     margin: 40px 0 0 30px;
@@ -1763,7 +1589,7 @@ height: 100%;
 	margin: 55px 0 0 40px;
 	float: left;
 	height: 56px;
-	background: url("images/img-sprite.png") no-repeat scroll -605px 0 transparent;
+	background: url("images/artunlimited/img-sprite.png") no-repeat scroll -605px 0 transparent;
 }
 
 .header-sub-content h2{
@@ -1808,7 +1634,7 @@ height: 100%;
 	margin: 55px 0 0 40px;
 	float: left;
 	height: 56px;
-	background: url("images/img-sprite.png") no-repeat scroll -605px 0 transparent;
+	background: url("images/artunlimited/img-sprite.png") no-repeat scroll -605px 0 transparent;
 }
 
 #gallery-1 img {
@@ -1817,20 +1643,20 @@ height: 100%;
 
 
 
-/* Clientes
+/* patrocinadores
 ----------------------------------------------- */
 
-.content-intro-clientes {
+.content-intro-patrocinadores {
 	float: left;
 	margin: 0 50px 0 130px;
    	 width: auto;
 }
 
-.content-intro-clientes #gallery-1 {
+.content-intro-patrocinadores #gallery-1 {
 	display: none;
 }
 
-.content-clientes {
+.content-patrocinadores {
     float: left;
     margin: 20px 0 0 110px;
     width: auto;
@@ -1970,7 +1796,7 @@ text-decoration: none;
 	margin: 15px 14px 10px 0;
 	float: left;
 	height: 56px;
-	background: url("images/img-sprite.png") no-repeat scroll -605px -67px transparent;
+	background: url("images/artunlimited/img-sprite.png") no-repeat scroll -605px -67px transparent;
 }
 #sidebar {
 	float: right;
@@ -2081,7 +1907,7 @@ text-decoration: none;
     margin: 0 1px 0 1px;
     display: block;
     float: left;
-	background: url(images/loader.gif) 20px 20px no-repeat;
+	background: url(images/artunlimited/loader.gif) 20px 20px no-repeat;
 	position: relative;
 }
 
@@ -2107,7 +1933,7 @@ text-decoration: none;
 
 .list_carousel a.prev {
 
-    background: url("images/setas.png") no-repeat scroll -5px center transparent;
+    background: url("images/artunlimited/setas.png") no-repeat scroll -5px center transparent;
     display: block;
     min-height: 70px;
 	position: absolute;
@@ -2118,7 +1944,7 @@ text-decoration: none;
 }
 
 .list_carousel a.next {
-    background: url("images/setas.png") no-repeat scroll -75px center transparent;
+    background: url("images/artunlimited/setas.png") no-repeat scroll -75px center transparent;
 	display: block;
 	min-height: 70px;
     position: absolute;
@@ -2202,7 +2028,7 @@ body.single-projects #carousel_wrap { margin: 15px 0 30px }
 					}
 
 #carousel_wrap a.prev {
-    background: url("images/setas.png") no-repeat scroll -5px center transparent;
+    background: url("images/artunlimited/setas.png") no-repeat scroll -5px center transparent;
     display: block;
     min-height: 70px;
 	position: absolute;
@@ -2213,7 +2039,7 @@ body.single-projects #carousel_wrap { margin: 15px 0 30px }
 }
 
 #carousel_wrap a.next {
-    background: url("images/setas.png") no-repeat scroll -75px center transparent;
+    background: url("images/artunlimited/setas.png") no-repeat scroll -75px center transparent;
 	display: block;
 	min-height: 70px;
     position: absolute;
@@ -2286,12 +2112,12 @@ body.single-projects #carousel_wrap { margin: 15px 0 30px }
 	margin-left: 50px;
 }
 .top-barra {
-	background: url("images/mini-art.png") no-repeat 0 25px #f0f0f0;
+	background: url("images/artunlimited/mini-art.png") no-repeat 0 25px #f0f0f0;
 	width: 50px;
 	height: 200px;
 }
 .seta-barra {
-	background: url("images/setas-outros.png") no-repeat scroll 4px -36px transparent;
+	background: url("images/artunlimited/setas-outros.png") no-repeat scroll 4px -36px transparent;
 	width: 50px;
 }
 .wrapper-barra {
@@ -2541,7 +2367,7 @@ a.titulo-resumo {
 }
 
 #busca-aba #lupa-aba {
-    background: url("images/img-sprite.png") no-repeat scroll -74px -97px transparent;
+    background: url("images/artunlimited/img-sprite.png") no-repeat scroll -74px -97px transparent;
     height: 30px;
     margin: 7px 0 0 9px;
     position: absolute;
@@ -2572,13 +2398,13 @@ a.titulo-resumo {
 }
 
 .compartilhe-sidebar-facebook {
-	background: url(images/compartilhe.png) no-repeat;
+	background: url(images/artunlimited/compartilhe.png) no-repeat;
 	width: 113px;
 	height: 30px;
 }
 
 .compartilhe-sidebar-email {
-	background: url(images/compartilhe.png) 0 -33px no-repeat;
+	background: url(images/artunlimited/compartilhe.png) 0 -33px no-repeat;
 	width: 113px;
 	height: 30px;
 	margin: 5px 0 25px 0;
@@ -2604,13 +2430,13 @@ a.titulo-resumo {
 .seta-outros-anteriores {
 	width: 50px;
 	height: 50px;
-	background: url("images/setas-outros.png") no-repeat scroll 5px 4px #b3b3b3;
+	background: url("images/artunlimited/setas-outros.png") no-repeat scroll 5px 4px #b3b3b3;
 }
 
 .seta-outros-posteriores {
 	width: 50px;
 	height: 50px;
-	background: url("images/setas-outros.png") no-repeat scroll 5px -37px #B3B3B3;
+	background: url("images/artunlimited/setas-outros.png") no-repeat scroll 5px -37px #B3B3B3;
 }
 
 .seta-outros-posteriores:hover, .seta-outros-anteriores:hover {
@@ -2656,7 +2482,7 @@ a.titulo-resumo {
 
 /* =Preloader desativado
 
-.preloader { background:url("../images/loader.gif") center 250px no-repeat #FFFFFF;  }
+.preloader { background:url("../images/artunlimited/artunlimited/loader.gif") center 250px no-repeat #FFFFFF;  }
 
 */
 
@@ -2853,12 +2679,12 @@ object {
 .footer {
     background: none repeat scroll 0 0 #E5E5E5;
     height: 70px;
-    margin: 0 0 0 50px;
+    margin: 0;
     max-width: 1190px;
     overflow: hidden;
     padding: 16px 20px;
     position: relative;
-    max-width: 1230px;
+    max-width: 1280px;
 }
 .footer-single {
    margin: 0;
@@ -3205,7 +3031,7 @@ margin: 0 !important;
 	}
 
 	.compartilhe-sidebar-email {
-	    background: url("images/compartilhe.png") no-repeat scroll 0 -36px rgba(0, 0, 0, 0);
+	    background: url("images/artunlimited/compartilhe.png") no-repeat scroll 0 -36px rgba(0, 0, 0, 0);
 	    float: left;
 	    margin: 0 0 0 20px;
 	}
@@ -3286,7 +3112,7 @@ margin: 0 !important;
     margin: 0 90px 0 30px;
 	}
 
-	.content-intro-clientes {
+	.content-intro-patrocinadores {
     margin: 0 90px 0 30px;
 	}
 
@@ -3348,9 +3174,6 @@ margin: 0 !important;
 	margin: 0;
 	}
 	
-	.botao-portfolio-menu {
-	display: block;
-	}
 
 	#site-title a {
 		font-size: 24px;
@@ -3365,13 +3188,6 @@ margin: 0 !important;
 		font-size: 12px;
 	}
 	
-	.area-4-header {
-    display: none;
-	}
-	
-	.area-3-header {
-    display: none;
-	}
 	
 	.slide-content {
     left: 20% !important;
