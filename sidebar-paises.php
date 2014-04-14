@@ -5,21 +5,10 @@
  * @package artunlimited
  */
 ?>
-	<div class="compartilhe-sidebar">
-	<h2 class="fonte-roxa">compartilhe!</h2>
-	<div class="compartilhe-sidebar-facebook">
-	<a class="a-compartilhe" href="<?php the_permalink() ?>?share=facebook&nb=1" target="_blank"></a>
-	</div><!-- .compartilhe-sidebar-facebook -->
-	<div class="compartilhe-sidebar-email">
-	<a class="a-compartilhe" href="mailto:<?php echo get_option( 'mo_email' ); ?>" target="_blank"></a>
-	</div><!-- .compartilhe-sidebar-email -->
-	<div class="">
-	</div><!--  -->
-	</div><!-- .compartilhe-sidebar -->
 	
 	<div class="outros-projetos">
 		
-			<h2 class="fonte-roxa">outros projetos:</h2>
+			<h2 class="fonte-roxa">outros paises:</h2>
 			<div class="setas-outros">
 			<a id="prev3" href="#"><div class="seta-outros-anteriores">
 			</div></a>
@@ -34,7 +23,7 @@
 				<ul id="foo3">
 					<?php
 					$esse_id = array(get_the_ID());
-					$query = new WP_Query( array( 'post_type' => 'portfolio', 'orderby' => 'rand', 'post__not_in' => $esse_id ) );
+					$query = new WP_Query( array( 'post_type' => 'paises', 'orderby' => 'rand', 'post__not_in' => $esse_id ) );
 
 					if ( $query->have_posts() ) : ?>
 						   <?php while ( $query->have_posts() ) : $query->the_post(); ?> 				

@@ -9,8 +9,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
 	<header class="entry-header-page">
-	    <div class="seta-page"></div>
-		<div class="titulo-page"><h1><?php the_title(); ?></h1></div>
+		<div class="titulo-page"><h2><?php the_title(); ?></h2></div>
 	</header><!-- .entry-header-page -->
 
 	<div class="entry-content">

@@ -661,9 +661,7 @@ a:active {
 .alignleft {
 
 	display: inline;
-
 	float: left;
-
 	margin-right: 1.5em;
 
 }
@@ -671,9 +669,7 @@ a:active {
 .alignright {
 
 	display: inline;
-
 	float: right;
-
 	margin-left: 1.5em;
 
 }
@@ -681,14 +677,14 @@ a:active {
 .aligncenter {
 
 	clear: both;
-
 	display: block;
-
 	margin: 0 auto;
 
 }
 
-
+.futbol-callejero {
+	max-width: 296px;
+}
 
 /* Text meant only for screen readers */
 
@@ -1136,13 +1132,12 @@ nav select {
 	width: 70%;
 	float: left;
 }
-.titulo-page h1 {
-    color: #4D449B;
+.titulo-page h2 {
+    color: #C63F28;
     font-family: 'Tauri',Arial,sans-serif;
-    font-size: 2em;
+    font-size: 2.2em;
     font-weight: 200;
-    margin: 18px 0 0;
-    text-transform: uppercase;
+    margin: 18px 0 0 70px;
 }
 
 .titulo-page-404 {
@@ -1316,8 +1311,7 @@ div.slider-nav span {
 	background: none repeat scroll 0 0 #FFFFFF;
     	padding: 0;
     	width: auto;
-	margin-right: 50px;
-	max-width: 1230px;
+	max-width: 1280px;
 	padding: 0;
 }
 
@@ -1518,7 +1512,7 @@ height: 70px;
 }
 
 .thumb-sub-content-direita img {
-height: 100%;
+	height: 100%;
 }
 
 .texto-sub-content {
@@ -2290,6 +2284,7 @@ body.single-projects #carousel_wrap { margin: 15px 0 30px }
 .thumb-cada-projeto {
 	overflow: hidden;
 	height: 200px;
+	width: 300px;
 }
 
 
@@ -2354,10 +2349,10 @@ a.titulo-resumo {
 
 .archive-portfolio {
 	float: left;
-	margin: 0 0 0 50px;
-	max-width: 1230px;
-	height: auto;
-	overflow: hidden;
+    height: auto;
+    margin: 110px 50px 0;
+    overflow: hidden;
+    width: 1180px;
 }
 
 .home-portfolio {
@@ -2421,30 +2416,6 @@ a.titulo-resumo {
 	margin: 0 0 0 5%;
 }
 
-.compartilhe-sidebar {
-	width: 100%;
-	overflow: hidden;
-	margin-top: 10px;
-}
-
-.compartilhe-sidebar-facebook {
-	background: url(images/artunlimited/compartilhe.png) no-repeat;
-	width: 113px;
-	height: 30px;
-}
-
-.compartilhe-sidebar-email {
-	background: url(images/artunlimited/compartilhe.png) 0 -33px no-repeat;
-	width: 113px;
-	height: 30px;
-	margin: 5px 0 25px 0;
-}
-
-.a-compartilhe {
-	position: absolute;
-	width: 113px;
-	height: 30px;
-}
 
 .outros-projetos {
 	width: 350px;

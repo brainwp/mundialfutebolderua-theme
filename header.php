@@ -20,123 +20,48 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic' rel='stylesheet' type='text/css'>
-
+<link href='http://fonts.googleapis.com/css?family=Tauri|Pathway+Gothic+One' rel='stylesheet' type='text/css'>
 <!--[if lt IE 9 ]><script src="/lib/respond.min.js"></script><![endif]-->
 <?php wp_head(); ?>
 
-<script type="text/javascript">
-
-    jQuery(function() {
-	    if (jQuery('.scroll-pane').length)
-	        jQuery('.scroll-pane').jScrollPane();
-	    if (jQuery('.scroll-panes').length)
-            jQuery('.scroll-panes').jScrollPane();
-    });
-
-    jQuery.fn.toggleText = function(a,b) {
-	    return this.html(this.html().replace(new RegExp("("+a+"|"+b+")"),function(x){return(x==a)?b:a;}));
-	}
-
-	jQuery(document).ready(function(){
-	    jQuery('.tgl').before('<span class="link-tgl"><?php echo $d; ?></span>');
-	    jQuery('.tgl').css('display', 'none')
-	    jQuery('span', '#link-login').click(function() {
-	        jQuery(this).next().slideToggle('slow')
-                .siblings('.tgl:visible')
-                .slideToggle('fast');
-            // aqui começa o funcionamento do plugin
-	        jQuery(this).toggleText('Revelar','Esconder')
-	            .siblings('span').next('.tgl:visible').prev()
-	            .toggleText('Revelar','Esconder')
-	    });
-    });
-
-</script>
 </head>
-
-<?php
-	global $current_user;
-	get_currentuserinfo();
-	if ( is_user_logged_in() ) {
-		$d = 'ol&aacute;, '.  $current_user->user_login .'!';
-	} else {
-		$d = 'acesso restrito';
-	}
-?>
 
 <body <?php body_class(); ?>>
 
-<div id="page" class="hfeed site">
+<div id="page" class="hfeed site site-home">
 
-		<header id="masthead" class="site-header" role="banner">
+	<header id="masthead" class="site-header" role="banner">
 		        
         <div id="logo">
-        	<a class="a-logo" href="<?php bloginfo( 'home' ); ?>"></a>
+        	<a class="a-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" alt="<?php bloginfo( 'name' ); ?>"></a>
         </div><!-- #logo -->
+                
+		
+	<div class="area-3-header">
 
-		<nav id="site-navigation" class="navigation-main" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul class="menu"><li class="first-menu-item"></li>%3$s</ul>' ) ); ?>	
-		</nav><!-- #site-navigation -->
-        
-        <div class="area-3-header">
-        <div id="redes">
-        	<div id="facebook">
-            	<a class="a-redes" href="<?php echo get_option( 'mo_facebook' ); ?>"></a>
-            </div><!-- #facebook -->
-            
-            <div id="linkedin">
-            	<a class="a-redes" href="<?php echo get_option( 'mo_linkedin' ); ?>"></a>
-		    </div><!-- #linkedin -->
-        </div><!-- #redes -->
-        
-        <div id="linguas">
+		
+			<nav id="site-navigation" class="navigation-main" role="navigation">
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul class="menu"><li class="first-menu-item"></li>%3$s</ul>' ) ); ?>		
+			</nav><!-- #site-navigation -->
+
+		
+    </div><!-- .area-3-header -->
+
+	<div id="linguas">
         	<div id="en">
             	<a class="a-linguas" href=""></a>
 		    </div><!-- #en -->
-            
+			<div id="es">
+            	<a class="a-linguas" href=""></a>
             <div id="pt">
 				<a class="a-linguas" href=""></a>	
 		    </div><!-- #pt -->
         </div><!-- #linguas -->
-        </div><!-- .area-3-header -->
-        
-        <div class="area-4-header">
-        <div id="link-login">
-        	<div id="cadeado"></div><!-- #cadeado -->
-			<div id="form-login" class="tgl">	
-				<?php if (!(current_user_can('level_0'))){ ?>
-				<form action="<?php bloginfo( 'home' ); ?>/wp-login.php" method="post">
-				<div class="linha-form">
-					<div class="linha-form-a">Login</div>
-					<div class="linha-form-b"><input type="text" name="log" id="log" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" size="20" />
-					</div>
-				</div>
-
-				<div class="linha-form">
-					<div class="linha-form-a">Senha</div>
-					<div class="linha-form-b"><input type="password" name="pwd" id="pwd" size="14" /><input type="submit" name="submit" value="ok" class="button" /></div>
-				</div>
-					<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>" />
-				</form>
-				<a href="<?php bloginfo( 'home' ); ?>/wp-login.php?action=lostpassword">Esqueceu a Senha?</a>
-				<?php } else { ?>
-				<a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Sair">Sair</a>
-				<a href="<?php bloginfo( 'home' ); ?>/wp-admin/">Admin</a>
-				<?php }?>
-
-			</div><!-- #form-login -->
-        </div><!-- #link-login -->
-        </div><!-- .area-4-header -->
-
-	<div class="botao-portfolio-menu">
-		<a class="etiqueta-barra-botao-portfolio-menu" href="<?php echo home_url('index.php/portfolio'); ?>">
-		</a>
-	</div>
+			
         
 	</header><!-- #masthead -->
 
+
 	<?php do_action( 'before' ); ?>
 
-	<div id="main" class="site-main">
+	<div id="main">

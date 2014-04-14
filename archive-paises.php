@@ -1,4 +1,4 @@
-<?php get_header( 'portfolio' ); ?>
+<?php get_header(); ?>
 
 		<div id="content-interno" class="site-content" role="main">
 		
@@ -20,10 +20,10 @@
 
 							/* $args_loop_cpt_projetos são os argumentos para o Loop */
 							$args_loop_cpt_projetos = array(
-							'post_type' => 'portfolio',
+							'post_type' => 'paises',
 							'orderby' => 'date',
 							'order' => 'DESC',
-							'posts_per_page' => '66',
+							'posts_per_page' => '36',
 							'paged' => $paged
 							);
 							$loop_cpt_projetos = new WP_Query( $args_loop_cpt_projetos ); if ( $loop_cpt_projetos->have_posts() ) {
@@ -61,4 +61,4 @@
 
 		</div><!-- #content -->
   
-<?php get_footer( 'portfolio' ); ?>
+<?php get_footer(); ?>

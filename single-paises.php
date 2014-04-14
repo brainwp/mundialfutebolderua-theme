@@ -4,7 +4,7 @@
  * @package artunlimited
  */
 
-get_header( 'portfolio' ); ?>
+get_header(); ?>
 
 	<div class="content-single-portfolio">
 		<div id="content-interno" class="site-content" role="main">
@@ -34,7 +34,7 @@ get_header( 'portfolio' ); ?>
 									
 									<?php 
 										$attachment_id = $anexo->ID;
-										$image_attributes = wp_get_attachment_image_src( $attachment_id, 'projetos' );
+										$image_attributes = wp_get_attachment_image_src( $attachment_id, 'paises' );
 										$attachment_page = get_attachment_link( $attachment_id ); 
 										$description = $anexo->post_content;
 										$url = wp_get_attachment_url( $attachment_id ); 
@@ -117,16 +117,15 @@ get_header( 'portfolio' ); ?>
 			<!-- .esquerda-single-portfolio -->
 		
 	<div class="direita-single-portfolio">
-			<?php get_sidebar( 'portfolio' ); ?>
+			<?php get_sidebar( 'paises' ); ?>
 	</div><!-- #direita-single-portfolio -->
-			
 		</div><!-- #content -->
 		
 			            <div class="clearfix">
 						</div>
 
-<?php get_footer( 'portfolio' ); ?>
+<?php get_footer(); ?>
 
 	</div><!-- #content-single-portfolio -->
-	
+
 

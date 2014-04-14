@@ -1,18 +1,18 @@
 <?php
 
 /*
-Classe metabox-portfolio para criação de MetaBox's
+Classe metabox-pais para criação de MetaBox's
 Versão 0.1
 */
 
-$prefix = 'metaportfolio_';
+$prefix = 'metapais_';
 
-$meta_box_portfolio = array(
-	'id' => 'metabox-portfolio',
+$meta_box_pais = array(
+	'id' => 'metabox-pais',
 	// Título do MetaBox
-	'title' => 'Informa&ccedil;&otilde;es do Projeto',
+	'title' => 'Informa&ccedil;&otilde;es do Pais',
 	// Tipo de Post a usar os MetaBox's
-	'page' => 'portfolio',
+	'page' => 'pais',
 	'context' => 'normal',
 	'priority' => 'high',
 	// Campos
@@ -41,29 +41,29 @@ $meta_box_portfolio = array(
 	)
 );
 
-add_action('admin_menu', 'add_metaportfolio');
+add_action('admin_menu', 'add_metapais');
 
-function add_metaportfolio() {
-    global $meta_box_portfolio;
+function add_metapais() {
+    global $meta_box_pais;
     add_meta_box(
-		$meta_box_portfolio['id'],
-		$meta_box_portfolio['title'], 
-		'show_metaportfolio',
-		$meta_box_portfolio['page'],
-		$meta_box_portfolio['context'],
-		$meta_box_portfolio['priority']);
+		$meta_box_pais['id'],
+		$meta_box_pais['title'], 
+		'show_metapais',
+		$meta_box_pais['page'],
+		$meta_box_pais['context'],
+		$meta_box_pais['priority']);
 }
 	
 	
-// Mostra os MetaBox's (metaportfolio)
-function show_metaportfolio() {
-    global $meta_box_portfolio, $post;
+// Mostra os MetaBox's (metapais)
+function show_metapais() {
+    global $meta_box_pais, $post;
     // Use nonce for verification
-    echo '<input type="hidden" name="metaportfolio_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
+    echo '<input type="hidden" name="metapais_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
 
 	// Inicia a tabela
 	echo '<table class="agenda-table">';
-    foreach ($meta_box_portfolio['fields'] as $field) {
+    foreach ($meta_box_pais['fields'] as $field) {
     // get current post meta data
     $meta = get_post_meta($post->ID, $field['id'], true);
     
@@ -98,18 +98,18 @@ function show_metaportfolio() {
     '</tr>';
     }
     // Fecha a tabela
-	echo '</table><!-- .metaportfolio-table -->';
+	echo '</table><!-- .metapais-table -->';
     }
 	
-	add_action('save_post', 'save_metaportfolio');
+	add_action('save_post', 'save_metapais');
     // Save data from meta box
-    function save_metaportfolio($post_id) {
-    global $meta_box_portfolio;
+    function save_metapais($post_id) {
+    global $meta_box_pais;
 	
 
 	
     // verify nonce
-    if (!wp_verify_nonce($_POST['metaportfolio_nonce'], basename(__FILE__))) {
+    if (!wp_verify_nonce($_POST['metapais_nonce'], basename(__FILE__))) {
     return $post_id;
     }
     // Checa se AutoSave está ativo e o ignora
@@ -125,7 +125,7 @@ function show_metaportfolio() {
     return $post_id;
     }
     
-	foreach ($meta_box_portfolio['fields'] as $field) {
+	foreach ($meta_box_pais['fields'] as $field) {
     $old = get_post_meta($post_id, $field['id'], true);
     $new = $_POST[$field['id']];
     if ($new && $new != $old) {
@@ -138,7 +138,7 @@ function show_metaportfolio() {
  /**
  * Adiciona o CSS para o jQuery DatePicker da Agenda e demais estilos
  */
-function metabox_portfolio_css() {
+function metabox_pais_css() {
 	wp_enqueue_style(
 		'estilo-metaboxes',
 		get_bloginfo('stylesheet_directory') . '/inc/estilo-metaboxes.css'

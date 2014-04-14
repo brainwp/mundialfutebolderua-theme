@@ -189,11 +189,11 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load Metabox.
  */
 require get_template_directory() . '/inc/metaboxes.php';
-require get_template_directory() . '/inc/metaboxes-portfolio.php';
+require get_template_directory() . '/inc/metaboxes-pais.php';
 /**
- * Load CPT Portfolios.
+ * Load CPT Paises.
  */
-require get_template_directory() . '/custom-portfolio.php';
+require get_template_directory() . '/custom-paises.php';
 
 
 function id_por_slug( $slug ) {
