@@ -145,60 +145,6 @@ get_header( 'home' ); ?>
 </div>
     </div><!-- .sub-content -->
 <!-- Final Países Participantes -->
-
-
-<!-- Já Aconteceu-->
-    <div class="sub-content" id="nav-aconteceu">
-
-        <?php
-    	$aconteceu = "";
-        $aconteceu = get_page_by_title( 'Ja Aconteceu' );
-        $content_aconteceu = apply_filters('the_content', $aconteceu->post_content);
-		$attachment_page = get_attachment_link($aconteceu->ID); ?>
-
-	<div class="center">
-
-		<div class="header-sub-content">
-			<div class="titulo-header"><h2><?php echo $aconteceu->post_title; ?></h2></div>
-		</div>
-						  
-		<div class="content-nomeio">
-                <?php echo $content_aconteceu; ?>    			
-		</div><!-- .content-nomeio -->
-
-	</div><!--center -->
-
-  <div id="thumbs-quem-somos">
-    
-
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post();    
-    	$args = array(
-        	'post_type' => 'attachment',
-            'numberposts' => 15,
-            'post_status' => null,
-            'post_parent' => $aconteceu->ID,
-            'orderby' => 'rand'
-		);
-
-		$attachments = get_posts( $args );
-		if ( $attachments ) {
-			foreach ( $attachments as $attachment ) {
-			$image_attributes = wp_get_attachment_image_src( $attachment->ID ); // returns an array
-			echo '<div class="imagens-post">';
-			echo '<img src="'.$image_attributes[0].'">';
-			echo '</div>';
-	  		}
-		}
-    	endwhile; endif; ?>
-        </div><!-- #thumbs-quem-somos -->
-
-
-    </div><!-- .sub-content -->
-      
-<!-- slider container -->
-<!-- Final Já aconteceu -->
-    
-
     
 <!-- Notícias 
 
@@ -288,8 +234,29 @@ get_header( 'home' ); ?>
             <?php echo $content_tipos_contatos; ?>
         </div><!-- .content-metade -->
     </div><!-- .direita -->
-<div class="footer-sub-content">
-</div>
+  <div id="thumbs-quem-somos">
+    
+
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post();    
+    	$args = array(
+        	'post_type' => 'attachment',
+            'numberposts' => 15,
+            'post_status' => null,
+            'post_parent' => $contatos->ID,
+            'orderby' => 'rand'
+		);
+
+		$attachments = get_posts( $args );
+		if ( $attachments ) {
+			foreach ( $attachments as $attachment ) {
+			$image_attributes = wp_get_attachment_image_src( $attachment->ID ); // returns an array
+			echo '<div class="imagens-post">';
+			echo '<img src="'.$image_attributes[0].'">';
+			echo '</div>';
+	  		}
+		}
+    	endwhile; endif; ?>
+        </div><!-- #thumbs-quem-somos -->
     </div><!-- .sub-content -->
 
 

@@ -47,7 +47,6 @@
 					<li class="first-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-336" id="menu-item-336"><a href="javascript:scroll_to('#nav-quem-somos');">Sobre</a></li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-30"><a href="javascript:scroll_to('#nav-metodologia');">Metodologia</a></li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32" id="menu-item-32"><a href="javascript:scroll_to('#nav-paises');">Pa&iacute;ses</a></li>		
-					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28" id="menu-item-28"><a href="javascript:scroll_to('#nav-aconteceu');">Hist&oacute;rico</a></li>
 					<li class="last-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-29" id="menu-item-29"><a href="javascript:scroll_to('#nav-contatos');">Contatos</a></li>		
 					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28" id="menu-item-28"><a href="javascript:scroll_to('#nav-patrocinadores-parceiros');">Patrocinadores</a></li>
 <!--	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-288" id="menu-item-288"><a href="javascript:scroll_to('#nav-noticias');">Not&iacute;cias</a></li> -->
