@@ -80,8 +80,7 @@ get_header( 'home' ); ?>
 			<div class="titulo-header"><h2>Contagem Regressiva</h2></div>
 		</div>
         <div class="content-nomeio">
-			Estou aqui!
-            <?php get_sidebar('home'); ?>
+           <div class="titulo-contagem"><h2><?php get_sidebar('home'); ?></h2></div>
         </div><!-- .content-nomeio -->
     </div><!-- .center -->
 <div class="footer-sub-content">
