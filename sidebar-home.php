@@ -6,7 +6,7 @@
  * @subpackage artunlimited
  */
 			
-			 if ( ! dynamic_sidebar( 'contact-home' ) ) : ?>
+			 if ( ! dynamic_sidebar( 'home' ) ) : ?>
 			<?php endif; // end sidebar widget area ?>
 			
 

@@ -4,6 +4,8 @@ get_header( 'home' ); ?>
  
 <div id="slider">
 
+<div id="slider-content-logo"></div>
+
 	<?php echo do_shortcode( '[orbit-slider]' );?>
 
 </div><!-- #slider -->
@@ -12,23 +14,39 @@ get_header( 'home' ); ?>
     <div class="sub-content" id="nav-quem-somos">
 
     <?php
+    $oque = "";
+    $oque = get_page_by_title( 'O que e?' );
+ ?>
+	<div class="esquerda">
+    
+		<div class="header-sub-content">
+			<div class="titulo-header-metade"><h2><?php echo $oque->post_title; ?></h2></div>
+		</div>
+        <?php $content_oque = apply_filters('the_content', $oque->post_content); ?>
+        <div class="content-metade">
+            <?php echo $content_oque; ?>
+        </div><!-- .content-metade -->
+
+    </div><!-- .esquerda -->
+
+    <?php
     $quem_somos = "";
     $quem_somos = get_page_by_title( 'Sobre' ); ?>
     
-	<div class="center">
+	<div class="direita">
     
 		<div class="header-sub-content">
-			<div class="titulo-header"><h2><?php echo $quem_somos->post_title; ?></h2></div>
+			<div class="titulo-header-metade"><h2><?php echo $quem_somos->post_title; ?></h2></div>
 		</div>
         <?php $content_quem_somos = apply_filters('the_content', $quem_somos->post_content); ?>
-        <div class="content-quem-somos">
+        <div class="content-metade">
             <?php echo $content_quem_somos; ?>
-        </div><!-- .content-quem-somos -->
-    </div><!-- .center -->
+        </div><!-- .content-metade -->
+    </div><!-- .direita -->
 <div class="footer-sub-content">
 </div>
     </div><!-- .sub-content -->
-<!-- Final Spore -->
+<!-- Final Sobre -->
 
 <!-- Metodologia -->
     <div class="sub-content" id="nav-metodologia">
@@ -62,7 +80,7 @@ get_header( 'home' ); ?>
 			<div class="titulo-header"><h2>Contagem Regressiva</h2></div>
 		</div>
         <div class="content-quem-somos">
-            [plugin contagem regressiva]
+            <?php get_sidebar('home'); ?>
         </div><!-- .content-quem-somos -->
     </div><!-- .center -->
 <div class="footer-sub-content">
@@ -197,71 +215,69 @@ get_header( 'home' ); ?>
    	<!-- Contatos -->
 	
 
-        <div class="sub-content" id="nav-contatos">
-            <?php
+  <div class="sub-content" id="nav-contatos">
+
+
+   			<?php
             $contatos = get_page_by_title( 'Contatos' );
 			$content_contatos = apply_filters('the_content', $contatos->post_content);
-
-			$endereco = get_post_meta($contatos->ID,'meta_endereco',true);
-			$bairro = get_post_meta($contatos->ID,'meta_bairro',true);
             ?>
 
-   			<div class="thumb-sub-content-direita">
-            	<?php echo do_shortcode('[google-map-sc id="22" width="280" height="760" margin="0" zoom="15"]'); ?>
-            </div><!-- .thumb-sub-content-direita -->
-			
-			<div class="left-sub-content">
-			
-				<div class="header-sub-content">
-					<div class="seta-header">
-					</div>
-					<div class="titulo-header"><h2>Onde nos Encontrar:</h2>
-					</div>
-				</div>
-             
-        <div class="content-contatos">
-				
-  			<div class="esquerda-contatos">
-            <?php echo get_post_meta($contatos->ID,'meta_endereco',true); ?><br />
-            <?php echo get_post_meta($contatos->ID,'meta_bairro',true); ?><br />
-            <?php echo get_post_meta($contatos->ID,'meta_cep',true); ?><br />
-            <?php echo get_post_meta($contatos->ID,'meta_cidade_uf_pais',true); ?><br />
-            </div><!-- .esquerda-contatos -->
-				
-  			<div class="direita-contatos">
-            Tel. <?php echo get_post_meta($contatos->ID,'meta_telefone_a',true); ?><br />
-            <?php echo get_post_meta($contatos->ID,'meta_telefone_b',true); ?><br />
-            </div><!-- .direita-contatos -->
-            
-			<div class="clear"></div>
-			
-			<?php echo $content_contatos; ?>
-						
-			<div class="clear"></div>
-
-			<?php get_sidebar('contatohome'); ?>
-			
-        </div><!-- .content-contatos -->
-		
-		<div class="footer-sub-content">
+    
+	<div class="esquerda">
+    
+		<div class="header-sub-content">
+			<div class="titulo-header-metade"><h2><?php echo $contatos->post_title; ?></h2></div>
 		</div>
-		
-		</div>
+        <?php $content_contatos = apply_filters('the_content', $oque->post_content); ?>
+        <div class="content-metade">
+            <?php echo $content_contatos; ?>
+        </div><!-- .content-metade -->
+    </div><!-- .esquerda -->
 
-        </div><!-- .sub-content -->
+    <?php
+    $tipos_contatos = "";
+    $tipos_contatos = get_page_by_title( 'Formas de Contato' ); ?>
+    
+	<div class="direita">
+    
+		<div class="header-sub-content">
+			<div class="titulo-header-metade"><h2><?php echo $tipos_contatos->post_title; ?></h2></div>
+		</div>
+        <?php $content_tipos_contatos = apply_filters('the_content', $tipos_contatos->post_content); ?>
+        <div class="content-metade">
+            <?php echo $content_tipos_contatos; ?>
+        </div><!-- .content-metade -->
+    </div><!-- .direita -->
+<div class="footer-sub-content">
+</div>
+    </div><!-- .sub-content -->
+
+
+
+
 		<!-- Final Contatos -->
 
 <!-- Patrocinadores -->
 
 	<div class="sub-content" id="nav-patrocinadores-parceiros">
-<?php
-	$patrocinadores = "";
-	$patrocinadores = get_page_by_title( 'Patrocinadores' );
-	$attachment_patrocinadores = get_attachment_link($patrocinadores->ID);
-	$content_patrocinadores = apply_filters('the_content', $patrocinadores->post_content);
-?>  
+	<?php
+		$patrocinadores = "";
+		$patrocinadores = get_page_by_title( 'Patrocinadores' );
+		$attachment_patrocinadores = get_attachment_link($patrocinadores->ID);
+		$content_patrocinadores = apply_filters('the_content', $patrocinadores->post_content);
+	?>  
 
 <div class="center">
+
+	<div class="header-sub-content">
+	    	<div class="titulo-header"><h2>Realiza&ccedil;&atilde;o</h2></div>
+	</div>
+
+		<div class="content-realizacao">
+			<img src="<?php bloginfo('template_directory'); ?>/images/logos-realizadores.png" width="512" height="161	" alt="Titulo da imagem" />
+        </div><!-- .content-realizacao -->
+
 
 	<div class="header-sub-content">
 	    	<div class="titulo-header"><h2><?php echo $patrocinadores->post_title; ?></h2></div>
@@ -269,7 +285,6 @@ get_header( 'home' ); ?>
 
 		<div class="content-intro-patrocinadores">
   			<?php echo $content_patrocinadores; ?>
-
         </div><!-- .content-intro-patrocinadores -->
         	                   
 		<div class="content-patrocinadores"> 
