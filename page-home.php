@@ -31,7 +31,7 @@ get_header( 'home' ); ?>
 
     <?php
     $quem_somos = "";
-    $quem_somos = get_page_by_title( 'Sobre' ); ?>
+    $quem_somos = get_page_by_title( 'Como Sera?' ); ?>
     
 	<div class="direita">
     
@@ -58,12 +58,12 @@ get_header( 'home' ); ?>
 	<div class="center">
     
 		<div class="header-sub-content">
-			<div class="titulo-header"><h2><?php echo $metodologia->post_title; ?></h2></div>
+			<div class="titulo-header-inteiro"><h2><?php echo $metodologia->post_title; ?></h2></div>
 		</div>
         <?php $content_metodologia = apply_filters('the_content', $metodologia->post_content); ?>
-        <div class="content-quem-somos">
+        <div class="content-nomeio">
             <?php echo $content_metodologia; ?>
-        </div><!-- .content-quem-somos -->
+        </div><!-- .content-nomeio -->
     </div><!-- .center -->
 <div class="footer-sub-content">
 </div>
@@ -79,9 +79,10 @@ get_header( 'home' ); ?>
 		<div class="header-sub-content">
 			<div class="titulo-header"><h2>Contagem Regressiva</h2></div>
 		</div>
-        <div class="content-quem-somos">
+        <div class="content-nomeio">
+			Estou aqui!
             <?php get_sidebar('home'); ?>
-        </div><!-- .content-quem-somos -->
+        </div><!-- .content-nomeio -->
     </div><!-- .center -->
 <div class="footer-sub-content">
 </div>
@@ -122,10 +123,9 @@ get_header( 'home' ); ?>
 			<div class="titulo-header"><h2><?php echo $aconteceu->post_title; ?></h2></div>
 		</div>
 						  
-		<div class="content-premios">
-                <?php echo $content_aconteceu; ?>
-    
-		</div><!-- .content-premios -->
+		<div class="content-nomeio">
+                <?php echo $content_aconteceu; ?>    			
+		</div><!-- .content-nomeio -->
 
 	</div><!--center -->
 
@@ -219,7 +219,7 @@ get_header( 'home' ); ?>
 
 
    			<?php
-            $contatos = get_page_by_title( 'Contatos' );
+            $contatos = get_page_by_title( 'Contato' );
 			$content_contatos = apply_filters('the_content', $contatos->post_content);
             ?>
 
@@ -229,7 +229,7 @@ get_header( 'home' ); ?>
 		<div class="header-sub-content">
 			<div class="titulo-header-metade"><h2><?php echo $contatos->post_title; ?></h2></div>
 		</div>
-        <?php $content_contatos = apply_filters('the_content', $oque->post_content); ?>
+        <?php $content_contatos = apply_filters('the_content', $contatos->post_content); ?>
         <div class="content-metade">
             <?php echo $content_contatos; ?>
         </div><!-- .content-metade -->
@@ -283,9 +283,6 @@ get_header( 'home' ); ?>
 	    	<div class="titulo-header"><h2><?php echo $patrocinadores->post_title; ?></h2></div>
 	</div>
 
-		<div class="content-intro-patrocinadores">
-  			<?php echo $content_patrocinadores; ?>
-        </div><!-- .content-intro-patrocinadores -->
         	                   
 		<div class="content-patrocinadores"> 
 		<?php   
