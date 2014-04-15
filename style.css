@@ -1207,7 +1207,7 @@ nav select {
 	height: 100%;
 	margin-right:0;
 	font-family: 'Tauri', serif;
-	max-height: 530px;
+	height: 530px;
 
 }
 
@@ -1426,7 +1426,13 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 height: 70px;
 }
 
+.zilla-alert p {
+	margin-bottom: 0.25em !important;
+}
 
+a.zilla-button, a.zilla-button:visited {
+	margin: 0 !important;
+}
 
 /* =Sub-Content
 
@@ -1565,7 +1571,7 @@ height: 70px;
 
 .content-metade {
     float: left;
-    font-size: 1.15em;
+    font-size: 1em;
     margin: 0 20px 0 25px;
     width: auto;
 }
