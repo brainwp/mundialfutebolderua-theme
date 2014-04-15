@@ -1428,6 +1428,7 @@ height: 70px;
 
 .zilla-alert p {
 	margin-bottom: 0.25em !important;
+	font-size: 0.8em;
 }
 
 a.zilla-button, a.zilla-button:visited {
@@ -1700,7 +1701,7 @@ a.zilla-button, a.zilla-button:visited {
 
 .content-patrocinadores {
 	margin: 20px auto 0;
-    max-width: 600px;
+    max-width: 720px;
     width: auto;
 }
 
@@ -1905,7 +1906,7 @@ text-decoration: none;
 .contact-form input[type="submit"] {
 	border: 0;
 	color: #FFF;
-	background: #4d449b;
+	background: #C63F28;
 	padding: 4px 10px;
 	cursor: pointer;
 }
@@ -1913,7 +1914,7 @@ text-decoration: none;
 .contact-form label {
     font-weight: lighter !important;
 	text-transform: uppercase;
-	color: #4D449B;
+	color: #C63F28;
 	font-size: 0.8em;
 }
 
