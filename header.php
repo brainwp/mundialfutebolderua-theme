@@ -47,16 +47,22 @@
 		
     </div><!-- .area-3-header -->
 
-	<div id="linguas">
+		<div id="linguas">
         	<div id="en">
             	<a class="a-linguas" href=""></a>
-		    </div><!-- #en -->
+		    </div><!--  #en -->
 			<div id="es">
             	<a class="a-linguas" href=""></a>
+			</div><!-- #es -->
             <div id="pt">
 				<a class="a-linguas" href=""></a>	
 		    </div><!-- #pt -->
         </div><!-- #linguas -->
+
+
+		<div id="site-description">
+        	<?php bloginfo( 'description' ); ?>
+        </div><!-- #site-description -->
 			
         
 	</header><!-- #masthead -->
