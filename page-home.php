@@ -97,8 +97,8 @@ get_header( 'home' ); ?>
 		<div class="header-sub-content">
 			<div class="titulo-header"><h2>Paises Participantes</h2></div>
 		</div>
-		<div class="content-realizacao">
-			<img src="<?php bloginfo('template_directory'); ?>/images/bandeiras-paises.png" width="512" height="161	" alt="Paises Participantes" />
+		<div class="content-bandeiras">
+			<img src="<?php bloginfo('template_directory'); ?>/images/bandeiras-paises.png" width="700" height="600" alt="Paises Participantes" />
         </div><!-- .content-realizacao -->
     </div><!-- .center -->
 <div class="footer-sub-content">
