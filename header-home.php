@@ -60,7 +60,7 @@
 		<div id="linguas">
         	<div id="en">
             	<a class="a-linguas" href=""></a>
-		    </div><!-- #en -->
+		    </div><!--  #en -->
 			<div id="es">
             	<a class="a-linguas" href=""></a>
 			</div><!-- #es -->

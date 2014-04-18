@@ -968,6 +968,11 @@ nav select {
 	margin: 35px 30px 20px 20px;
 }
 
+.a-linguas {
+	width: 36px;
+	height: 34px;
+	position: absolute;
+}
 
 
 #en, #pt, #es {
@@ -980,20 +985,9 @@ nav select {
 }
 
 
-
 #en {
 	background: url(images/artunlimited/img-sprite.png) -350px -2px no-repeat;
 }
-
-
-
-.a-linguas {
-	width: 36px;
-	height: 34px;
-	position: absolute;
-}
-
-
 
 #en:hover {
 
@@ -1005,7 +999,7 @@ nav select {
 
 #pt {
 
-	background: url(images/artunlimited/img-sprite.png) -391px -2px no-repeat;
+	background: url(images/images/bandeiras-idiomas.png) -101px -2px no-repeat;
 	display: none;
 	margin-left: 5px;
 
@@ -1015,22 +1009,20 @@ nav select {
 
 #pt:hover {
 
-	background-position: -391px -38px;
+	background-position: -101px -38px;
 
 }
 
 #es {
 
-	background: url(images/artunlimited/img-sprite.png) -391px -2px no-repeat;
+	background: url("images/bandeiras-idiomas.png") no-repeat scroll -7px -3px rgba(0, 0, 0, 0);
 	margin-left: 5px;
 
 }
 
-
-
 #es:hover {
 
-	background-position: -391px -38px;
+	background-position: -7px -38px;
 
 }
 
