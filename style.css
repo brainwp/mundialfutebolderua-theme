@@ -1607,6 +1607,7 @@ a.zilla-button, a.zilla-button:visited {
 
 	width: auto;
 	overflow: hidden;
+	min-height: 50px;
 
 }
 
@@ -1626,12 +1627,56 @@ a.zilla-button, a.zilla-button:visited {
 	font-family: 'Tauri', Arial, sans-serif;
 }
 
-.titulo-contagem {
-    margin: 50px auto 0;
+
+.contador {
+    margin: 0 auto;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+.contador .widget-title {
+    margin: 70px auto 0;
     text-align: center;
     width: 100%;
 	font-family: 'Tauri', Arial, sans-serif;
-	
+	text-transform: none;
+}
+
+.donp-counter {
+    display: table;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    padding: 20px;
+	width: 100%;
+}
+
+.text-before {
+    float: left;
+    display: block;
+    font-size: 1.3em;
+    overflow: hidden;
+    padding: 20px 10px;
+}
+
+
+.text-date {
+    background: none repeat scroll 0 0 #333333;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-size: 1.8em;
+    margin: 7px 0;
+    overflow: hidden;
+    padding: 15px;
+}
+
+
+.text-after {
+    float: left;
+    display: block;
+    font-size: 1.3em;
+    overflow: hidden;
+    padding: 20px 10px;
 }
 
 

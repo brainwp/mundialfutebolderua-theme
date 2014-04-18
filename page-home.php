@@ -71,27 +71,20 @@ get_header( 'home' ); ?>
 <!-- Final Metodologia -->
 
 <!-- Contagem Regressiva -->
-    <div class="sub-content">
+<div class="sub-content">
 
-    
 	<div class="center">
-    
-		<div class="header-sub-content">
-			<div class="titulo-header"><h2>Contagem Regressiva</h2></div>
-		</div>
-        <div class="content-nomeio">
-           <div class="titulo-contagem"><h2><?php get_sidebar('home'); ?></h2></div>
-        </div><!-- .content-nomeio -->
-    </div><!-- .center -->
-<div class="footer-sub-content">
-</div>
-    </div><!-- .sub-content -->
+	    <div class="contador">
+	       <?php get_sidebar('home'); ?>
+	    </div><!-- .contador -->
+	</div><!-- .center -->
+	<div class="footer-sub-content">
+	</div>
+</div><!-- .sub-content -->
 <!-- Final Contagem Regressiva -->
 
 <!-- Países Participantes -->
-    <div class="sub-content" id="nav-paises">
-
-    
+<div class="sub-content" id="nav-paises">   
 	<div class="center">
     
 		<div class="header-sub-content">
@@ -101,9 +94,9 @@ get_header( 'home' ); ?>
 			<img src="<?php bloginfo('template_directory'); ?>/images/bandeiras-paises.png" width="700" height="600" alt="Paises Participantes" />
         </div><!-- .content-realizacao -->
     </div><!-- .center -->
-<div class="footer-sub-content">
-</div>
-    </div><!-- .sub-content -->
+	<div class="footer-sub-content">
+	</div>
+</div><!-- .sub-content -->
 <!-- Final Países Participantes -->
     
 <!-- Notícias 
