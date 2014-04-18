@@ -896,7 +896,7 @@ nav select {
     font-family: 'Pathway Gothic One',Arial,sans-serif;
     font-size: 1.6em;
     line-height: 1.4em;
-    margin: 20px;
+    margin: 20px 10px;
     overflow: hidden;
     text-align: center;
     width: 100px;
@@ -1409,9 +1409,60 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 height: 70px;
 }
 
+/* =Shortcodes
+
+----------------------------------------------- */
+
+
+
+
+a.zilla-button, a.zilla-button:visited {
+
+border: none !important;
+}
+
+a.zilla-button.red {
+    background: none repeat scroll 0 0 #B73724;
+	border-color: none !important;
+}
+
+a.zilla-button.red:hover {
+    background: none repeat scroll 0 0 #CE6333 !important;;
+}
+
+a.zilla-button.grey {
+    background: none repeat scroll 0 0 #666;
+}
+
+a.zilla-button.grey:hover {
+    background: none repeat scroll 0 0 #999999;
+}
+
+a.zilla-button.small {
+    padding: 8px !important;
+}
+
+a.zilla-button.medium {
+    padding: 12px 10px !important;
+}
+
+a.zilla-button.large {
+    padding: 15px 17px !important;
+}
+
+.zilla-alert {
+    border: none !important;
+}
+
 .zilla-alert p {
 	margin-bottom: 0.25em !important;
 	font-size: 0.8em;
+}
+
+.zilla-alert.white {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DFDFDF;
+    color: #373737;
 }
 
 a.zilla-button, a.zilla-button:visited {
@@ -2775,7 +2826,7 @@ object {
 ----------------------------------------------- */
 
 .zilla-toggle {
-    background: none repeat scroll 0 0 #4D449B !important;
+    background: none repeat scroll 0 0 #D66633 !important;
     border: none !important;
     border-radius: 8px;
     cursor: pointer;
@@ -2785,17 +2836,35 @@ object {
 }
 
 .zilla-toggle-title {
-    background: none repeat scroll 0 0 #4D449B !important;
+    background: none repeat scroll 0 0 #D66633 !important;
 }
 
 .zilla-toggle-inner {
-    background: none repeat scroll 0 0 #4D449B !important;
+    background: none repeat scroll 0 0 #D66633 !important;
 }
 
 .ui-accordion .ui-accordion-header .ui-icon {
     margin-top: 5px !important;
 }
 
+
+.zilla-tabs .zilla-tab {
+    background: none repeat scroll 0 0 #DDDDDD;
+}
+
+
+.zilla-tabs ul.zilla-nav li a {
+    background: none repeat scroll 0 0 #EEEEEE !important;
+	color: #333333 !important;
+}
+
+.zilla-tabs ul.zilla-nav li a:hover {
+    background: none repeat scroll 0 0 #CCCCCC !important;
+}
+
+.zilla-tabs ul.zilla-nav li.ui-tabs-active a {
+    background: none repeat scroll 0 0 #DDDDDD !important;
+}
 
 
 /* Testes de Aba
