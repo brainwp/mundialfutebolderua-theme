@@ -22,7 +22,7 @@
             	<a class="a-redes" href="<?php echo get_option( 'mo_facebook' ); ?>"></a>
             </div><!-- #facebook -->
             
-            <div id="linkedin">
+            <div id="twitter">
             	<a class="a-redes" href="<?php echo get_option( 'mo_linkedin' ); ?>"></a>
 		    </div><!-- #linkedin -->
         </div><!-- #redes -->

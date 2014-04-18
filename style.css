@@ -909,7 +909,7 @@ nav select {
 	margin: 35px 5px 0 0;
 }
 
-#facebook, #linkedin {
+#facebook, #twitter {
 	width: 34px;
 	height: 34px;
 	-webkit-border-radius: 3px;
@@ -920,36 +920,22 @@ nav select {
 }
 
 #facebook {
-	background: url(images/artunlimited/img-sprite.png) -269px 0 no-repeat;
+	background: url("images/img-redes-sociais.png") no-repeat scroll -6px -3px rgba(255, 255, 255, 0);
 }
-
-
 
 #facebook:hover {
-
-	background-position: -269px -34px;
+background-position:-6px -38px ;
 
 }
 
-
-
-#linkedin {
-
-	background: url(images/artunlimited/img-sprite.png) -310px 0 no-repeat;
-
+#twitter {
+	background: url(images/img-redes-sociais.png) -47px -3px no-repeat;
 	margin-left: 5px;
-
 }
 
-
-
-#linkedin:hover {
-
-	background-position: -310px -34px;
-
+#twitter:hover {
+	background-position:  -47px -38px;
 }
-
-
 
 .a-redes {
 
@@ -984,46 +970,33 @@ nav select {
 	float: left
 }
 
-
 #en {
-	background: url(images/artunlimited/img-sprite.png) -350px -2px no-repeat;
+	background: url(images/bandeiras-idiomas.png) -47px -2px no-repeat;
+	margin-right: 5px;
+	display: none;
 }
 
 #en:hover {
-
-	background-position: -350px -38px;
-
+	background-position: -47px -39px;
 }
-
 
 
 #pt {
-
-	background: url(images/images/bandeiras-idiomas.png) -101px -2px no-repeat;
-	display: none;
-	margin-left: 5px;
-
+	background: url(images/bandeiras-idiomas.png) -88px -2px no-repeat;
 }
 
-
-
 #pt:hover {
-
-	background-position: -101px -38px;
-
+	background-position: -88px -39px;;
 }
 
 #es {
-
-	background: url("images/bandeiras-idiomas.png") no-repeat scroll -7px -3px rgba(0, 0, 0, 0);
-	margin-left: 5px;
+	background: url("images/bandeiras-idiomas.png") no-repeat scroll -7px -2px rgba(0, 0, 0, 0);
+	margin-right: 5px;
 
 }
 
 #es:hover {
-
-	background-position: -7px -38px;
-
+	background-position: -7px -39px;
 }
 
 /* =Home
