@@ -802,7 +802,7 @@ a:active {
 	width: auto;
 	font-family: 'Pathway Gothic One', Arial, sans-serif;
 	font-size: 1em;
-	margin: 40px 5px 0 40px;
+	margin: 40px 5px 0 20px;
 }
 .navigation-main-interno {
 	display: block;
@@ -890,6 +890,18 @@ nav select {
 	width: auto;
 }
 
+#site-description {
+    color: #FFFFFF;
+    float: right;
+    font-family: 'Pathway Gothic One',Arial,sans-serif;
+    font-size: 1.6em;
+    line-height: 1.4em;
+    margin: 20px;
+    overflow: hidden;
+    text-align: center;
+    width: 100px;
+}
+
 #redes {
 	width: 80px;
 	height: 35px;
@@ -953,7 +965,7 @@ nav select {
 	width: auto;
 	height: 35px;
 	float: right;
-	margin: 35px 30px 0 0;
+	margin: 35px 30px 20px 20px;
 }
 
 
@@ -1746,9 +1758,16 @@ a.zilla-button, a.zilla-button:visited {
 
 .content-patrocinadores {
 	margin: 20px auto 0;
-    max-width: 720px;
+    max-width: 360px;
     width: auto;
 }
+
+.content-apoiadores {
+	margin: 20px auto 0;
+    max-width: 600px;
+    width: auto;
+}
+
 
 .imagens-cliente {
 	float: left;
@@ -3260,10 +3279,6 @@ margin: 0 !important;
 
 	}
 
-	#site-description {
-		font-size: 12px;
-	}
-
 	#access ul {
 		font-size: 12px;
 	}
@@ -3317,8 +3332,7 @@ margin: 0 !important;
 
 	}
 
-	#site-title,
-	#site-description {
+	#site-title{
 
 		margin-right: 0;
 

@@ -220,58 +220,96 @@ get_header( 'home' ); ?>
 <!-- Patrocinadores -->
 
 	<div class="sub-content" id="nav-patrocinadores-parceiros">
-	<?php
-		$patrocinadores = "";
-		$patrocinadores = get_page_by_title( 'Patrocinadores' );
-		$attachment_patrocinadores = get_attachment_link($patrocinadores->ID);
-		$content_patrocinadores = apply_filters('the_content', $patrocinadores->post_content);
-	?>  
+		<?php
+			$patrocinadores = "";
+			$patrocinadores = get_page_by_title( 'Patrocinadores' );
+			$attachment_patrocinadores = get_attachment_link($patrocinadores->ID);
+		?>  
 
-<div class="center">
+			<div class="center">
+	
+				<div class="header-sub-content">
+						<div class="titulo-header"><h2>Realiza&ccedil;&atilde;o</h2></div>
+				</div>
 
-	<div class="header-sub-content">
-	    	<div class="titulo-header"><h2>Realiza&ccedil;&atilde;o</h2></div>
-	</div>
-
-		<div class="content-realizacao">
-			<img src="<?php bloginfo('template_directory'); ?>/images/logos-realizadores.png" width="512" height="161	" alt="Titulo da imagem" />
-        </div><!-- .content-realizacao -->
+				<div class="content-realizacao">
+					<img src="<?php bloginfo('template_directory'); ?>/images/logos-realizadores.png" width="512" height="161	" alt="Titulo da imagem" />
+				</div><!-- .content-realizacao -->
 
 
-	<div class="header-sub-content">
-	    	<div class="titulo-header"><h2><?php echo $patrocinadores->post_title; ?></h2></div>
-	</div>
+			<div class="header-sub-content">
+					<div class="titulo-header"><h2><?php echo $patrocinadores->post_title; ?></h2></div>
+			</div>
 
-        	                   
-		<div class="content-patrocinadores"> 
-		<?php   
-	    	$args_patrocinadores = array(
-			'post_type' => 'attachment',
-			'numberposts' => -1,
-			'post_status' => null,
-			'post_parent' => $patrocinadores->ID,
-			'orderby' => 'menu_order',
-			'order' => 'ASC'
-			);
+					                   
+				<div class="content-patrocinadores"> 
+				<?php   
+					$args_patrocinadores = array(
+					'post_type' => 'attachment',
+					'numberposts' => -1,
+					'post_status' => null,
+					'post_parent' => $patrocinadores->ID,
+					'orderby' => 'menu_order',
+					'order' => 'ASC'
+					);
 
-			$attachments_patrocinadores = get_posts( $args_patrocinadores );
-			if ( $attachments_patrocinadores ) {
-				foreach ( $attachments_patrocinadores as $attachment_cliente ) {
-				$image_attributes_cliente = wp_get_attachment_image_src( $attachment_cliente->ID );
-				echo '<div class="imagens-cliente">';
-				echo '<img src="'.$image_attributes_cliente[0].'">';
-				echo '</div>';
-		  		}
-			}
-	    	?>
+					$attachments_patrocinadores = get_posts( $args_patrocinadores );
+					if ( $attachments_patrocinadores ) {
+						foreach ( $attachments_patrocinadores as $attachment_cliente ) {
+						$image_attributes_cliente = wp_get_attachment_image_src( $attachment_cliente->ID );
+						echo '<div class="imagens-cliente">';
+						echo '<img src="'.$image_attributes_cliente[0].'">';
+						echo '</div>';
+				  		}
+					}
+					?>
 
-		    <?php wp_reset_postdata(); // reset the query ?>   
+					<?php wp_reset_postdata(); // reset the query ?>   
 
-		</div><!-- .content-patrocinadores -->
+				</div><!-- .content-patrocinadores -->
 
-		<div class="footer-sub-content">
-		</div><!-- .footer-sub-content -->
-	</div><!-- .center -->
+					<div class="header-sub-content">
+
+				<?php
+					$apoiadores= "";
+					$apoiadores = get_page_by_title( 'Apoiadores' );
+					$attachment_apoiadores = get_attachment_link($apoiadores->ID);
+				?>  
+
+							<div class="titulo-header"><h2><?php echo $apoiadores->post_title; ?></h2></div>
+					</div>
+
+					                   
+				<div class="content-apoiadores"> 
+				<?php   
+					$args_apoiadores = array(
+					'post_type' => 'attachment',
+					'numberposts' => -1,
+					'post_status' => null,
+					'post_parent' => $apoiadores->ID,
+					'orderby' => 'menu_order',
+					'order' => 'ASC'
+					);
+
+					$attachments_apoiadores = get_posts( $args_apoiadores );
+					if ( $attachments_apoiadores ) {
+						foreach ( $attachments_apoiadores as $attachment_cliente ) {
+						$image_attributes_cliente = wp_get_attachment_image_src( $attachment_cliente->ID );
+						echo '<div class="imagens-cliente">';
+						echo '<img src="'.$image_attributes_cliente[0].'">';
+						echo '</div>';
+				  		}
+					}
+					?>
+
+					<?php wp_reset_postdata(); // reset the query ?>   
+
+				</div><!-- .content-patrocinadores -->
+
+
+				<div class="footer-sub-content">
+				</div><!-- .footer-sub-content -->
+			</div><!-- .center -->
 
 </div><!-- .sub-content -->
 <!-- Final patrocinadores e Parceiros -->
