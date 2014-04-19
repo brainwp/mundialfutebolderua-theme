@@ -1105,7 +1105,7 @@ background-position:-6px -38px ;
 	background: url("images/artunlimited/img-sprite.png") no-repeat scroll -605px 0 transparent;
 }
 .titulo-page {
-	width: 70%;
+	width: auto;
 	float: left;
 }
 .titulo-page h2 {
@@ -1113,7 +1113,7 @@ background-position:-6px -38px ;
     font-family: 'Tauri',Arial,sans-serif;
     font-size: 2.2em;
     font-weight: 200;
-    margin: 18px 0 0 70px;
+    margin: 18px 0 0 20px;
 }
 
 .titulo-page-404 {
@@ -1281,7 +1281,7 @@ div.slider-nav span {
     background: none repeat scroll 0 0 #FFFFFF;
     margin: 0;
     padding: 2em 0 0 0;
-    max-width: 950px;
+    max-width: 1000px;
 }
 
 #content.page404-content {
@@ -1387,7 +1387,7 @@ div.sharedaddy div.sd-block {
 }
 
 .page-template-default .entry-content {
-	margin: 1.5em 1.5em 0 5em;
+	margin: 1.5em 1.5em 0;
 	max-width: 880px;
 
 }
@@ -1396,9 +1396,9 @@ div.sharedaddy div.sd-block {
 .no-results {
     float: left;
     margin: 0 auto;
-    padding: 0 0 30px 3em;
+    padding: 0 4% 30px;
     position: relative;
-    width: 90%;
+    width: 92%;
 }
 .page-links {
 	clear: both;
@@ -1408,67 +1408,6 @@ div.sharedaddy div.sd-block {
 div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 height: 70px;
 }
-
-/* =Shortcodes
-
------------------------------------------------ */
-
-
-
-
-a.zilla-button, a.zilla-button:visited {
-
-border: none !important;
-}
-
-a.zilla-button.red {
-    background: none repeat scroll 0 0 #B73724;
-	border-color: none !important;
-}
-
-a.zilla-button.red:hover {
-    background: none repeat scroll 0 0 #CE6333 !important;;
-}
-
-a.zilla-button.grey {
-    background: none repeat scroll 0 0 #666;
-}
-
-a.zilla-button.grey:hover {
-    background: none repeat scroll 0 0 #999999;
-}
-
-a.zilla-button.small {
-    padding: 8px !important;
-}
-
-a.zilla-button.medium {
-    padding: 12px 10px !important;
-}
-
-a.zilla-button.large {
-    padding: 15px 17px !important;
-}
-
-.zilla-alert {
-    border: none !important;
-}
-
-.zilla-alert p {
-	margin-bottom: 0.25em !important;
-	font-size: 0.8em;
-}
-
-.zilla-alert.white {
-    background: none repeat scroll 0 0 #FFFFFF;
-    border: 1px solid #DFDFDF;
-    color: #373737;
-}
-
-a.zilla-button, a.zilla-button:visited {
-	margin: 10px 0 0 !important;
-}
-
 /* =Sub-Content
 
 ----------------------------------------------- */
@@ -1985,11 +1924,20 @@ text-decoration: none;
 }
 
 .contact-form input[type="submit"] {
-	border: 0;
-	color: #FFF;
-	background: #C63F28;
-	padding: 4px 10px;
+	border-radius: 8px;
+    font-size: 12px;
+    padding: 8px 12px !important;
+	background: #B73724;
 	cursor: pointer;
+	text-transform: uppercase;
+	border: none;
+	color: #FFF;
+	font-weight: bold;
+
+}
+
+.contact-form input[type="submit"]:hover {
+	background: #BA4820;
 }
 
 .contact-form label {
@@ -2824,6 +2772,55 @@ object {
 /* = Shortcodes
 
 ----------------------------------------------- */
+
+
+a.zilla-button.red {
+    background: none repeat scroll 0 0 #B73724 !important;
+	border-color: none !important;
+}
+
+a.zilla-button.red:hover {
+    background: none repeat scroll 0 0 #CE6333 !important;
+}
+
+a.zilla-button.grey {
+    background: none repeat scroll 0 0 #666;
+}
+
+a.zilla-button.grey:hover {
+    background: none repeat scroll 0 0 #999999;
+}
+
+a.zilla-button.small {
+    padding: 8px !important;
+}
+
+a.zilla-button.medium {
+    padding: 12px 10px !important;
+}
+
+a.zilla-button.large {
+    padding: 15px 17px !important;
+}
+
+.zilla-alert {
+    border: none !important;
+}
+
+.zilla-alert p {
+	margin-bottom: 0.25em !important;
+	font-size: 0.8em;
+}
+
+.zilla-alert.white {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DFDFDF;
+    color: #373737;
+}
+
+a.zilla-button, a.zilla-button:visited {
+	margin: 10px 0 0 !important;
+}
 
 .zilla-toggle {
     background: none repeat scroll 0 0 #D66633 !important;
