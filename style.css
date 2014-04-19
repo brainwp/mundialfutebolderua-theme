@@ -1178,10 +1178,10 @@ background-position:-6px -38px ;
 /* =Slider Home - Orbit Slider
 ----------------------------------------------- */
 #slider {
-	max-width: 1280px;
+	max-width: 1000px;
 	margin-top: 110px;
 	font-family: 'Tauri', serif;
-	min-height: 500px;
+	max-height: 500px;
 
 }
 
@@ -1204,7 +1204,7 @@ div.slider-nav span.left {
 
 
 #orbit-inside img.orbit-slide {
-    margin-top: -150px;
+    margin-top: -50px;
 	width: 100%;
 	}
 
@@ -1212,7 +1212,7 @@ div.slider-nav span.left {
   background: url("images/logo-slider-sombranca.png") no-repeat scroll center top rgba(0, 0, 0, 0);
     display: block;
      height: 400px;
-    margin: 6% 40% 0;
+    margin: 5% 40% 0;
     position: absolute;
     width: 240px;
     z-index: 9999;
@@ -1233,6 +1233,7 @@ div.slider-nav span {
 	margin: 0 auto;
 	max-width: 1000px;
 	padding: 0;
+box-shadow: 0 6px 13px 0 rgba(30, 30, 30, 0.6);
 }
 
 /* =Content
