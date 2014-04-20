@@ -1266,8 +1266,9 @@ box-shadow: 0 6px 13px 0 rgba(30, 30, 30, 0.6);
 }
 
 .content-realizacao {
-	width: 512px;
-	height: 161px; 
+	max-width: 512px;
+	width: 100%;
+	height: 100%; 
 	margin: 0 auto;
 }
 
@@ -3204,6 +3205,11 @@ margin: 0 !important;
 
 	}
 
+	#slider-content-logo {
+		display: block;
+		margin: 2% 40% 0;
+		min-width: 80px;
+	}
 
 	#linguas {
 		display: none;

@@ -235,7 +235,7 @@ get_header( 'home' ); ?>
 				</div>
 
 				<div class="content-realizacao">
-					<img src="<?php bloginfo('template_directory'); ?>/images/logos-realizadores.png" width="512" height="161	" alt="Titulo da imagem" />
+					<img src="<?php bloginfo('template_directory'); ?>/images/logos-realizadores.png" width="512" height="auto" alt="Titulo da imagem" />
 				</div><!-- .content-realizacao -->
 
 
