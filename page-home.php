@@ -4,7 +4,9 @@ get_header( 'home' ); ?>
  
 <div id="slider">
 
-<div id="slider-content-logo"></div>
+	<div id="slider-content-logo">
+		<img src="<?php bloginfo('template_directory'); ?>/images/logo-slider-sombranca.png" width="237" height="400" alt="Logo Slider" />
+	</div>
 
 	<?php echo do_shortcode( '[orbit-slider]' );?>
 

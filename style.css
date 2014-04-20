@@ -903,9 +903,9 @@ nav select {
 }
 
 #redes {
-	width: 80px;
+	width: 12%;
 	height: 35px;
-	float: left;
+	float: right;
 	margin: 35px 5px 0 0;
 }
 
@@ -1209,13 +1209,17 @@ div.slider-nav span.left {
 	}
 
 #slider-content-logo {
-  background: url("images/logo-slider-sombranca.png") no-repeat scroll center top rgba(0, 0, 0, 0);
     display: block;
-     height: 400px;
     margin: 5% 40% 0;
     position: absolute;
-    width: 240px;
+    width: auto;
+	min-width: 237px;
     z-index: 9999;
+}
+
+#slider-content-logo img {
+	width: 100%;
+	height: auto;
 }
 
 div.slider-nav span {
@@ -1269,12 +1273,14 @@ box-shadow: 0 6px 13px 0 rgba(30, 30, 30, 0.6);
 
 .content-bandeiras {
 	margin: -30px auto 0;
-    width: 700px;
+	float: none;
 }
 
 .content-bandeiras img {
-	width: 700px;
-	height: 510px;
+	max-width: 700px;
+	width: 100%;
+	max-height: 600px;
+	height: auto;
 }
 
 
@@ -2745,7 +2751,7 @@ object {
     float: left;
     font-weight: 300;
     margin: 20px 0 0 10px;
-    width: 90%;
+    width: 84%;
 }
 
 .footer-noticias {
@@ -2903,17 +2909,36 @@ margin: 0 !important;
 /* =Responsive Structure
 
 ----------------------------------------------- */
-@media (max-width:1200px) {
 
-	
-	#slider {
-    margin-top: 125px;
+@media (max-width:800px) {
 
-	}
+.content-metade {
+    float: none;
 }
 
-@media (max-width:990px) {
+#site-description {
+	display: none;
+}
 
+.esquerda {
+    float: left;
+    margin: 3%;
+    width: 94%;
+}
+
+.direita {
+    float: left;
+    margin: 3%;
+    width: 94%;
+}
+
+
+#slider-content-logo {
+    display: block;
+    margin: 3% 40% 0;
+    min-height: 173px;
+    min-width: 120px;
+}
 
 	.navigation-main {
 		display: block;
@@ -2962,91 +2987,6 @@ margin: 0 !important;
 		float: none;
 		margin: 0 7.6%;
 		width: auto;
-
-	}
-
-	/* Simplify the showcase template */
-
-	.page-template-showcase-php .featured-posts {
-
-		min-height: 280px;
-
-	}
-
-	.featured-posts section.featured-post {
-
-		height: auto;
-
-	}
-
-	.page-template-showcase-php section.recent-posts {
-
-		float: none;
-		margin: 0;
-		width: 100%;
-
-	}
-
-	.page-template-showcase-php #main .widget-area {
-
-		float: none;
-		margin: 0;
-		width: auto;
-
-	}
-
-	.page-template-showcase-php .other-recent-posts {
-
-		border-bottom: 1px solid #ddd;
-
-	}
-
-	/* Simplify the showcase template when small feature */
-
-	section.featured-post .attachment-small-feature,
-
-	.one-column section.featured-post .attachment-small-feature {
-
-		border: none;
-		display: block;
-		float: left;
-		height: auto;
-		margin: 0.625em auto 1.025em;
-		max-width: 30%;
-		position: static;
-
-	}
-
-	article.feature-image.small {
-
-		float: right;
-		margin: 0 0 1.625em;
-		width: 64%;
-
-	}
-
-	.one-column article.feature-image.small .entry-summary {
-
-		height: auto;
-
-	}
-
-	article.feature-image.small .entry-summary p a {
-	
-		left: 0;
-		padding-left: 20px;
-		padding-right: 20px;
-		width: auto;
-
-	}
-
-	/* Remove the margin on singular articles */
-	.singular .entry-header,
-	.singular .entry-content,
-	.singular footer.entry-meta,
-	.singular #comments-title {
-
-		width: 100%;
 
 	}
 
@@ -3164,14 +3104,6 @@ margin: 0 !important;
 	}
 	
 
-}
-
-@media (max-width:790px) {
-
-	.titulo-header {
-		margin: 40px 0 0 30px;
-	}
-
 
 	nav.navigation-main li {
 
@@ -3270,6 +3202,11 @@ margin: 0 !important;
 
 		font-size: 13px;
 
+	}
+
+
+	#linguas {
+		display: none;
 	}
 	
 	#thumbs-quem-somos {
