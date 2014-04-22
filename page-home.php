@@ -129,7 +129,7 @@ get_header( 'home' ); ?>
 						</a>
                         
                         <div class="thumb-cada-noticia">
-                        <a href="<?php // the_permalink(); ?>"><?php the_post_thumbnail( 'thumb-projetos' ); ?></a>
+                        <a href="<?php // the_permalink(); ?>"><?php the_post_thumbnail( 'thumb-noticias' ); ?></a>
             			</div>
                         
 						<a class="titulo-cada-noticia" href="<?php // the_permalink(); ?>"><?php // the_title(); ?></a>

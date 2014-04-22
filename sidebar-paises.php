@@ -8,7 +8,7 @@
 	
 	<div class="outros-projetos">
 		
-			<h2 class="fonte-roxa">outros paises:</h2>
+			<h2 class="fonte-roxa">Outros paises:</h2>
 			<div class="setas-outros">
 			<a id="prev3" href="#"><div class="seta-outros-anteriores">
 			</div></a>
@@ -32,10 +32,8 @@
 					<div class="cada-outro-projeto">
 
 						<?php if ( has_post_thumbnail() ) {
-						the_post_thumbnail( 'thumb-outros-projetos' );
-						} else { ?>
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/default-outros-<?php echo mt_rand(1,3); ?>.jpg" alt="<?php the_title(); ?>" />
-						<?php } ?>
+						the_post_thumbnail( 'medium' );
+						} ?>
                         
 					</div><!-- .cada-outro-projeto -->
 					<div class="titulo-outros-projetos">
