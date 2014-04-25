@@ -2,8 +2,7 @@
 /**
  * Template for displaying Category Archive pages
  *
- * @package WordPress
- * @subpackage Twenty_Eleven
+ * @package mundialfutebolderua
  * @since Twenty Eleven 1.0
  */
 

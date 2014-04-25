@@ -2,7 +2,7 @@
 /**
  * The template for displaying search forms in artunlimited
  *
- * @package artunlimited
+ * @package mundialfutebolderua
  */
 ?>
 	<form method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">

@@ -3,7 +3,7 @@
  * Sidebar containing the contact widget area for the home template
  *
  * @package WordPress
- * @subpackage artunlimited
+ * @subpackage mundialfutebolderua
  */
 			
 			 if ( ! dynamic_sidebar( 'home' ) ) : ?>

@@ -1,4 +1,14 @@
-<?php get_header(); ?>
+<?php 
+
+/**
+ * The template for displaying Archive pages of CPT Paises.
+ *
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package mundialfutebolderua
+ */
+
+get_header(); ?>
 
 		<div id="content-interno" class="site-content" role="main">
 		

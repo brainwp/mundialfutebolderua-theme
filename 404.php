@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages (Not Found).
  *
- * @package artunlimited
+ * @package mundialfutebolderua
  */
 
 get_header( 'interno' ); ?>

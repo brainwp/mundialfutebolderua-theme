@@ -2,7 +2,7 @@
 /**
  * The template for displaying image attachments.
  *
- * @package artunlimited
+ * @package mundialfutebolderua
  */
 
 get_header();
