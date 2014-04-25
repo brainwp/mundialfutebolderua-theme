@@ -1,14 +1,14 @@
 <?php
 /**
- * artunlimited functions and definitions
- * @package artunlimited
+ * mundialfutebolderua functions and definitions
+ * @package mundialfutebolderua
  * Set the content width based on the theme's design and stylesheet.
  */
 
 if ( ! isset( $content_width ) )
 	$content_width = 640; /* pixels */
 
-if ( ! function_exists( 'artunlimited_setup' ) ) :
+if ( ! function_exists( 'mundialfutebolderua_setup' ) ) :
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -17,14 +17,14 @@ if ( ! function_exists( 'artunlimited_setup' ) ) :
  * before the init hook. The init hook is too late for some features, such as indicating
  * support post thumbnails.
  */
-function artunlimited_setup() {
+function mundialfutebolderua_setup() {
 	/**
 	 * Make theme available for translation
 	 * Translations can be filed in the /languages/ directory
-	 * If you're building a theme based on artunlimited, use a find and replace
-	 * to change 'artunlimited' to the name of your theme in all the template files
+	 * If you're building a theme based on mundialfutebolderua, use a find and replace
+	 * to change 'mundialfutebolderua' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'artunlimited', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'mundialfutebolderua', get_template_directory() . '/languages' );
 	
 	/* Enable support for Post Thumbnails on posts and pages
 	 *
@@ -47,16 +47,15 @@ function artunlimited_setup() {
 
 	register_nav_menus( array(
 
-		'primary' => __( 'Primary Menu', 'artunlimited' ),
+		'primary' => __( 'Primary Menu', 'mundialfutebolderua' ),
 
 	) );
 
 }
 
-endif; // artunlimited_setup
+endif; // mundialfutebolderua_setup
 
-add_action( 'after_setup_theme', 'artunlimited_setup' );
-
+add_action( 'after_setup_theme', 'mundialfutebolderua_setup' );
 
 
 /**
@@ -72,7 +71,7 @@ add_action( 'after_setup_theme', 'artunlimited_setup' );
  * Hooks into the after_setup_theme action.
  */
 
-function artunlimited_register_custom_background() {
+function mundialfutebolderua_register_custom_background() {
 
 	$args = array(
 
@@ -81,7 +80,7 @@ function artunlimited_register_custom_background() {
 
 	);
 
-	$args = apply_filters( 'artunlimited_custom_background_args', $args );
+	$args = apply_filters( 'mundialfutebolderua_custom_background_args', $args );
 
 	if ( function_exists( 'wp_get_theme' ) ) {
 
@@ -101,16 +100,16 @@ function artunlimited_register_custom_background() {
 
 }
 
-add_action( 'after_setup_theme', 'artunlimited_register_custom_background' );
+add_action( 'after_setup_theme', 'mundialfutebolderua_register_custom_background' );
 
 /**
  * Register widgetized area and update sidebar with default widgets
  */
 
-function artunlimited_widgets_init() {
+function mundialfutebolderua_widgets_init() {
 
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'artunlimited' ),
+		'name'          => __( 'Sidebar', 'mundialfutebolderua' ),
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -119,7 +118,7 @@ function artunlimited_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Widget na Home', 'artunlimited' ),
+		'name'          => __( 'Widget na Home', 'mundialfutebolderua' ),
 		'id'            => 'home',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -129,18 +128,18 @@ function artunlimited_widgets_init() {
 
 
 }
-add_action( 'widgets_init', 'artunlimited_widgets_init' );
+add_action( 'widgets_init', 'mundialfutebolderua_widgets_init' );
 
 /**
  * Enqueue scripts and styles
  */
-function artunlimited_scripts() {
-	wp_enqueue_style( 'artunlimited-style', get_stylesheet_uri() );
+function mundialfutebolderua_scripts() {
+	wp_enqueue_style( 'mundialfutebolderua-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'twentyeleven-style', get_template_directory_uri() . '/twentyeleven-style.css' );
 	wp_enqueue_style( 'jquery.jscrollpane', get_template_directory_uri() . '/js/scroll/script/jquery.jscrollpane.css' );
 	wp_enqueue_script( 'jquery' );
-	// wp_enqueue_script( 'artunlimited-navigation', get_template_directory_uri() . '/js/navigation.js', array(), null, true );
-	wp_enqueue_script( 'artunlimited-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), null, true );
+	// wp_enqueue_script( 'mundialfutebolderua-navigation', get_template_directory_uri() . '/js/navigation.js', array(), null, true );
+	wp_enqueue_script( 'mundialfutebolderua-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), null, true );
     wp_enqueue_script( 'caroufredsel', get_template_directory_uri() . '/js/jquery.carouFredSel-6.2.1-packed.js', array('jquery') );
     wp_enqueue_script( 'tabslideout', get_template_directory_uri() . '/js/jquery.tabSlideOut.v1.3.js', array('jquery') );
     wp_enqueue_script( 'caroufredsel_pre', get_template_directory_uri() . '/js/caroufredsel_pre.js', array('caroufredsel') );
@@ -161,11 +160,11 @@ function artunlimited_scripts() {
 	}
 
 	if ( is_singular() && wp_attachment_is_image() ) {
-		wp_enqueue_script( 'artunlimited-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
+		wp_enqueue_script( 'mundialfutebolderua-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
 
 }
-add_action( 'wp_enqueue_scripts', 'artunlimited_scripts' );
+add_action( 'wp_enqueue_scripts', 'mundialfutebolderua_scripts' );
 /**
  * Custom template tags for this theme.
  */
@@ -184,15 +183,13 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 /**
- * Load Metabox.
- */
-require get_template_directory() . '/inc/metaboxes.php';
-require get_template_directory() . '/inc/metaboxes-pais.php';
-/**
  * Load CPT Paises.
  */
 require get_template_directory() . '/custom-paises.php';
-
+/**
+ * Load Metabox.
+ */
+require get_template_directory() . '/inc/metaboxes-pais.php';
 
 function id_por_slug( $slug ) {
 

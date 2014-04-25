@@ -9,7 +9,7 @@ foreach ($categories as $category_list ) {
        $wp_cats[$category_list->cat_ID] = $category_list->cat_name;
 }
 
-array_unshift($wp_cats, "Choose a category"); 
+array_unshift($wp_cats, "Escolha uma Categoria"); 
 
 $options = array (
  
@@ -27,9 +27,58 @@ array( "name" => "Facebook",
 	"type" => "text",
 	"std" => ""),
 	
-array( "name" => "Linkedin",
-	"desc" => "Adicione a URL do Linkedin",
-	"id" => $shortname."_linkedin",
+array( "name" => "YouTube",
+	"desc" => "Adicione a URL do YouTube",
+	"id" => $shortname."_youtube",
+	"type" => "text",
+	"std" => ""),
+
+array( "name" => "Instagram",
+	"desc" => "Adicione a URL do Instagram",
+	"id" => $shortname."_instagram",
+	"type" => "text",
+	"std" => ""),
+	
+array( "type" => "close"),
+
+ //* Contatos */
+array( "name" => "Contatos",
+	"type" => "section"),
+array( "type" => "open"),
+ 
+array( "name" => "Endere&ccedil;o",
+	"desc" => "Adicione o endere&ccedil;o",
+	"id" => $shortname."_endereco",
+	"type" => "text",
+	"std" => ""),
+	
+array( "name" => "Bairro",
+	"desc" => "Adicione o bairro",
+	"id" => $shortname."_bairro",
+	"type" => "text",
+	"std" => ""),
+
+array( "name" => "CEP",
+	"desc" => "Adicione o CEP",
+	"id" => $shortname."_cep",
+	"type" => "text",
+	"std" => ""),
+
+array( "name" => "Cidade | UF | Pa&iacute;s",
+	"desc" => "Adicione a cidade, UF e pa&iacute;s",
+	"id" => $shortname."_cidade_uf_pais",
+	"type" => "text",
+	"std" => ""),
+
+array( "name" => "Telefone",
+	"desc" => "Adicione o telefone",
+	"id" => $shortname."_telefone_a",
+	"type" => "text",
+	"std" => ""),
+
+array( "name" => "Telefone",
+	"desc" => "Adicione um segundo telefone, se houver",
+	"id" => $shortname."_telefone_b",
 	"type" => "text",
 	"std" => ""),
 	

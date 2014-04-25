@@ -31,6 +31,7 @@ function create_post_type_paises() {
     register_post_type( 'paises', array(
 		'labels' => $labels,
 	    'public' => true,
+		'menu_icon' => 'dashicons-location',
 	    'publicly_queryable' => true,
 	    'show_ui' => true,
 	    'show_in_menu' => true,

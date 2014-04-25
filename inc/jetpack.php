@@ -3,17 +3,17 @@
  * Jetpack Compatibility File
  * See: http://jetpack.me/
  *
- * @package artunlimited
+ * @package mundialfutebolderua-theme
  */
 
 /**
  * Add theme support for Infinite Scroll.
  * See: http://jetpack.me/support/infinite-scroll/
  */
-function artunlimited_jetpack_setup() {
+function mundialfutebolderua_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'content',
 		'footer'    => 'page',
 	) );
 }
-add_action( 'after_setup_theme', 'artunlimited_jetpack_setup' );
+add_action( 'after_setup_theme', 'mundialfutebolderua_jetpack_setup' );

@@ -4,22 +4,22 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package artunlimited
+ * @package mundialfutebolderua
  */
 
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  */
-function artunlimited_page_menu_args( $args ) {
+function mundialfutebolderua_page_menu_args( $args ) {
 	$args['show_home'] = true;
 	return $args;
 }
-add_filter( 'wp_page_menu_args', 'artunlimited_page_menu_args' );
+add_filter( 'wp_page_menu_args', 'mundialfutebolderua_page_menu_args' );
 
 /**
  * Adds custom classes to the array of body classes.
  */
-function artunlimited_body_classes( $classes ) {
+function mundialfutebolderua_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -27,12 +27,12 @@ function artunlimited_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'artunlimited_body_classes' );
+add_filter( 'body_class', 'mundialfutebolderua_body_classes' );
 
 /**
  * Filter in a link to a content ID attribute for the next/previous image links on image attachment pages
  */
-function artunlimited_enhanced_image_navigation( $url, $id ) {
+function mundialfutebolderua_enhanced_image_navigation( $url, $id ) {
 	if ( ! is_attachment() && ! wp_attachment_is_image( $id ) )
 		return $url;
 
@@ -42,12 +42,12 @@ function artunlimited_enhanced_image_navigation( $url, $id ) {
 
 	return $url;
 }
-add_filter( 'attachment_link', 'artunlimited_enhanced_image_navigation', 10, 2 );
+add_filter( 'attachment_link', 'mundialfutebolderua_enhanced_image_navigation', 10, 2 );
 
 /**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.
  */
-function artunlimited_wp_title( $title, $sep ) {
+function mundialfutebolderua_wp_title( $title, $sep ) {
 	global $page, $paged;
 
 	if ( is_feed() )
@@ -63,8 +63,8 @@ function artunlimited_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 )
-		$title .= " $sep " . sprintf( __( 'Page %s', 'artunlimited' ), max( $paged, $page ) );
+		$title .= " $sep " . sprintf( __( 'Page %s', 'mundialfutebolderua' ), max( $paged, $page ) );
 
 	return $title;
 }
-add_filter( 'wp_title', 'artunlimited_wp_title', 10, 2 );
+add_filter( 'wp_title', 'mundialfutebolderua_wp_title', 10, 2 );

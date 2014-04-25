@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Brasa
 Author URI: http://brasa.art.br/
 Description: Tema original desenvolvido pela Brasa para o Mundial Futebol d Rua.
-Version: 0.2
+Version: 0.3
 License: GNU General Public License
 License URI: license.txt
 Tags:
@@ -1734,9 +1734,10 @@ height: 70px;
 
 .imagens-cliente {
 	float: left;
-	margin: 0 10px 10px 0;
-	overflow: hidden;
-	width: 110px;
+    height: 110px;
+    margin: 0 10px 10px 0;
+    overflow: hidden;
+    width: 110px;
 }
 
 /* Notícias

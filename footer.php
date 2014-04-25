@@ -9,12 +9,11 @@
     <div class="footer">
 		<?php wp_footer(); ?>
 		<div class="infos-rodape">
-			<?php $contatos = get_page_by_title( 'Contato' ); ?>
-			<?php echo get_post_meta($contatos->ID,'meta_endereco',true); ?>,
-            <?php echo get_post_meta($contatos->ID,'meta_bairro',true); ?> - 
-            <?php echo get_post_meta($contatos->ID,'meta_cidade_uf_pais',true); ?><br />
-            Tel. <?php echo get_post_meta($contatos->ID,'meta_telefone_a',true); ?>&nbsp;&nbsp;&nbsp; 
-            <?php echo get_post_meta($contatos->ID,'meta_telefone_b',true); ?>
+			<?php echo get_option( 'mo_endereco',true ); ?>,
+			<?php echo get_option( 'mo_bairro',true ); ?> - 
+            <?php echo get_option( 'mo_cidade_uf_pais',true ); ?><br />
+            Tel. <?php echo get_option( 'mo_telefone_a',true ); ?>&nbsp;&nbsp;&nbsp; 
+            <?php echo get_option( 'mo_telefone_b',true ); ?>
 		</div><!-- .infos-rodape  -->
             
 		<div id="redes">
@@ -22,9 +21,13 @@
             	<a class="a-redes" href="<?php echo get_option( 'mo_facebook' ); ?>"></a>
             </div><!-- #facebook -->
             
-            <div id="twitter">
-            	<a class="a-redes" href="<?php echo get_option( 'mo_linkedin' ); ?>"></a>
-		    </div><!-- #linkedin -->
+            <div id="youtube">
+            	<a class="a-redes" href="<?php echo get_option( 'mo_youtube' ); ?>"></a>
+		    </div><!-- #youtube -->
+
+ 			<div id="instagram">
+            	<a class="a-redes" href="<?php echo get_option( 'mo_instagram' ); ?>"></a>
+		    </div><!-- #instagram -->
         </div><!-- #redes -->
     </div><!-- .footer -->
     

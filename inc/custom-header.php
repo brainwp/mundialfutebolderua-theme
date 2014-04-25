@@ -13,7 +13,7 @@
 	<?php } // if ( ! empty( $header_image ) ) ?>
 
  *
- * @package artunlimited
+ * @package mundialfutebolderua
  */
 
 /**
@@ -26,25 +26,25 @@
  *
  * @todo Rework this function to remove WordPress 3.4 support when WordPress 3.6 is released.
  *
- * @uses artunlimited_header_style()
- * @uses artunlimited_admin_header_style()
- * @uses artunlimited_admin_header_image()
+ * @uses mundialfutebolderua_header_style()
+ * @uses mundialfutebolderua_admin_header_style()
+ * @uses mundialfutebolderua_admin_header_image()
  *
- * @package artunlimited
+ * @package mundialfutebolderua
  */
-function artunlimited_custom_header_setup() {
+function mundialfutebolderua_custom_header_setup() {
 	$args = array(
 		'default-image'          => '',
 		'default-text-color'     => '000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'artunlimited_header_style',
-		'admin-head-callback'    => 'artunlimited_admin_header_style',
-		'admin-preview-callback' => 'artunlimited_admin_header_image',
+		'wp-head-callback'       => 'mundialfutebolderua_header_style',
+		'admin-head-callback'    => 'mundialfutebolderua_admin_header_style',
+		'admin-preview-callback' => 'mundialfutebolderua_admin_header_image',
 	);
 
-	$args = apply_filters( 'artunlimited_custom_header_args', $args );
+	$args = apply_filters( 'mundialfutebolderua_custom_header_args', $args );
 
 	if ( function_exists( 'wp_get_theme' ) ) {
 		add_theme_support( 'custom-header', $args );
@@ -57,7 +57,7 @@ function artunlimited_custom_header_setup() {
 		add_custom_image_header( $args['wp-head-callback'], $args['admin-head-callback'], $args['admin-preview-callback'] );
 	}
 }
-add_action( 'after_setup_theme', 'artunlimited_custom_header_setup' );
+add_action( 'after_setup_theme', 'mundialfutebolderua_custom_header_setup' );
 
 /**
  * Shiv for get_custom_header().
@@ -84,13 +84,13 @@ if ( ! function_exists( 'get_custom_header' ) ) {
 	}
 }
 
-if ( ! function_exists( 'artunlimited_header_style' ) ) :
+if ( ! function_exists( 'mundialfutebolderua_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
  * @see artunlimited_custom_header_setup().
  */
-function artunlimited_header_style() {
+function mundialfutebolderua_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -123,13 +123,13 @@ function artunlimited_header_style() {
 	</style>
 	<?php
 }
-endif; // artunlimited_header_style
+endif; // mundialfutebolderua_header_style
 
-if ( ! function_exists( 'artunlimited_admin_header_style' ) ) :
+if ( ! function_exists( 'mundialfutebolderua_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see artunlimited_custom_header_setup().
+ * @see mundialfutebolderua_custom_header_setup().
  */
 function artunlimited_admin_header_style() {
 ?>
@@ -153,13 +153,13 @@ function artunlimited_admin_header_style() {
 }
 endif; // artunlimited_admin_header_style
 
-if ( ! function_exists( 'artunlimited_admin_header_image' ) ) :
+if ( ! function_exists( 'mundialfutebolderua_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see artunlimited_custom_header_setup().
+ * @see mundialfutebolderua_custom_header_setup().
  */
-function artunlimited_admin_header_image() {
+function mundialfutebolderua_admin_header_image() {
 	$style        = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 	$header_image = get_header_image();
 ?>
@@ -172,4 +172,4 @@ function artunlimited_admin_header_image() {
 	</div>
 <?php
 }
-endif; // artunlimited_admin_header_image
+endif; // mundialfutebolderua_admin_header_image
