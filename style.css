@@ -909,7 +909,7 @@ nav select {
 	margin: 35px 5px 0 0;
 }
 
-#facebook, #twitter {
+#facebook, #youtube, #instagram {
 	width: 34px;
 	height: 34px;
 	-webkit-border-radius: 3px;
@@ -920,31 +920,37 @@ nav select {
 }
 
 #facebook {
-	background: url("images/img-redes-sociais.png") no-repeat scroll -6px -3px rgba(255, 255, 255, 0);
+	background: url("images/img-redes-sociais.png") no-repeat scroll 3px 0px #3B5998;
 }
 
 #facebook:hover {
-background-position:-6px -38px ;
+	background-color: #5071B7;
 
 }
 
-#twitter {
-	background: url(images/img-redes-sociais.png) -47px -3px no-repeat;
+#youtube {
+	background: url("images/img-redes-sociais.png") no-repeat scroll -38px -1px #CC181E;
 	margin-left: 5px;
 }
 
-#twitter:hover {
-	background-position:  -47px -38px;
+#youtube:hover {
+	background-color: #E02927;
+}
+
+#instagram {
+	background: url("images/img-redes-sociais.png") -85px -2px no-repeat #55ACEE;
+	margin-left: 5px;
+}
+
+#instagram:hover {
+	background-color: #3E96D9;
 }
 
 .a-redes {
-
 	width: 34px;
 	height: 34px;
 	position: absolute;
-
 }
-
 
 
 #linguas {
