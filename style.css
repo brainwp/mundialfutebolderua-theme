@@ -803,6 +803,7 @@ a:active {
 	font-family: 'Pathway Gothic One', Arial, sans-serif;
 	font-size: 1em;
 	margin: 40px 5px 0 20px;
+	letter-spacing: -1px;
 }
 .navigation-main-interno {
 	display: block;
@@ -1187,8 +1188,9 @@ nav select {
 	max-width: 1000px;
 	margin-top: 110px;
 	font-family: 'Tauri', serif;
+	display:block;	
+	min-height: 450px;
 	max-height: 500px;
-
 }
 
 div.slider-nav span.left {
@@ -1673,12 +1675,6 @@ height: 70px;
     width: 100%;
 }
 
-.titulo-header-noticias {
-    float: left;
-    margin: 40px 0 0 0;
-    width: auto;
-	font-family: 'Tauri', Arial, sans-serif;
-}
 
 .seta-premios {
 	width: 56px;
@@ -1752,7 +1748,7 @@ height: 70px;
 .todas-noticias {
     float: left;
     height: auto;
-    margin: 15px 0 50px 80px;
+    margin: 15px 0 50px 40px;
     overflow: hidden;
     width: auto;
 }
@@ -1767,31 +1763,45 @@ height: 70px;
 }
 .titulo-header span a:hover {
 	color: #FFF;
-	background: #4D4899;
+	background: #C63F28;
 	padding: 3px 5px;
 }
-
-.titulo-header-noticias span a {
-   display: block;
+.titulo-header-noticias {
     float: left;
+    margin: 40px 0 0 0;
+    width: auto;
+	font-family: 'Tauri', Arial, sans-serif;
+}
+.titulo-header-noticias h2{
+  	float: left;
+    font-size: 2.2em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    width: auto;
+}
+
+span.noticias a {
     font-weight: bold;
     margin: 12px 0 0 12px;
     padding: 3px 5px;
     text-decoration: none;
     text-transform: uppercase;
+	float: left;
 }
-.titulo-header-noticias span a:hover {
+span.noticias a:hover {
 	color: #FFF;
-	background: #4D4899;
+	background: #C63F28;
 	padding: 3px 5px;
 }
 
 .cada-noticia{
 	float: left;
-	max-width: 310px;
 	min-width: 200px;
 	background: #efefef;
-	margin: 0 50px 25px 0;
+	margin: 0 30px 25px 0;
+    max-width: 285px;
 }
 .cada-noticia a{
 text-decoration: none;
@@ -1855,7 +1865,7 @@ text-decoration: none;
     float: right;
     font-weight: bold;
     overflow: hidden;
-    padding: 0px 6px;
+ 	padding: 4px 6px 1px;
 	margin-top: 5px;
 }
 .mais-cada-noticia a{
@@ -2312,7 +2322,7 @@ body.single-projects #carousel_wrap { margin: 15px 0 30px }
 }
 
 .separated-list li a:hover {
-	color: #4D4899;
+	color: #C63F28;
 }
 
 .search-categorias-portfolio {

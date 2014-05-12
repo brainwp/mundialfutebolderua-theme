@@ -11,6 +11,30 @@ get_header( 'home' ); ?>
 	<?php echo do_shortcode( '[orbit-slider]' );?>
 
 </div><!-- #slider -->
+
+<!-- Video em Destaque -->
+
+	<div class="sub-content" id="nav-video">
+
+ <?php
+    $destaque = "";
+    $destaque = get_page_by_title( 'Video Home' ); ?>
+    
+	<div class="center">
+    
+		<div class="header-sub-content">
+		</div>
+        <?php $content_destaque = apply_filters('the_content', $destaque->post_content); ?>
+        <div class="content-nomeio">
+            <?php echo $content_destaque; ?>
+        </div><!-- .content-nomeio -->
+    </div><!-- .center -->
+<div class="footer-sub-content">
+</div>
+					
+    </div>
+
+<!-- Final Video em Destaque -->
 	
 <!-- Sobre -->
     <div class="sub-content" id="nav-quem-somos">
@@ -101,55 +125,54 @@ get_header( 'home' ); ?>
 </div><!-- .sub-content -->
 <!-- Final Países Participantes -->
     
-<!-- Notícias 
+<!-- Notícias -->
 
 	<div class="sub-content" id="nav-noticias">
 
 		<div class="center">
 			
 		<div class="header-sub-content">
-	<div class="seta-header"></div>
-    <div class="titulo-header-noticias"> <h2>Noticias</h2><span><a href="<?php // echo home_url('/noticias'); ?>">Ver todas</a></span></div>
+    <div class="titulo-header-noticias"> <h2>Not&iacute;cias</h2><span class="noticias"><a href="<?php echo home_url('/noticias'); ?>">Ver todas</a></span></div>
 		</div>
 
 					<div class="todas-noticias">
-					<?php // $custom_query = new WP_Query('posts_per_page=2');
-                    // while($custom_query->have_posts()) : $custom_query->the_post(); ?>
+					<?php $custom_query = new WP_Query('posts_per_page=3');
+                     while($custom_query->have_posts()) : $custom_query->the_post(); ?>
                     
                     <div class="cada-noticia">
-						<a href="<?php // the_permalink(); ?>">						
+						<a href="<?php  the_permalink(); ?>">						
 						<div class="data-cada-noticia">
                         <?php
-						// $mes = get_the_date( 'M' );
-						// $dia = get_the_date( 'd' );
+						$mes = get_the_date( 'M' );
+						$dia = get_the_date( 'd' );
 						?>
-						<p class="p-mes"><?php // echo $mes; ?></p>
-                        <p class="p-dia"><?php // echo $dia; ?></p>
+						<p class="p-mes"><?php echo $mes; ?></p>
+                        <p class="p-dia"><?php echo $dia; ?></p>
             			</div>
 						</a>
                         
                         <div class="thumb-cada-noticia">
-                        <a href="<?php // the_permalink(); ?>"><?php the_post_thumbnail( 'thumb-noticias' ); ?></a>
+                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'thumb-noticias' ); ?></a>
             			</div>
                         
-						<a class="titulo-cada-noticia" href="<?php // the_permalink(); ?>"><?php // the_title(); ?></a>
+						<a class="titulo-cada-noticia" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 						<div class="clear"></div>                        
 						<div class="content-cada-noticia">
-						<?php // limit_words(get_the_excerpt(), '20'); ?>...
+						<?php limit_words(get_the_excerpt(), '20'); ?>...
 			            </div>
                         
                         <div class="footer-cada-noticia">
-                        <div class="categorias-cada-noticia"><?php // the_category(' | '); ?></div>
-						<div class="mais-cada-noticia"><a href="<?php // the_permalink(); ?>">+</a></div>
+                        <div class="categorias-cada-noticia"><?php the_category(' | '); ?></div>
+						<div class="mais-cada-noticia"><a href="<?php the_permalink(); ?>">+</a></div>
 			            </div>
                     </div>
-					<?php // endwhile; ?>
-                    <?php // wp_reset_postdata(); // reset the query ?>  
+					<?php endwhile; ?>
+                    <?php wp_reset_postdata(); // reset the query ?>  
 					</div>
 			</div>
 					
     </div>
--->
+
 <!-- Final Notícias -->
 
    	<!-- Contatos -->

@@ -189,7 +189,7 @@ require get_template_directory() . '/custom-paises.php';
 /**
  * Load Metabox.
  */
-require get_template_directory() . '/inc/metaboxes-pais.php';
+//require get_template_directory() . '/inc/metaboxes-pais.php';
 
 function id_por_slug( $slug ) {
 
