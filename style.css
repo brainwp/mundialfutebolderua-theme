@@ -159,7 +159,7 @@ body.no-scroll {
 }
 
 .comments-title {
-    color: #0273B1;
+    color: #CE6333;
     line-height: 2.6em;
     padding: 0 0 0.6em;
     text-transform: uppercase;
@@ -1066,7 +1066,7 @@ nav select {
 .entry-header-noticias {
     float: left;
     margin: 5px 0 20px 5px;
-    width: 87%;
+    width: 100%;
 }
 
 .entry-header-noticias h1 {
@@ -1166,13 +1166,13 @@ nav select {
 }
 
 .titulo-noticias a {
-	color: #0273b1;
+	color: #CE6333;
 	text-decoration: none;
 	text-transform: uppercase;
 }
 
 .titulo-noticias a:hover {
-	color: #0d519b;
+	color: #C13724;
 }
 
 .full-thumb {
@@ -1901,7 +1901,7 @@ text-decoration: none;
 
 	font-family: 'Tauri', Arial, sans-serif;
 	font-weight: 200;
-	color: #006bb5;
+	color: #BE3724;
 	text-transform: uppercase;
 }
 
@@ -2696,7 +2696,7 @@ object {
 
 
 #respond input#submit {
-    background: none repeat scroll 0 0 #4D449B !important;
+    background: none repeat scroll 0 0 #C63F28 !important;
 }
 
 /* =Widgets

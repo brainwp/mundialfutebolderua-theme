@@ -27,8 +27,6 @@ get_header( 'interno' ); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					
-                    <div class="seta-noticias"></div>
-					
                     <header class="entry-header-noticias">
 
 						<h1 class="titulo-noticias"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
