@@ -28,6 +28,9 @@ get_header( 'home' ); ?>
         <div class="content-nomeio">
             <?php echo $content_destaque; ?>
         </div><!-- .content-nomeio -->
+
+			<a class="open-popup-link" href="#download-popup">Clique para Popup</a>		
+	
     </div><!-- .center -->
 <div class="footer-sub-content">
 </div>
@@ -339,5 +342,10 @@ get_header( 'home' ); ?>
 </div><!-- .sub-content -->
 <!-- Final patrocinadores e Parceiros -->
     
+<div id="download-popup" class="white-popup mfp-hide">
+	<?php $page = get_post( $id = 1696 );
+		echo apply_filters( 'the_content', $page->post_content);
+	?>
+</div>
 
 <?php get_footer(); ?>

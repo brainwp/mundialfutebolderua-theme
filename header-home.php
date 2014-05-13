@@ -22,6 +22,17 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link href='http://fonts.googleapis.com/css?family=Tauri|Pathway+Gothic+One' rel='stylesheet' type='text/css'>
 <!--[if lt IE 9 ]><script src="/lib/respond.min.js"></script><![endif]-->
+
+<!-- Chamar e rodar o magnificPopup -->
+<script type="text/javascript">
+	jQuery(function() {
+		   jQuery('.open-popup-link').magnificPopup({
+		     type:'inline',
+		     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+		   });
+	});
+</script>
+
 <?php wp_head(); ?>
 
 </head>

@@ -162,9 +162,13 @@ function mundialfutebolderua_scripts() {
 	if ( is_singular() && wp_attachment_is_image() ) {
 		wp_enqueue_script( 'mundialfutebolderua-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
-
 }
 add_action( 'wp_enqueue_scripts', 'mundialfutebolderua_scripts' );
+
+// Chamando o LigthBox Magnific!
+	wp_enqueue_script( 'jquery.magnific-popup', get_stylesheet_directory_uri() . '/js/jquery.magnific-popup.js', array('jquery'), '', true );
+	wp_enqueue_style( 'magnific-popup', get_stylesheet_directory_uri() . '/js/magnific-popup.css' );
+
 /**
  * Custom template tags for this theme.
  */
