@@ -1238,7 +1238,7 @@ div.slider-nav span.left {
     position: absolute;
     width: auto;
 	min-width: 237px;
-    z-index: 999;
+    z-index: 99;
 }
 
 #slider-content-logo img {

@@ -45,12 +45,6 @@ get_header( 'home' ); ?>
             <?php echo $content_quem_somos; ?>
         </div><!-- .content-metade -->
     </div><!-- .direita -->
-	<div class="clear"></div>   
-	<!-- Video em Destaque -->
-		<p style="text-align: center;">
-				<a class="open-popup-link zilla-button medium red round" href="#download-popup">Veja o V&iacute;deo</a>		
-		</p>
-	<!-- Final Video em Destaque -->
 
 <div class="footer-sub-content">
 </div>
