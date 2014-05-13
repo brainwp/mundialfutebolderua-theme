@@ -11,33 +11,6 @@ get_header( 'home' ); ?>
 	<?php echo do_shortcode( '[orbit-slider]' );?>
 
 </div><!-- #slider -->
-
-<!-- Video em Destaque -->
-
-	<div class="sub-content" id="nav-video">
-
- <?php
-    $destaque = "";
-    $destaque = get_page_by_title( 'Video Home' ); ?>
-    
-	<div class="center">
-    
-		<div class="header-sub-content">
-		</div>
-        <?php $content_destaque = apply_filters('the_content', $destaque->post_content); ?>
-        <div class="content-nomeio">
-            <?php echo $content_destaque; ?>
-        </div><!-- .content-nomeio -->
-
-			<a class="open-popup-link" href="#download-popup">Clique para Popup</a>		
-	
-    </div><!-- .center -->
-<div class="footer-sub-content">
-</div>
-					
-    </div>
-
-<!-- Final Video em Destaque -->
 	
 <!-- Sobre -->
     <div class="sub-content" id="nav-quem-somos">
@@ -72,11 +45,17 @@ get_header( 'home' ); ?>
             <?php echo $content_quem_somos; ?>
         </div><!-- .content-metade -->
     </div><!-- .direita -->
+	<div class="clear"></div>   
+	<!-- Video em Destaque -->
+		<p style="text-align: center;">
+				<a class="open-popup-link zilla-button medium red round" href="#download-popup">Veja o V&iacute;deo</a>		
+		</p>
+	<!-- Final Video em Destaque -->
+
 <div class="footer-sub-content">
 </div>
     </div><!-- .sub-content -->
 <!-- Final Sobre -->
-
 <!-- Metodologia -->
     <div class="sub-content" id="nav-metodologia">
 

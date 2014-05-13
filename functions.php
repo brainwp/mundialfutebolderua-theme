@@ -138,6 +138,9 @@ function mundialfutebolderua_scripts() {
 	wp_enqueue_style( 'twentyeleven-style', get_template_directory_uri() . '/twentyeleven-style.css' );
 	wp_enqueue_style( 'jquery.jscrollpane', get_template_directory_uri() . '/js/scroll/script/jquery.jscrollpane.css' );
 	wp_enqueue_script( 'jquery' );
+	// Chamando o LigthBox Magnific!
+	wp_enqueue_script( 'jquery.magnific-popup', get_stylesheet_directory_uri() . '/js/jquery.magnific-popup.js', array('jquery'), '', true );
+	wp_enqueue_style( 'magnific-popup', get_stylesheet_directory_uri() . '/js/magnific-popup.css' );
 	// wp_enqueue_script( 'mundialfutebolderua-navigation', get_template_directory_uri() . '/js/navigation.js', array(), null, true );
 	wp_enqueue_script( 'mundialfutebolderua-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), null, true );
     wp_enqueue_script( 'caroufredsel', get_template_directory_uri() . '/js/jquery.carouFredSel-6.2.1-packed.js', array('jquery') );
@@ -164,10 +167,6 @@ function mundialfutebolderua_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'mundialfutebolderua_scripts' );
-
-// Chamando o LigthBox Magnific!
-	wp_enqueue_script( 'jquery.magnific-popup', get_stylesheet_directory_uri() . '/js/jquery.magnific-popup.js', array('jquery'), '', true );
-	wp_enqueue_style( 'magnific-popup', get_stylesheet_directory_uri() . '/js/magnific-popup.css' );
 
 /**
  * Custom template tags for this theme.

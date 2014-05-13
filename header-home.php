@@ -23,6 +23,8 @@
 <link href='http://fonts.googleapis.com/css?family=Tauri|Pathway+Gothic+One' rel='stylesheet' type='text/css'>
 <!--[if lt IE 9 ]><script src="/lib/respond.min.js"></script><![endif]-->
 
+<?php wp_head(); ?>
+
 <!-- Chamar e rodar o magnificPopup -->
 <script type="text/javascript">
 	jQuery(function() {
@@ -31,9 +33,10 @@
 		     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
 		   });
 	});
+		   jQuery("document").ready(function() {
+		   jQuery('.open-popup-link').trigger('click');
+			});
 </script>
-
-<?php wp_head(); ?>
 
 </head>
 

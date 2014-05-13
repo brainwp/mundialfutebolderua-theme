@@ -748,7 +748,7 @@ a:active {
     overflow: hidden;
     position: fixed;
     width: 100%;
-    z-index: 99999;
+    z-index: 999;
 	-webkit-box-shadow: 0 2px 6px 0 rgba(48,48,48,0.4);
 	-moz-box-shadow: 0 2px 6px 0 rgba(48,48,48,0.4);
 	box-shadow: 0 2px 6px 0 rgba(48,48,48,0.4);
@@ -1059,7 +1059,7 @@ nav select {
 ----------------------------------------------- */
 
 .white-popup {
-    background: none repeat scroll 0 0 #0C586E;
+    background: none repeat scroll 0 0 #D16433;
     margin: 20px auto;
     max-width: 720px;
     padding: 30px;
@@ -1238,7 +1238,7 @@ div.slider-nav span.left {
     position: absolute;
     width: auto;
 	min-width: 237px;
-    z-index: 9999;
+    z-index: 999;
 }
 
 #slider-content-logo img {
