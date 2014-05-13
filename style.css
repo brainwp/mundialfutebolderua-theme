@@ -640,7 +640,7 @@ a {
 }
 
 a:visited {
-	color: #3f3c80;
+	color: #BB3724;
 }
 
 a:hover,
@@ -649,7 +649,7 @@ a:focus,
 
 a:active {
 
-	color: midnightblue;
+	color: #CA6233;
 
 }
 
@@ -1071,6 +1071,13 @@ nav select {
 
 .entry-header-noticias h1 {
 	margin: 18px 0 0 0;
+}
+
+.large-thumb {
+	max-height: 300px;
+	display: block;
+	overflow: hidden;
+	clear: both;
 }
 
 .entry-header-page {

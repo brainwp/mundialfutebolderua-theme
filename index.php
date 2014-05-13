@@ -46,11 +46,16 @@ get_header( 'interno' ); ?>
 					<div class="clear"></div>
 						
 
-					<!-- <div class="full-thumb">
-
-						<?php // the_post_thumbnail ( 'full' ); ?>
-
-					</div> -->
+					<div class="large-thumb">
+							<a href="<?php the_permalink(); ?>">
+								<?php
+								if ( has_post_thumbnail() )
+									the_post_thumbnail('large');
+								else
+									echo '<img src="' . get_template_directory_uri() . '/images/default-post-image.jpg' . '" alt="" />';
+								?>
+							</a>
+					</div>
 
 					<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 
