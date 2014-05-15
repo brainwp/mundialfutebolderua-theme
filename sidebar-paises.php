@@ -8,7 +8,7 @@
 	
 	<div class="outros-projetos">
 		
-			<h2 class="fonte-roxa">Outros paises:</h2>
+			<h2 class="fonte-laranja">Outros Pa&iacute;ses:</h2>
 			<div class="setas-outros">
 			<a id="prev3" href="#"><div class="seta-outros-anteriores">
 			</div></a>

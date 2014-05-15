@@ -124,8 +124,13 @@ body {
 	background: url("images/bg-site-bege.jpg") repeat scroll center top rgba(0, 0, 0, 0);
 }
 .fonte-roxa {
-	color: #4d449b;	
+	color: #C63F28;	
 }
+
+.fonte-laranja {
+	color: #C63F28;	
+}
+
 
 body.no-scroll {
     overflow: hidden;
@@ -802,7 +807,7 @@ a:active {
 	width: auto;
 	font-family: 'Pathway Gothic One', Arial, sans-serif;
 	font-size: 1em;
-	margin: 40px 5px 0 20px;
+	margin: 40px 5px 0 10px;
 	letter-spacing: -1px;
 }
 .navigation-main-interno {
@@ -897,7 +902,7 @@ nav select {
     font-family: 'Pathway Gothic One',Arial,sans-serif;
     font-size: 1.6em;
     line-height: 1.4em;
-    margin: 20px 10px;
+    margin: 20px 10px 10px 0;
     overflow: hidden;
     text-align: center;
     width: 100px;
@@ -958,7 +963,7 @@ nav select {
 	width: auto;
 	height: 35px;
 	float: right;
-	margin: 35px 30px 20px 20px;
+	margin: 35px 30px 20px 15px;
 }
 
 .a-linguas {
@@ -1210,20 +1215,20 @@ nav select {
 }
 
 div.slider-nav span.left {
-	background: url("images/artunlimited/setas.png") no-repeat scroll -5px center transparent !important;
+	background: url("images/setas.png") no-repeat scroll -5px center transparent !important;
 }
 
 div.slider-nav span.right {
-	background: url("images/artunlimited/setas.png") no-repeat scroll -75px center transparent !important;
+	background: url("images/setas.png") no-repeat scroll -65px center transparent !important;
 }
 
 
 div.slider-nav span.left {
-    background: url("images/artunlimited/left-arrow.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("images/setas.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
     left: 0;
 }
 div.slider-nav span.left {
-    background: url("images/artunlimited/setas.png") no-repeat scroll -5px center rgba(0, 0, 0, 0) !important;
+    background: url("images/setas.png") no-repeat scroll -5px center rgba(0, 0, 0, 0) !important;
 }
 
 
@@ -2044,7 +2049,7 @@ text-decoration: none;
 
 .list_carousel a.prev {
 
-    background: url("images/artunlimited/setas.png") no-repeat scroll -5px center transparent;
+    background: url("images/setas.png") no-repeat scroll -5px center transparent;
     display: block;
     min-height: 70px;
 	position: absolute;
@@ -2055,7 +2060,7 @@ text-decoration: none;
 }
 
 .list_carousel a.next {
-    background: url("images/artunlimited/setas.png") no-repeat scroll -75px center transparent;
+    background: url("images/setas.png") no-repeat scroll -75px center transparent;
 	display: block;
 	min-height: 70px;
     position: absolute;
@@ -2090,7 +2095,7 @@ ul#carousel li {
 	display: block;
 	float: left;
 	height: 500px;
-	margin: 0 3px;
+	margin: 0 4px 0 0;
 	max-width: 900px;
 	position: relative;
     text-align: center;
@@ -2139,7 +2144,7 @@ body.single-projects #carousel_wrap { margin: 15px 0 30px }
 					}
 
 #carousel_wrap a.prev {
-    background: url("images/artunlimited/setas.png") no-repeat scroll -5px center transparent;
+    background: url("images/setas.png") no-repeat scroll -5px center transparent;
     display: block;
     min-height: 70px;
 	position: absolute;
@@ -2150,7 +2155,7 @@ body.single-projects #carousel_wrap { margin: 15px 0 30px }
 }
 
 #carousel_wrap a.next {
-    background: url("images/artunlimited/setas.png") no-repeat scroll -75px center transparent;
+    background: url("images/setas.png") no-repeat scroll -65px center transparent;
 	display: block;
 	min-height: 70px;
     position: absolute;
@@ -2439,6 +2444,7 @@ a.titulo-resumo {
     height: auto;
     margin: 110px auto 0;
     max-width: 1000px;
+	width: 100%;
     overflow: hidden;
 }
 
@@ -2518,17 +2524,17 @@ a.titulo-resumo {
 .seta-outros-anteriores {
 	width: 50px;
 	height: 50px;
-	background: url("images/artunlimited/setas-outros.png") no-repeat scroll 5px 4px #b3b3b3;
+	background: url("images/setas-pequenas.png") no-repeat scroll 2px 2px #b3b3b3;
 }
 
 .seta-outros-posteriores {
 	width: 50px;
 	height: 50px;
-	background: url("images/artunlimited/setas-outros.png") no-repeat scroll 5px -37px #B3B3B3;
+	background: url("images/setas-pequenas.png") no-repeat scroll -42px 0 #B3B3B3;
 }
 
 .seta-outros-posteriores:hover, .seta-outros-anteriores:hover {
-	background-color: #4d449b;
+	background-color: #CA6233;
 }
 .outros-slider {
 	float: left;
