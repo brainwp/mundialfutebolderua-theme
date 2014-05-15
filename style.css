@@ -118,7 +118,7 @@ body {
 	font-family: 'Tauri', Arial, sans-serif;
 	font-size: 14px;
 	background-color: #FFFFFF;
-	line-height: 1.5;
+	line-height: 1.8;
 	margin: 0;
 	padding: 0;
 	background: url("images/bg-site-bege.jpg") repeat scroll center top rgba(0, 0, 0, 0);
@@ -165,7 +165,7 @@ body.no-scroll {
 
 .comments-title {
     color: #CE6333;
-    line-height: 2.6em;
+    line-height: 2;
     padding: 0 0 0.6em;
     text-transform: uppercase;
 }
@@ -207,7 +207,7 @@ ol.comment-list {
 .comment-meta {
     color: #666666;
     font-size: 12px;
-    line-height: 2.2em;
+    line-height: 2;
 }
 .comment-list .children li.comment .comment-meta {
     line-height: 1.625em;
@@ -225,7 +225,7 @@ ol.comment-list {
 .comment-meta {
     color: #666666;
     font-size: 12px;
-    line-height: 2.2em;
+    line-height: 2;
 }
 
 .comment-author {
@@ -335,7 +335,7 @@ textarea {
 	color: #404040;
 	font-family: 'Tauri', Arial,sans-serif;
 	font-size: 14px;
-	line-height: 16px;
+	line-height: 1.2;
 }
 .clear {
 	clear: both;
@@ -1079,12 +1079,12 @@ nav select {
 
 .entry-header-noticias {
     float: left;
-    margin: 5px 0 20px 5px;
+    margin: 5px 0 20px 15px;
     width: 100%;
 }
 
 .entry-header-noticias h1 {
-	margin: 18px 0 0 0;
+	margin: 18px 0 15px 0;
 }
 
 .large-thumb {
@@ -1172,7 +1172,7 @@ nav select {
 .entry-meta {	
 	font-family: 'Tauri', Arial, sans-serif;
 	font-weight: 400;
-	font-size: 12px;
+	font-size: 1em;
 	color: #888;
 }
 
@@ -1183,7 +1183,8 @@ nav select {
 .titulo-noticias {
 	font-family: 'Tauri', Arial, sans-serif;
 	font-weight: 200;
-	color: #86755f;
+	color: #C53824;
+	line-height: 1.4;
 }
 
 .titulo-noticias a {
@@ -1374,6 +1375,7 @@ box-shadow: 0 6px 13px 0 rgba(30, 30, 30, 0.6);
    	width: 75%;
 	background: #FFF;
 	padding-top: 2em;
+	line-height: 2;
 }
 
 #secondary {
@@ -1925,13 +1927,12 @@ text-decoration: none;
 	text-transform: uppercase;
 }
 
-
 .widget-title {
-
 	font-family: 'Tauri', Arial, sans-serif;
 	font-weight: 200;
 	color: #BE3724;
 	text-transform: uppercase;
+	font-size: 1.6em;
 }
 
 #sidebar ul{
@@ -2508,13 +2509,13 @@ a.titulo-resumo {
 .esquerda-single-portfolio {
 	float: left;
 	width: 55%;
-	margin: 0 0 0 5%;
+	margin: 0 0 0 40px;
 }
 
 .direita-single-portfolio {
 	float: left;
 	width: 350px;
-	margin: 0;
+	margin: 0 0 0 20px;
 }
 
 
