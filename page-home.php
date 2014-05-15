@@ -316,6 +316,12 @@ get_header( 'home' ); ?>
 <!-- Final patrocinadores e Parceiros -->
     
 <div id="download-popup" class="white-popup mfp-hide">
+
+	<div class="titulo-header-popup">
+	<h2>	<?php $page = get_post( $id = 1696 );
+		echo apply_filters( 'the_title', $page->post_title);?>
+	</h2>
+	</div>
 	<?php $page = get_post( $id = 1696 );
 		echo apply_filters( 'the_content', $page->post_content);
 	?>
