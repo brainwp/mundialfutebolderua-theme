@@ -774,9 +774,9 @@ a:active {
 /* Area 1 Header */
 
 .a-logo {
-	position: absolute;
-	width: 267px;
-	height: 48px;
+	height: 90px;
+    position: absolute;
+    width: 180px;
 }
 #logo {
 	width: 173px;
