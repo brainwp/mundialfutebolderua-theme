@@ -478,7 +478,7 @@ th {
 	font-weight: bold;
 }
 img {
-	width:100%;
+	max-width:100%;
 }
 button,
 input,
@@ -1064,12 +1064,12 @@ nav select {
 ----------------------------------------------- */
 
 .white-popup {
-    background: none repeat scroll 0 0 #D16433;
+	background: none repeat scroll 0 0 #E5833D;
     margin: 20px auto;
-    max-width: 720px;
+    max-width: 560px;
     padding: 30px;
     position: relative;
-    width: auto;
+    width: auto;	
 }
 
 .entry-header {
