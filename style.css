@@ -1815,7 +1815,7 @@ height: 70px;
 
 span.noticias a {
     font-weight: bold;
-    margin: 12px 0 0 12px;
+    margin: 15px 0 0 12px;
     padding: 3px 5px;
     text-decoration: none;
     text-transform: uppercase;
@@ -1824,7 +1824,7 @@ span.noticias a {
 span.noticias a:hover {
 	color: #FFF;
 	background: #C63F28;
-	padding: 3px 5px;
+    padding: 3px 8px;
 }
 
 .cada-noticia{
@@ -2785,7 +2785,7 @@ object {
     margin: 0;
     max-width: 1000px;
     overflow: hidden;
-    padding: 16px 20px;
+    padding: 16px 20px 10px;
     position: relative;
     max-width: 1000px;
 }
@@ -2793,13 +2793,13 @@ object {
    margin: 0;
 }
 .footer #redes, .footer-noticias #redes {
-    margin: 25px 0 0;
+    margin: 20px 0 0;
 }
 .infos-rodape {
     color: #FFF;
     float: left;
     font-weight: 300;
-    margin: 20px 0 0 10px;
+    margin: 10px 0 0 10px;
     width: 84%;
 }
 

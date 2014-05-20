@@ -203,7 +203,7 @@ get_header( 'home' ); ?>
 		$attachments = get_posts( $args );
 		if ( $attachments ) {
 			foreach ( $attachments as $attachment ) {
-			$image_attributes = wp_get_attachment_image_src( $attachment->ID ); // returns an array
+			$image_attributes = wp_get_attachment_image_src( $attachment->ID, 'medium' ); // returns an array
 			echo '<div class="imagens-post">';
 			echo '<img src="'.$image_attributes[0].'">';
 			echo '</div>';
