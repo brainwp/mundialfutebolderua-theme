@@ -14,8 +14,8 @@ get_header( 'interno' ); ?>
 			<article id="post-0" class="post not-found">
             
             	<header class="entry-header-page-404">
-                    <div class="seta-page-404"></div>
-                    <div class="titulo-page-404"><h1><?php _e( 'Erro 404', 'artunlimited' ); ?></h1></div>
+                    <div class="escudo-page-404"></div>
+                    <div class="titulo-page-404"><h1><?php _e( '404', 'mundialfutebolderua' ); ?></h1></div>
                 </header><!-- .entry-header-page-404 -->
 
 				<div class="entry-content">

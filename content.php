@@ -7,7 +7,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
 	<header class="entry-header-page">
-	    <div class="seta-page"></div>
 		<div class="titulo-page"><h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1></div>
 	
 		<?php if ( 'post' == get_post_type() ) : ?>

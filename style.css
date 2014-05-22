@@ -3,7 +3,7 @@ Theme Name: Mundial Futebol de Rua Theme
 Theme URI: http://underscores.me/
 Author: Brasa
 Author URI: http://brasa.art.br/
-Description: Tema original desenvolvido pela Brasa para o Mundial Futebol d Rua.
+Description: Tema original desenvolvido pela Brasa para o Mundial Futebol de Rua.
 Version: 0.3
 License: GNU General Public License
 License URI: license.txt
@@ -1125,12 +1125,12 @@ nav select {
 	background: url("images/artunlimited/img-sprite.png") no-repeat scroll -605px 0 transparent;
 }
 
-.seta-page-404 {
-	width: 56px;
-	margin: 82px 14px 10px 0;
-	float: left;
-	height: 56px;
-	background: url("images/artunlimited/img-sprite.png") no-repeat scroll -605px 0 transparent;
+.escudo-page-404 {
+    background: url("images/logo-slider.png") no-repeat scroll -35px top rgba(0, 0, 0, 0);
+    float: left;
+    height: 210px;
+    margin: 40px 15px 0 0;
+    width: 170px;
 }
 .titulo-page {
 	width: auto;
@@ -1147,10 +1147,11 @@ nav select {
 .titulo-page-404 {
 	width: 70%;
 	float: left;
+	margin: 20px 0 -10px 15px;
 }
 .titulo-page-404 h1 {
 	margin: 18px 0 0 0;
-	color: #4d449b;
+	color: #CA6233;
     text-transform: uppercase;
     font-family: 'Tauri',Arial,sans-serif;
     font-weight: 900;
@@ -1289,6 +1290,10 @@ box-shadow: 0 6px 13px 0 rgba(30, 30, 30, 0.6);
 	width: auto;
 }
 
+#content nav { 
+margin: 0 40px;
+}
+
 #content-pages {
 	background: none repeat scroll 0 0 #FFFFFF;
     	padding: 0;
@@ -1339,8 +1344,8 @@ box-shadow: 0 6px 13px 0 rgba(30, 30, 30, 0.6);
 
 
 .form-content-interno {
-	width: 35%;
-	margin: 20px 0 250px 0;
+	width: 70%;
+	margin: 20px 0 50px 0;
 }
 
 .field-interno {
