@@ -76,11 +76,33 @@
             	<a class="a-linguas" href=""></a>
 		    </div><!--  #en -->
 			<div id="es">
-            	<a class="a-linguas" href=""></a>
+            	<a class="a-linguas" href="<?php echo esc_url( home_url( '/es' ) ); ?>"></a>
 			</div><!-- #es -->
             <div id="pt">
-				<a class="a-linguas" href=""></a>	
+				<a class="a-linguas" href="<?php echo esc_url( home_url( '/pt' ) ); ?>"></a>	
 		    </div><!-- #pt -->
+
+			
+			<?php /**
+			 // global $q_config;
+			  if(is_404()) $url = get_option('home'); else $url = '';
+			  echo '<ul id="headerMenuSystem">';
+
+			  foreach(qtrans_getSortedLanguages() as $language)
+			  {
+				$link = qtrans_convertURL('', $language);
+
+				if($_SERVER["HTTPS"] == "on")
+				  $link = preg_replace('#^http://#','https://', $link);
+
+				echo '<div class="class-'.$language.'"><a class="a-class-'.$language.'" href="'.$link.'"';
+				echo ' hreflang="'.$language.'" title="'.$q_config['language_name'][$language].'"';
+				echo '></a></div>';
+			  }
+
+			  echo '</ul>';
+			**/ ?> 
+
         </div><!-- #linguas -->
 
 

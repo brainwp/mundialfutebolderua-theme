@@ -17,7 +17,7 @@ get_header( 'home' ); ?>
 
     <?php
     $oque = "";
-    $oque = get_page_by_title( 'O que e?' );
+    $oque = get_page_by_path( 'o-que-e');
  ?>
 	<div class="esquerda">
     
@@ -33,7 +33,7 @@ get_header( 'home' ); ?>
 
     <?php
     $quem_somos = "";
-    $quem_somos = get_page_by_title( 'Como Sera?' ); ?>
+    $quem_somos = get_page_by_path( 'como-sera' ); ?>
     
 	<div class="direita">
     
@@ -55,7 +55,7 @@ get_header( 'home' ); ?>
 
     <?php
     $metodologia = "";
-    $metodologia = get_page_by_title( 'Metodologia' ); ?>
+    $metodologia = get_page_by_path( 'metodologia' ); ?>
     
 	<div class="center">
     
@@ -158,7 +158,7 @@ get_header( 'home' ); ?>
 
 
    			<?php
-            $contatos = get_page_by_title( 'Contato' );
+            $contatos = get_page_by_path( 'contato' );
 			$content_contatos = apply_filters('the_content', $contatos->post_content);
             ?>
 
@@ -176,7 +176,7 @@ get_header( 'home' ); ?>
 
     <?php
     $tipos_contatos = "";
-    $tipos_contatos = get_page_by_title( 'Formas de Contato' ); ?>
+    $tipos_contatos = get_page_by_path( 'formas-de-contato' ); ?>
     
 	<div class="direita">
     
@@ -223,7 +223,7 @@ get_header( 'home' ); ?>
 	<div class="sub-content" id="nav-patrocinadores-parceiros">
 		<?php
 			$patrocinadores = "";
-			$patrocinadores = get_page_by_title( 'Patrocinadores' );
+			$patrocinadores = get_page_by_path( 'patrocinadores' );
 			$attachment_patrocinadores = get_attachment_link($patrocinadores->ID);
 		?>  
 
@@ -273,7 +273,7 @@ get_header( 'home' ); ?>
 
 				<?php
 					$apoiadores= "";
-					$apoiadores = get_page_by_title( 'Apoiadores' );
+					$apoiadores = get_page_by_path( 'apoiadores' );
 					$attachment_apoiadores = get_attachment_link($apoiadores->ID);
 				?>  
 
