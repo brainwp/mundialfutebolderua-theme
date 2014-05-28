@@ -223,7 +223,7 @@ get_header( 'home' ); ?>
 	<div class="sub-content" id="nav-patrocinadores-parceiros">
 		<?php
 			$patrocinadores = "";
-			$patrocinadores = get_page_by_path( 'patrocinadores' );
+			$patrocinadores = get_page_by_path( 'apoiadores' );
 			$attachment_patrocinadores = get_attachment_link($patrocinadores->ID);
 		?>  
 
@@ -273,7 +273,7 @@ get_header( 'home' ); ?>
 
 				<?php
 					$apoiadores= "";
-					$apoiadores = get_page_by_path( 'apoiadores' );
+					$apoiadores = get_page_by_path( 'parcerias' );
 					$attachment_apoiadores = get_attachment_link($apoiadores->ID);
 				?>  
 
