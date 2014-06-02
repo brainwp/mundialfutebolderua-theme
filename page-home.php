@@ -22,7 +22,10 @@ get_header( 'home' ); ?>
 	<div class="esquerda">
     
 		<div class="header-sub-content">
-			<div class="titulo-header-metade"><h2><?php echo $oque->post_title; ?></h2></div>
+			<div class="titulo-header-metade">
+				<h2><?php echo qtrans_use($q_config['language'], $oque->post_title, true); ?>
+				</h2>
+			</div>
 		</div>
         <?php $content_oque = apply_filters('the_content', $oque->post_content); ?>
         <div class="content-metade">
@@ -38,7 +41,11 @@ get_header( 'home' ); ?>
 	<div class="direita">
     
 		<div class="header-sub-content">
-			<div class="titulo-header-metade"><h2><?php echo $quem_somos->post_title; ?></h2></div>
+			<div class="titulo-header-metade">
+				<h2>
+				<?php echo qtrans_use($q_config['language'], $quem_somos->post_title, true); ?>
+				</h2>
+			</div>
 		</div>
         <?php $content_quem_somos = apply_filters('the_content', $quem_somos->post_content); ?>
         <div class="content-metade">
