@@ -1,0 +1,118 @@
+<?php /** * Template Name: Inicial (Home) */
+
+get_header( 'home' ); ?>
+ 
+<div id="slider">
+
+	<div id="slider-content-logo">
+		<img src="<?php bloginfo('template_directory'); ?>/images/logo-slider-sombranca.png" width="237" height="400" alt="Logo Slider" />
+	</div>
+
+	<?php echo do_shortcode( '[orbit-slider]' );?>
+
+</div><!-- #slider -->
+	
+<!-- Sobre -->
+    <div class="sub-content" id="nav-quem-somos">
+
+    <?php
+    $oque = "";
+    $oque = get_page_by_path( 'o-que-e');
+ ?>
+	<div class="esquerda">
+    
+		<div class="header-sub-content">
+			<div class="titulo-header-metade">
+				<h2><?php echo qtrans_use($q_config['language'], $oque->post_title, true); ?>
+				</h2>
+			</div>
+		</div>
+        <?php $content_oque = apply_filters('the_content', $oque->post_content); ?>
+        <div class="content-metade">
+            <?php echo $content_oque; ?>
+        </div><!-- .content-metade -->
+
+    </div><!-- .esquerda -->
+
+    <?php
+    $quem_somos = "";
+    $quem_somos = get_page_by_path( 'como-sera' ); ?>
+    
+	<div class="direita">
+    
+		<div class="header-sub-content">
+			<div class="titulo-header-metade">
+				<h2>
+				<?php echo qtrans_use($q_config['language'], $quem_somos->post_title, true); ?>
+				</h2>
+			</div>
+		</div>
+        <?php $content_quem_somos = apply_filters('the_content', $quem_somos->post_content); ?>
+        <div class="content-metade">
+            <?php echo $content_quem_somos; ?>
+        </div><!-- .content-metade -->
+    </div><!-- .direita -->
+
+<div class="footer-sub-content">
+</div>
+    </div><!-- .sub-content -->
+<!-- Final Sobre -->
+<!-- Metodologia -->
+    <div class="sub-content" id="nav-metodologia">
+
+    <?php
+    $metodologia = "";
+    $metodologia = get_page_by_path( 'metodologia' ); ?>
+    
+	<div class="center">
+    
+		<div class="header-sub-content">
+			<div class="titulo-header-inteiro"><h2><?php echo $metodologia->post_title; ?></h2></div>
+		</div>
+        <?php $content_metodologia = apply_filters('the_content', $metodologia->post_content); ?>
+        <div class="content-nomeio">
+            <?php echo $content_metodologia; ?>
+        </div><!-- .content-nomeio -->
+    </div><!-- .center -->
+<div class="footer-sub-content">
+</div>
+    </div><!-- .sub-content -->
+<!-- Final Metodologia -->
+
+<!-- Contagem Regressiva -->
+<div class="sub-content">
+
+	<div class="center">
+	    <div class="contador">
+	       <?php get_sidebar('home'); ?>
+	    </div><!-- .contador -->
+	</div><!-- .center -->
+	<div class="footer-sub-content">
+	</div>
+</div><!-- .sub-content -->
+<!-- Final Contagem Regressiva -->
+
+<!-- Países Participantes -->
+<div class="sub-content" id="nav-paises">   
+	<div class="center">
+    
+		<div class="header-sub-content">
+			<div class="titulo-header"><h2>Paises Participantes</h2></div>
+		</div>
+		<div class="content-bandeiras">
+			<img src="<?php bloginfo('template_directory'); ?>/images/bandeiras-paises.png" width="700" height="600" alt="Paises Participantes" />
+        </div><!-- .content-realizacao -->
+    </div><!-- .center -->
+	<div class="footer-sub-content">
+	</div>
+</div><!-- .sub-content -->
+<!-- Final Países Participantes -->
+    
+<!-- Notícias -->
+
+	<div class="sub-content" id="nav-noticias">
+
+		<div class="center">
+			
+		<div class="header-sub-content">
+    <div class="titulo-header-noticias"> <h2><?php _e(

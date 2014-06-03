@@ -67,7 +67,8 @@ get_header( 'home' ); ?>
 	<div class="center">
     
 		<div class="header-sub-content">
-			<div class="titulo-header-inteiro"><h2><?php echo $metodologia->post_title; ?></h2></div>
+			<div class="titulo-header-inteiro"><h2>
+			<?php echo qtrans_use($q_config['language'], $metodologia->post_title, true); ?></h2></div>
 		</div>
         <?php $content_metodologia = apply_filters('the_content', $metodologia->post_content); ?>
         <div class="content-nomeio">
@@ -92,12 +93,12 @@ get_header( 'home' ); ?>
 </div><!-- .sub-content -->
 <!-- Final Contagem Regressiva -->
 
-<!-- Países Participantes -->
+<!-- PaÃ­ses Participantes -->
 <div class="sub-content" id="nav-paises">   
 	<div class="center">
     
 		<div class="header-sub-content">
-			<div class="titulo-header"><h2>Paises Participantes</h2></div>
+			<div class="titulo-header"><h2><?php _e("[:pt]Pa&iacute;ses participantes[:es]Los pa&iacute;ses participantes"); ?></h2></div>
 		</div>
 		<div class="content-bandeiras">
 			<img src="<?php bloginfo('template_directory'); ?>/images/bandeiras-paises.png" width="700" height="600" alt="Paises Participantes" />
@@ -106,16 +107,16 @@ get_header( 'home' ); ?>
 	<div class="footer-sub-content">
 	</div>
 </div><!-- .sub-content -->
-<!-- Final Países Participantes -->
+<!-- Final PaÃ­ses Participantes -->
     
-<!-- Notícias -->
+<!-- NotÃ­cias -->
 
 	<div class="sub-content" id="nav-noticias">
 
 		<div class="center">
 			
 		<div class="header-sub-content">
-    <div class="titulo-header-noticias"> <h2>Not&iacute;cias</h2><span class="noticias"><a href="<?php echo home_url('/noticias'); ?>">Ver todas</a></span></div>
+    <div class="titulo-header-noticias"><h2><?php _e("[:pt]Not&iacute;cias[:es]Noticias"); ?></h2><span class="noticias"><a href="<?php echo home_url('/noticias'); ?>">Ver todas</a></span></div>
 		</div>
 
 					<div class="todas-noticias">
@@ -156,7 +157,7 @@ get_header( 'home' ); ?>
 					
     </div>
 
-<!-- Final Notícias -->
+<!-- Final NotÃ­cias -->
 
    	<!-- Contatos -->
 	
@@ -173,7 +174,7 @@ get_header( 'home' ); ?>
 	<div class="esquerda">
     
 		<div class="header-sub-content">
-			<div class="titulo-header-metade"><h2><?php echo $contatos->post_title; ?></h2></div>
+			<div class="titulo-header-metade"><h2><?php echo qtrans_use($q_config['language'], $contatos->post_title, true); ?></h2></div>
 		</div>
         <?php $content_contatos = apply_filters('the_content', $contatos->post_content); ?>
         <div class="content-metade">
@@ -188,7 +189,7 @@ get_header( 'home' ); ?>
 	<div class="direita">
     
 		<div class="header-sub-content">
-			<div class="titulo-header-metade"><h2><?php echo $tipos_contatos->post_title; ?></h2></div>
+			<div class="titulo-header-metade"><h2><?php echo qtrans_use($q_config['language'], $tipos_contatos->post_title, true); ?></h2></div>
 		</div>
         <?php $content_tipos_contatos = apply_filters('the_content', $tipos_contatos->post_content); ?>
         <div class="content-metade">
@@ -237,7 +238,7 @@ get_header( 'home' ); ?>
 			<div class="center">
 	
 				<div class="header-sub-content">
-						<div class="titulo-header"><h2>Realiza&ccedil;&atilde;o</h2></div>
+						<div class="titulo-header"><h2><?php _e("[:pt]Realiza&ccedil;&atilde;o[:es]Realizaci&oacute;n"); ?></h2></div>
 				</div>
 
 				<div class="content-realizacao">
@@ -246,7 +247,7 @@ get_header( 'home' ); ?>
 
 
 			<div class="header-sub-content">
-					<div class="titulo-header"><h2><?php echo $patrocinadores->post_title; ?></h2></div>
+					<div class="titulo-header"><h2><?php echo qtrans_use($q_config['language'], $patrocinadores->post_title, true); ?></h2></div>
 			</div>
 
 					                   
@@ -284,7 +285,7 @@ get_header( 'home' ); ?>
 					$attachment_apoiadores = get_attachment_link($apoiadores->ID);
 				?>  
 
-							<div class="titulo-header"><h2><?php echo $apoiadores->post_title; ?></h2></div>
+							<div class="titulo-header"><h2><?php echo qtrans_use($q_config['language'], $apoiadores->post_title, true); ?></h2></div>
 					</div>
 
 					                   
