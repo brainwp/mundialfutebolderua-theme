@@ -45,46 +45,9 @@
 <div id="page" class="hfeed site site-home">
 
 	<header id="masthead" class="site-header" role="banner">
-		        
-        <div id="logo">
-        	<a class="a-logo" href="javascript:scroll_to('#page');"></a>
-        </div><!-- #logo -->
-                
-		
-	<div class="area-3-header">
 
-		
-			<nav id="site-navigation" class="navigation-main" role="navigation">
-				<?php  // wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul class="menu"><li class="first-menu-item"></li>%3$s</ul>' ) ); ?>
-		
-				<ul class="menu">
-					<li class="first-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-336" id="menu-item-336"><a href="javascript:scroll_to('#nav-quem-somos');">Sobre</a></li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-30"><a href="javascript:scroll_to('#nav-metodologia');">Metodologia</a></li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32" id="menu-item-32"><a href="javascript:scroll_to('#nav-paises');">Pa&iacute;ses</a></li>		
-					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-288" id="menu-item-288"><a href="javascript:scroll_to('#nav-noticias');">Not&iacute;cias</a></li>
-					<li class="last-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-29" id="menu-item-29"><a href="javascript:scroll_to('#nav-contatos');">Contatos</a></li>		
-					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28" id="menu-item-28"><a href="javascript:scroll_to('#nav-patrocinadores-parceiros');">Realizadores</a></li>
-				</ul>
-		
-			</nav><!-- #site-navigation -->
-
-		
-    </div><!-- .area-3-header -->
-
-		<div id="linguas">
-        	<div id="en">
-            	<a class="a-linguas" href=""></a>
-		    </div><!--  #en -->
-			<div id="es">
-            	<a class="a-linguas" href="<?php echo esc_url( home_url( '/es' ) ); ?>"></a>
-			</div><!-- #es -->
-            <div id="pt">
-				<a class="a-linguas" href="<?php echo esc_url( home_url( '/pt' ) ); ?>"></a>	
-		    </div><!-- #pt -->
-
-			
-			<?php /**
-			 // global $q_config;
+			<?php 
+			  global $q_config;
 			  if(is_404()) $url = get_option('home'); else $url = '';
 			  echo '<ul id="headerMenuSystem">';
 
@@ -101,8 +64,40 @@
 			  }
 
 			  echo '</ul>';
-			**/ ?> 
+			?> 
+		        
+        <div id="logo">
+        	<a class="a-logo" href="javascript:scroll_to('#page');"></a>
+        </div><!-- #logo -->
+                
+		
+	<div class="area-3-header">
 
+		
+			<nav id="site-navigation" class="navigation-main" role="navigation">
+				<?php  // wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul class="menu"><li class="first-menu-item"></li>%3$s</ul>' ) ); ?>
+		
+				<ul class="menu">
+					<li class="first-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-336" id="menu-item-336"><a href="javascript:scroll_to('#nav-quem-somos');"><?php _e("[:pt]Sobre[:es]Sobre"); ?></a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-30"><a href="javascript:scroll_to('#nav-metodologia');"><?php _e("[:pt]Metodologia[:es]Metodologia"); ?></a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32" id="menu-item-32"><a href="javascript:scroll_to('#nav-paises');"><?php _e("[:pt]Pa&iacute;ses[:es]Pa&iacute;ses"); ?></a></li>		
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-288" id="menu-item-288"><a href="javascript:scroll_to('#nav-noticias');"><?php _e("[:pt]Not&iacute;cias[:es]Noticias"); ?></a></li>
+					<li class="last-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-29" id="menu-item-29"><a href="javascript:scroll_to('#nav-contatos');"><?php _e("[:pt]Contatos[:es]Contactos"); ?></a></li>		
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28" id="menu-item-28"><a href="javascript:scroll_to('#nav-patrocinadores-parceiros');"><?php _e("[:pt]Realiza&ccedil;&atilde;o[:es]Realizaci&oacute;n"); ?></a></li>
+				</ul>
+		
+			</nav><!-- #site-navigation -->
+
+		
+    </div><!-- .area-3-header -->
+
+		<div id="linguas">
+			<div id="es">
+            	<a class="a-linguas" href="<?php echo esc_url( home_url( '/es' ) ); ?>"></a>
+			</div><!-- #es -->
+            <div id="pt">
+				<a class="a-linguas" href="<?php echo esc_url( home_url( '/pt' ) ); ?>"></a>	
+		    </div><!-- #pt -->
         </div><!-- #linguas -->
 
 

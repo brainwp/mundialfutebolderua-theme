@@ -11,23 +11,23 @@
 	<div class="sub-content" id="nav-patrocinadores-parceiros">
 		<?php
 			$patrocinadores = "";
-			$patrocinadores = get_page_by_title( 'Patrocinadores' );
+			$patrocinadores = get_page_by_path( 'apoiadores' );
 			$attachment_patrocinadores = get_attachment_link($patrocinadores->ID);
 		?>  
 
 			<div class="center">
 	
 				<div class="header-sub-content">
-						<div class="titulo-header"><h2>Realiza&ccedil;&atilde;o</h2></div>
+						<div class="titulo-header"><h2><?php _e("[:pt]Realiza&ccedil;&atilde;o[:es]Realizaci&oacute;n"); ?></h2></div>
 				</div>
 
 				<div class="content-realizacao">
-					<img src="<?php bloginfo('template_directory'); ?>/images/logos-realizadores.png" width="512" height="161	" alt="Titulo da imagem" />
+					<img src="<?php bloginfo('template_directory'); ?>/images/logos-realizadores.png" width="512" height="auto" alt="Titulo da imagem" />
 				</div><!-- .content-realizacao -->
 
 
 			<div class="header-sub-content">
-					<div class="titulo-header"><h2><?php echo $patrocinadores->post_title; ?></h2></div>
+					<div class="titulo-header"><h2><?php echo qtrans_use($q_config['language'], $patrocinadores->post_title, true); ?></h2></div>
 			</div>
 
 					                   
@@ -61,11 +61,11 @@
 
 				<?php
 					$apoiadores= "";
-					$apoiadores = get_page_by_title( 'Apoiadores' );
+					$apoiadores = get_page_by_path( 'parcerias' );
 					$attachment_apoiadores = get_attachment_link($apoiadores->ID);
 				?>  
 
-							<div class="titulo-header"><h2><?php echo $apoiadores->post_title; ?></h2></div>
+							<div class="titulo-header"><h2><?php echo qtrans_use($q_config['language'], $apoiadores->post_title, true); ?></h2></div>
 					</div>
 
 					                   
