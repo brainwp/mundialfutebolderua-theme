@@ -113,14 +113,12 @@ get_header( 'home' ); ?>
 						<div class="cada-pais cada-pais-home">
 
 								<div class="etiqueta-cada-pais">
-								<h3><a class="titulo-resumo" href="<?php the_permalink(); ?>"><?php the_title(); ?><br />
-								</a></h3>
-
-							<div class="thumb-cada-pais-home">
-								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumb-projetos'); ?></a>
+								<h3 class="titulo-resumo" href=""><?php the_title(); ?><br />
+								</h3>
+								</div><!-- .etiqueta-cada-pais -->	
+								<div class="thumb-cada-pais-home">
+								<?php the_post_thumbnail('thumb-projetos'); ?>
 								</div><!-- .thumb-cada-pais -->
-					
-							</div><!-- .rodape-cada-pais -->							
 
 						</div><!-- .cada-pais -->
 
