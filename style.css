@@ -2387,22 +2387,48 @@ body.single-projects #carousel_wrap { margin: 15px 0 30px }
 	box-shadow:         0px 2px 6px rgba(50, 50, 50, 0.5);
 }
 
+.cada-pais-home {
+	width: 13.7% !important;
+	min-height: 120px !important;
+}
+
+.thumb-cada-pais-home {
+	overflow: hidden;
+	height: 100px;
+	max-width: auto;
+}
+
+.thumb-cada-pais-home img {
+	width: 100%;
+	min-height: 90px;
+	overflow: hidden;
+}
+
 .thumb-cada-pais {
 	overflow: hidden;
 	height: 200px;
 	max-width: 300px;
 }
 
-
-.thumb-cada-pais img{
-width: 105%;
- min-height: 200px;
- }
-
+.thumb-cada-pais img {
+	width: 105%;
+	min-height: 200px;
+}
 
 .attachment-thumb-projetos {
 	margin: 0 auto;
 	text-align: center;
+}
+
+.etiqueta-cada-pais {
+	width: 100%;
+}
+
+.etiqueta-cada-pais h3, .data-cada-post {
+	line-height: 1.2;
+	margin: -30px -20px 0 0;
+	display: block;
+
 }
 
 .rodape-cada-pais {

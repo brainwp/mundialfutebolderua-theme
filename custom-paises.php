@@ -44,7 +44,7 @@ function create_post_type_paises() {
 	    'capability_type' => 'post',
 	    'has_archive' => true,
 	    'hierarchical' => true,
-	    'menu_position' => null,
+	    'menu_position' => 5,
 	    'supports' => array('title','editor','thumbnail')
 		)    );
 
