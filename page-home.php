@@ -1,4 +1,5 @@
-<?php /** * Template Name: Inicial (Home) */
+<?php /** 
+* Template Name: Inicial (Home) */
 
 get_header( 'home' ); ?>
  
@@ -22,10 +23,7 @@ get_header( 'home' ); ?>
 	<div class="esquerda">
     
 		<div class="header-sub-content">
-			<div class="titulo-header-metade">
-				<h2><?php echo qtrans_use($q_config['language'], $oque->post_title, true); ?>
-				</h2>
-			</div>
+			<div class="titulo-header-metade"><h2><?php echo $oque->post_title; ?></h2></div>
 		</div>
         <?php $content_oque = apply_filters('the_content', $oque->post_content); ?>
         <div class="content-metade">
@@ -37,15 +35,11 @@ get_header( 'home' ); ?>
     <?php
     $quem_somos = "";
     $quem_somos = get_page_by_path( 'como-sera' ); ?>
-    
+        <div style="display:none;"><?php var_dump($quem_somos) ?></div>
 	<div class="direita">
     
 		<div class="header-sub-content">
-			<div class="titulo-header-metade">
-				<h2>
-				<?php echo qtrans_use($q_config['language'], $quem_somos->post_title, true); ?>
-				</h2>
-			</div>
+			<div class="titulo-header-metade"><h2><?php echo $quem_somos->post_title; ?></h2></div>
 		</div>
         <?php $content_quem_somos = apply_filters('the_content', $quem_somos->post_content); ?>
         <div class="content-metade">
@@ -101,7 +95,41 @@ get_header( 'home' ); ?>
 			<div class="titulo-header"><h2><?php _e("[:pt]Pa&iacute;ses participantes[:es]Los pa&iacute;ses participantes"); ?></h2></div>
 		</div>
 		<div class="content-bandeiras">
-			<img src="<?php bloginfo('template_directory'); ?>/images/bandeiras-paises.png" width="700" height="600" alt="Paises Participantes" />
+
+	<?php
+							/* $paged é a variável para paginação do Loop CPT Projetos */	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+							/* $args_loop_cpt_projetos são os argumentos para o Loop */
+							$args_loop_cpt_projetos = array(
+							'post_type' => 'paises',
+							'orderby' => 'date',
+							'order' => 'DESC',
+							'posts_per_page' => '36',
+							'paged' => $paged
+							);
+							$loop_cpt_projetos = new WP_Query( $args_loop_cpt_projetos ); if ( $loop_cpt_projetos->have_posts() ) {
+							while ( $loop_cpt_projetos->have_posts() ) : $loop_cpt_projetos->the_post();
+						?>
+							
+						<div class="cada-pais cada-pais-home">
+
+								<div class="etiqueta-cada-pais">
+								<h3 class="titulo-resumo" href=""><?php the_title(); ?><br />
+								</h3>
+								</div><!-- .etiqueta-cada-pais -->	
+								<div class="thumb-cada-pais-home">
+								<?php the_post_thumbnail('thumb-projetos'); ?>
+								</div><!-- .thumb-cada-pais -->
+
+						</div><!-- .cada-pais -->
+
+						<?php
+							// Fim do Loop
+							endwhile;
+						}
+						?>
+
+			<!-- <img src="<?php //bloginfo('template_directory'); ?>/images/bandeiras-paises.png" width="700" height="600" alt="Paises Participantes" /> -->
         </div><!-- .content-realizacao -->
     </div><!-- .center -->
 	<div class="footer-sub-content">
