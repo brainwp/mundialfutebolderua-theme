@@ -70,4 +70,4 @@ get_header( 'interno' ); ?>
 
 </div><!-- #content -->
 
-<?php get_footer('noticias'); ?>
+<?php get_footer('pages'); ?>

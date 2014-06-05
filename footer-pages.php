@@ -27,7 +27,7 @@
 
 
 			<div class="header-sub-content">
-					<div class="titulo-header"><h2><?php echo qtrans_use($q_config['language'], $patrocinadores->post_title, true); ?></h2></div>
+					<div class="titulo-header"><h2><?php _e("[:pt]Apoio[:es]Apoyo"); ?></h2></div>
 			</div>
 
 					                   
@@ -65,7 +65,7 @@
 					$attachment_apoiadores = get_attachment_link($apoiadores->ID);
 				?>  
 
-							<div class="titulo-header"><h2><?php echo qtrans_use($q_config['language'], $apoiadores->post_title, true); ?></h2></div>
+							<div class="titulo-header"><h2><?php _e("[:pt]Parcerias[:es]Asociaciones"); ?></h2></div>
 					</div>
 
 					                   
