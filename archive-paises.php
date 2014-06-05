@@ -11,9 +11,11 @@
 get_header(); ?>
 
 		<div id="content-interno" class="site-content" role="main">
-		
+
 		<div class="archive-portfolio">
-			
+
+			<div class="titulo-archive-paises"><h2><?php _e("[:pt]Pa&iacute;ses participantes[:es]Los pa&iacute;ses participantes"); ?></h2></div>
+					
 			        <div class="header-portfolio">
                         <div id="busca-aba" class="portfolio">
                             <div id="lupa-aba"></div>

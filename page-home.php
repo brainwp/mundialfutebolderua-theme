@@ -102,9 +102,9 @@ get_header( 'home' ); ?>
 							/* $args_loop_cpt_projetos são os argumentos para o Loop */
 							$args_loop_cpt_projetos = array(
 							'post_type' => 'paises',
-							'orderby' => 'date',
-							'order' => 'DESC',
-							'posts_per_page' => '36',
+							'orderby' => 'title',
+							'order' => 'ASC',
+							'posts_per_page' => '24',
 							'paged' => $paged
 							);
 							$loop_cpt_projetos = new WP_Query( $args_loop_cpt_projetos ); if ( $loop_cpt_projetos->have_posts() ) {
@@ -129,7 +129,6 @@ get_header( 'home' ); ?>
 						}
 						?>
 
-			<!-- <img src="<?php //bloginfo('template_directory'); ?>/images/bandeiras-paises.png" width="700" height="600" alt="Paises Participantes" /> -->
         </div><!-- .content-realizacao -->
     </div><!-- .center -->
 	<div class="footer-sub-content">
