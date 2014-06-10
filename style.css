@@ -1654,6 +1654,19 @@ height: 70px;
     margin: 20px 0 0 40px;
 }
 
+.page_nav {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+.page_nav .page-numbers {
+	padding: 3px 5px;
+}
+.page_nav span.current{
+	background: #C63F28;
+	color: #FFF;
+}
 .contador {
     margin: 0 auto;
     max-width: 500px;

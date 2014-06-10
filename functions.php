@@ -44,19 +44,14 @@ function mundialfutebolderua_setup() {
 	/**
 	 * This theme uses wp_nav_menu() in one location.
 	 */
-
 	register_nav_menus( array(
-
 		'primary' => __( 'Primary Menu', 'mundialfutebolderua' ),
-
 	) );
 
 }
-
 endif; // mundialfutebolderua_setup
 
 add_action( 'after_setup_theme', 'mundialfutebolderua_setup' );
-
 
 /**
  * Setup the WordPress core custom background feature.
@@ -74,10 +69,8 @@ add_action( 'after_setup_theme', 'mundialfutebolderua_setup' );
 function mundialfutebolderua_register_custom_background() {
 
 	$args = array(
-
 		'default-color' => 'ffffff',
 		'default-image' => '',
-
 	);
 
 	$args = apply_filters( 'mundialfutebolderua_custom_background_args', $args );
@@ -190,9 +183,8 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 require get_template_directory() . '/custom-paises.php';
 /**
- * Load Metabox.
+ * Conseguir ID pelo slug
  */
-//require get_template_directory() . '/inc/metaboxes-pais.php';
 
 function id_por_slug( $slug ) {
 
