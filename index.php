@@ -11,53 +11,76 @@
  * @package mundialfutebolderua
  */
 
-get_header( 'interno' ); ?>
+get_header(); ?>
 
 <div class="altura-header"></div>
 
-<div id="content-index" class="site-content" role="main">
+	<div class="sub-content">
 
-	<div id="primary" class="content">
+		<div class="center">
 
+				<div class="titulo-index-noticias"><h2><?php _e("[:pt]Not&iacute;cias[:es]Noticias"); ?></h2></div>
+					
+			        <div class="header-portfolio">
+                        <div id="busca-aba" class="portfolio">
+                            <div id="lupa-aba"></div>
+                            <form id="searchform" action="<?php bloginfo('url'); ?>/" method="get">
+								<input class="inlineSearch" type="text" name="s" value="busca" onblur="if (this.value == '') {this.value = 'busca';}" onfocus="if (this.value == 'busca') {this.value = '';}" />
+								<input type="hidden" name="post_type" value="portfolio" />
+								<!-- <input class="inlineSubmit" id="searchsubmit" type="submit" alt="Search" value="Buscar" /> -->
+                            </form>
+                        </div><!-- #busca-aba -->
+                    </div><!-- .header-paises -->
+
+		<div class="todas-noticias">
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
 
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php while ( have_posts() ) : the_post(); $count++;
+		
+				if ( 1 == $count%3 ) {
+				echo '<div class="clear"></div>';}?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					
-                    <header class="entry-header-noticias">
+				 <div class="cada-noticia">
+						<a href="<?php  the_permalink(); ?>">						
+						<div class="data-cada-noticia">
+                        <?php
+						$mes = get_the_date( 'M' );
+						$dia = get_the_date( 'd' );
+						?>
+						<p class="p-mes"><?php echo $mes; ?></p>
+                        <p class="p-dia"><?php echo $dia; ?></p>
+            			</div>
+						</a>
+ 						
+						<div class="thumb-cada-noticia">
+                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'thumb-noticias' ); ?></a>
+            			</div>
+                        
+						<a class="titulo-cada-noticia" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+						<div class="clear"></div>                        
+						<div class="content-cada-noticia">
+						<?php limit_words(get_the_excerpt(), '20'); ?>...
+						<footer class="entry-meta">
+							<?php edit_post_link( __( 'Edit', 'artunlimited' ), '<span class="edit-link">', '</span>' ); ?>
+						</footer><!-- .entry-meta -->
+			            </div>
 
-						<h1 class="titulo-noticias"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+                        <div class="footer-cada-noticia">
+                        <div class="categorias-cada-noticia"><?php the_category(' | '); ?></div>
+						<div class="mais-cada-noticia"><a href="<?php the_permalink(); ?>">+</a></div>
+			            </div>					
 
-							<?php if ( 'post' == get_post_type() ) : ?>
-
-						<div class="entry-meta">
-
-							<?php echo get_the_date(); ?>
-
-						</div><!-- .entry-meta -->
-
-						<?php endif; ?>
-
-					</header><!-- .entry-header -->
-
-					<div class="clear"></div>
-						
-
-					<div class="large-thumb">
-							<a href="<?php the_permalink(); ?>">
-								<?php
-								if ( has_post_thumbnail() )
-									the_post_thumbnail('large');
-								else
-									echo '<img src="' . get_template_directory_uri() . '/images/default-post-image.jpg' . '" alt="" />';
-								?>
-							</a>
-					</div>
-
+		
 					<?php if ( is_search() ) : // Only display Excerpts for Search ?>
+
+						<div class="thumb-cada-noticia">
+                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'thumb-noticias' ); ?></a>
+            			</div>
+                        
+						<a class="titulo-cada-noticia" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+						<div class="clear"></div>                        
 
 					<div class="entry-summary">
 
@@ -67,21 +90,13 @@ get_header( 'interno' ); ?>
 
 					<?php else : ?>
 
-					<div class="entry-content">
-
-						<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'artunlimited' ) ); ?>
-
-					</div><!-- .entry-content -->
+					<div class="clear"></div>          
 
 					<?php endif; ?>
 
-					<footer class="entry-meta">
-						<?php edit_post_link( __( 'Edit', 'artunlimited' ), '<span class="edit-link">', '</span>' ); ?>
-					</footer><!-- .entry-meta -->
+				</div><!-- #post-## -->
 
-				</article><!-- #post-## -->
-
-			<?php endwhile; ?>
+			<?php endwhile; //ending the loop ?>
 
 		<?php else : ?>
 
@@ -89,10 +104,10 @@ get_header( 'interno' ); ?>
 
 		<?php endif; ?>
 
-	</div><!-- #primary -->
+		</div><!-- .todas-noticias -->
 
-<?php get_sidebar(); ?>
+	</div><!-- .center -->
 
-</div><!-- #content -->
+</div><!-- .sub-content -->
 
-<?php get_footer( 'noticias' ); ?>
+<?php get_footer(); ?>

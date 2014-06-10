@@ -5,13 +5,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	
+	ESTOU AQUI
 	<header class="entry-header-page">
 		<div class="titulo-page"><h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1></div>
 	
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php artunlimited_posted_on(); ?>
+			<?php mundialfutebolderua_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header-page -->
@@ -40,7 +40,7 @@
 				if ( $categories_list && artunlimited_categorized_blog() ) :
 			?>
 			<span class="cat-links">
-				<?php printf( __( 'Posted in %1$s', 'artunlimited' ), $categories_list ); ?>
+				<?php printf( __( 'Posted in %1$s', 'mundialfutebolderuas' ), $categories_list ); ?>
 			</span>
 			<?php endif; // End if categories ?>
 

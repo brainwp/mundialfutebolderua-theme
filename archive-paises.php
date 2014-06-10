@@ -25,7 +25,7 @@ get_header(); ?>
 								<!-- <input class="inlineSubmit" id="searchsubmit" type="submit" alt="Search" value="Buscar" /> -->
                             </form>
                         </div><!-- #busca-aba -->
-                    </div><!-- .header-categories -->
+                    </div><!-- .header-paises -->
 			
 						<?php
 							/* $paged é a variável para paginação do Loop CPT Projetos */	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;

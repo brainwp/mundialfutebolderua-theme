@@ -136,7 +136,7 @@ get_header( 'home' ); ?>
 </div><!-- .sub-content -->
 <!-- Final Países Participantes -->
     
-<!-- Notícias -->
+<!-- Noticias -->
 
 	<div class="sub-content" id="nav-noticias">
 
