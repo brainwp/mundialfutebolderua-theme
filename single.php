@@ -23,7 +23,7 @@ get_header( 'interno' ); ?>
 
 		<div class="entry-meta">
 
-			<?php echo get_the_date(); ?>
+			<?php the_time( get_option( 'date_format' ) ); ?> 
 
 		</div><!-- .entry-meta -->
 
