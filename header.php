@@ -33,7 +33,7 @@
 	<header id="masthead" class="site-header" role="banner">
 		        
         <div id="logo">
-        	<a class="a-logo" href="<?php esc_url( home_url( '/' ) ); ?>" rel="home" alt="<?php bloginfo( 'name' ); ?>"></a>
+        	<a class="a-logo" href="<?php echo esc_url( home_url( '/' ) ); ?><?php _e("[:pt]pt[:es]es"); ?>" rel="home"></a>
         </div><!-- #logo -->             
 		
 	<div class="area-3-header">

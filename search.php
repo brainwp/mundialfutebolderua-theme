@@ -20,11 +20,9 @@ get_header( 'interno' ); ?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'search' ); ?>
+				<?php get_template_part( 'content', get_post_format() ); ?>
 
 			<?php endwhile; ?>
-
-			<?php artunlimited_content_nav( 'nav-below' ); ?>
 
 		<?php else : ?>
 

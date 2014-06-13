@@ -5,13 +5,12 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	ESTOU AQUI
 	<header class="entry-header-page">
 		<div class="titulo-page"><h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1></div>
 	
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php mundialfutebolderua_posted_on(); ?>
+			<?php the_time( get_option( 'date_format' ) ); ?> 
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header-page -->
@@ -22,17 +21,14 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'artunlimited' ) ); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'artunlimited' ),
-				'after'  => '</div>',
-			) );
-		?>
+		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'mundialfutebolderua' ) ); ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 
 	<footer class="entry-meta">
+
+	<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'mundialfutebolderua' ), 'after' => '</div>' ) ); ?>
+
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 			<?php
 				/* translators: used between list items, there is a space after the comma */
