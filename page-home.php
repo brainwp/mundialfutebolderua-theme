@@ -104,7 +104,7 @@ get_header( 'home' ); ?>
 							'post_type' => 'paises',
 							'orderby' => 'title',
 							'order' => 'ASC',
-							'posts_per_page' => '24',
+							'posts_per_page' => '20',
 							'paged' => $paged
 							);
 							$loop_cpt_projetos = new WP_Query( $args_loop_cpt_projetos ); if ( $loop_cpt_projetos->have_posts() ) {
@@ -256,22 +256,22 @@ get_header( 'home' ); ?>
 <!-- Patrocinadores -->
 
 	<div class="sub-content" id="nav-patrocinadores-parceiros">
-		<?php
-			$patrocinadores = "";
-			$patrocinadores = get_page_by_path( 'apoiadores' );
-			$attachment_patrocinadores = get_attachment_link($patrocinadores->ID);
-		?>  
-
+		
 			<div class="center">
 	
 				<div class="header-sub-content">
-						<div class="titulo-header"><h2><?php _e("[:pt]Realiza&ccedil;&atilde;o[:es]Realizaci&oacute;n"); ?></h2></div>
+						<div class="titulo-header"><h2><?php _e("[:pt]Promo&ccedil;&atilde;o[:es]Promoc&oacute;n"); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php _e("[:pt]Realiza&ccedil;&atilde;o[:es]Realizaci&oacute;n"); ?></h2></div>
 				</div>
 
 				<div class="content-realizacao">
 					<img src="<?php bloginfo('template_directory'); ?>/images/logos-realizadores.png" width="512" height="auto" alt="Titulo da imagem" />
 				</div><!-- .content-realizacao -->
 
+			<?php
+			$patrocinadores = "";
+			$patrocinadores = get_page_by_path( 'patrocinio' );
+			$attachment_patrocinadores = get_attachment_link($patrocinadores->ID);
+			?>  
 
 			<div class="header-sub-content">
 					<div class="titulo-header"><h2><?php echo qtrans_use($q_config['language'], $patrocinadores->post_title, true); ?></h2></div>
@@ -303,20 +303,57 @@ get_header( 'home' ); ?>
 					<?php wp_reset_postdata(); // reset the query ?>   
 
 				</div><!-- .content-patrocinadores -->
-
-					<div class="header-sub-content">
+	
+			<div class="header-sub-content">
 
 				<?php
-					$apoiadores= "";
-					$apoiadores = get_page_by_path( 'parcerias' );
-					$attachment_apoiadores = get_attachment_link($apoiadores->ID);
+					$parcerias= "";
+					$parcerias = get_page_by_path( 'parcerias' );
+					$attachment_parcerias = get_attachment_link($parcerias->ID);
 				?>  
 
-							<div class="titulo-header"><h2><?php echo qtrans_use($q_config['language'], $apoiadores->post_title, true); ?></h2></div>
+							<div class="titulo-header"><h2><?php echo qtrans_use($q_config['language'], $parcerias->post_title, true); ?></h2></div>
 					</div>
 
 					                   
 				<div class="content-apoiadores"> 
+				<?php   
+					$args_parcerias = array(
+					'post_type' => 'attachment',
+					'numberposts' => -1,
+					'post_status' => null,
+					'post_parent' => $parcerias->ID,
+					'orderby' => 'menu_order',
+					'order' => 'ASC'
+					);
+
+					$attachments_parcerias = get_posts( $args_parcerias );
+					if ( $attachments_parcerias ) {
+						foreach ( $attachments_parcerias as $attachment_cliente ) {
+						$image_attributes_cliente = wp_get_attachment_image_src( $attachment_cliente->ID );
+						echo '<div class="imagens-cliente">';
+						echo '<img src="'.$image_attributes_cliente[0].'">';
+						echo '</div>';
+				  		}
+					}
+					?>
+
+					<?php wp_reset_postdata(); // reset the query ?>   
+
+				</div><!-- .content-patrocinadores -->
+
+			<?php
+			$apoiadores = "";
+			$apoiadores = get_page_by_path( 'apoiadores' );
+			$attachment_apoiadores = get_attachment_link($apoiadores->ID);
+			?>  
+
+			<div class="header-sub-content">
+					<div class="titulo-header"><h2><?php echo qtrans_use($q_config['language'], $apoiadores->post_title, true); ?></h2></div>
+			</div>
+
+					                   
+				<div class="content-patrocinadores"> 
 				<?php   
 					$args_apoiadores = array(
 					'post_type' => 'attachment',
@@ -341,6 +378,14 @@ get_header( 'home' ); ?>
 					<?php wp_reset_postdata(); // reset the query ?>   
 
 				</div><!-- .content-patrocinadores -->
+
+				<div class="header-sub-content">
+						<div class="titulo-header"><h2><?php _e("[:pt]Produ&ccedil;&atilde;o[:es]Produci&oacute;n"); ?></h2></div>
+				</div>
+
+				<div class="content-producao">
+					<img src="<?php bloginfo('template_directory'); ?>/images/logo-producao.jpg" width="190" height="auto" alt="" />
+				</div><!-- .content-realizacao -->
 
 
 				<div class="footer-sub-content">
