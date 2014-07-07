@@ -59,7 +59,7 @@
 		
 				<ul class="menu">
 					<li class="first-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-336" id="menu-item-336"><a href="javascript:scroll_to('#nav-quem-somos');"><?php _e("[:pt]Sobre[:es]Sobre"); ?></a></li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-30"><a href="javascript:scroll_to('#nav-metodologia');"><?php _e("[:pt]Metodologia[:es]Metodologia"); ?></a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-30"><a href="javascript:scroll_to('#nav-metodologia');"><?php _e("[:pt]Programa&ccedil;&atilde;o[:es]Programaci&oacute;n"); ?></a></li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32" id="menu-item-32"><a href="javascript:scroll_to('#nav-paises');"><?php _e("[:pt]Pa&iacute;ses[:es]Pa&iacute;ses"); ?></a></li>		
 					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-288" id="menu-item-288"><a href="javascript:scroll_to('#nav-noticias');"><?php _e("[:pt]Not&iacute;cias[:es]Noticias"); ?></a></li>
 					<li class="last-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-29" id="menu-item-29"><a href="javascript:scroll_to('#nav-contatos');"><?php _e("[:pt]Contatos[:es]Contactos"); ?></a></li>		

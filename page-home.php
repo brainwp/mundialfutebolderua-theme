@@ -51,12 +51,23 @@ get_header( 'home' ); ?>
 </div>
     </div><!-- .sub-content -->
 <!-- Final Sobre -->
+<!-- Contagem Regressiva 
+<div class="sub-content">
+	<div class="center">
+	    <div class="contador">
+	       <?php // get_sidebar('home'); ?>
+	    </div>
+	</div>
+	<div class="footer-sub-content">
+	</div>
+</div> -->
+<!-- Final Contagem Regressiva -->
 <!-- Metodologia -->
     <div class="sub-content" id="nav-metodologia">
 
     <?php
     $metodologia = "";
-    $metodologia = get_page_by_path( 'metodologia' ); ?>
+    $metodologia = get_page_by_path( 'programacao' ); ?>
     
 	<div class="center">
     
@@ -74,20 +85,30 @@ get_header( 'home' ); ?>
     </div><!-- .sub-content -->
 <!-- Final Metodologia -->
 
-<!-- Contagem Regressiva -->
-<div class="sub-content">
+<!-- Metodologia -->
+    <div class="sub-content" id="nav-metodologia">
 
+    <?php
+    $jogos = "";
+    $jogos = get_page_by_path( 'fique-por-dentro-do-mundial' ); ?>
+    
 	<div class="center">
-	    <div class="contador">
-	       <?php get_sidebar('home'); ?>
-	    </div><!-- .contador -->
-	</div><!-- .center -->
-	<div class="footer-sub-content">
-	</div>
-</div><!-- .sub-content -->
-<!-- Final Contagem Regressiva -->
+    
+		<div class="header-sub-content">
+			<div class="titulo-header-inteiro"><h2>
+			<?php echo qtrans_use($q_config['language'], $jogos->post_title, true); ?></h2></div>
+		</div>
+        <?php $content_jogos = apply_filters('the_content', $jogos->post_content); ?>
+        <div class="content-nomeio">
+            <?php echo $content_jogos; ?>
+        </div><!-- .content-nomeio -->
+    </div><!-- .center -->
+<div class="footer-sub-content">
+</div>
+    </div><!-- .sub-content -->
+<!-- Final Metodologia -->
 
-<!-- Países Participantes -->
+<!-- Paises Participantes -->
 <div class="sub-content" id="nav-paises">   
 	<div class="center">
     
@@ -134,7 +155,7 @@ get_header( 'home' ); ?>
 	<div class="footer-sub-content">
 	</div>
 </div><!-- .sub-content -->
-<!-- Final Países Participantes -->
+<!-- Final Pai�ses Participantes -->
     
 <!-- Noticias -->
 
@@ -267,42 +288,13 @@ get_header( 'home' ); ?>
 					<img src="<?php bloginfo('template_directory'); ?>/images/logos-realizadores.png" width="512" height="auto" alt="Titulo da imagem" />
 				</div><!-- .content-realizacao -->
 
-			<?php
-			$patrocinadores = "";
-			$patrocinadores = get_page_by_path( 'patrocinio' );
-			$attachment_patrocinadores = get_attachment_link($patrocinadores->ID);
-			?>  
+					<div class="header-sub-content">
+						<div class="titulo-header"><h2><?php _e("[:pt]Patrocinio[:es]Patrocinio"); ?></h2></div>
+				</div>
 
-			<div class="header-sub-content">
-					<div class="titulo-header"><h2><?php echo qtrans_use($q_config['language'], $patrocinadores->post_title, true); ?></h2></div>
-			</div>
-
-					                   
-				<div class="content-patrocinadores"> 
-				<?php   
-					$args_patrocinadores = array(
-					'post_type' => 'attachment',
-					'numberposts' => -1,
-					'post_status' => null,
-					'post_parent' => $patrocinadores->ID,
-					'orderby' => 'menu_order',
-					'order' => 'ASC'
-					);
-
-					$attachments_patrocinadores = get_posts( $args_patrocinadores );
-					if ( $attachments_patrocinadores ) {
-						foreach ( $attachments_patrocinadores as $attachment_cliente ) {
-						$image_attributes_cliente = wp_get_attachment_image_src( $attachment_cliente->ID );
-						echo '<div class="imagens-cliente">';
-						echo '<img src="'.$image_attributes_cliente[0].'">';
-						echo '</div>';
-				  		}
-					}
-					?>
-
-					<?php wp_reset_postdata(); // reset the query ?>   
-
-				</div><!-- .content-patrocinadores -->
+				<div class="content-realizacao">
+					<img src="<?php bloginfo('template_directory'); ?>/images/logos-patrocinadores.png" width="512" height="auto" alt="Titulo da imagem" />
+				</div><!-- .content-realizacao -->
 	
 			<div class="header-sub-content">
 

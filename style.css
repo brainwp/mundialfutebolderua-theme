@@ -208,7 +208,10 @@ ol.comment-list {
     color: #666666;
     font-size: 12px;
     line-height: 2;
+	display: block;
 }
+
+
 .comment-list .children li.comment .comment-meta {
     line-height: 1.625em;
     margin-left: 50px;
@@ -1079,7 +1082,7 @@ nav select {
 
 .entry-header-noticias {
     float: left;
-    margin: 5px 0 20px 15px;
+    margin: 5px 0 20px 0;
     width: 100%;
 }
 
@@ -1795,13 +1798,13 @@ height: 70px;
 
 .content-patrocinadores {
 	margin: 20px auto 0;
-    max-width: 500px;
+    max-width: 720px;
     width: auto;
 }
 
 .content-apoiadores {
 	margin: 20px auto 0;
-    max-width: 600px;
+    max-width: 490px;
     width: auto;
 }
 
@@ -2971,10 +2974,12 @@ a.zilla-button, a.zilla-button:visited {
     display: block;
     outline: medium none;
     position: relative;
+	margin-bottom: 15px;
 }
 
 .zilla-toggle-title {
     background: none repeat scroll 0 0 #D66633 !important;
+	padding: 3px 10px 5px 5px !important;
 }
 
 .zilla-toggle-inner {
@@ -2982,7 +2987,9 @@ a.zilla-button, a.zilla-button:visited {
 }
 
 .ui-accordion .ui-accordion-header .ui-icon {
-    margin-top: 5px !important;
+	margin-left: 5px !important;
+    margin-right: 0 !important;
+    margin-top: 1px !important;
 }
 
 
