@@ -23,7 +23,7 @@ get_header( 'home' ); ?>
 	<div class="esquerda">
     
 		<div class="header-sub-content">
-			<div class="titulo-header-metade"><h2><?php echo qtrans_use($q_config['language'], $oque->post_title, true); ?></h2></div>
+			<div class="titulo-header-metade"><h2><?php echo apply_filters('the_title', $oque->post_title); ?></h2></div>
 		</div>
         <?php $content_oque = apply_filters('the_content', $oque->post_content); ?>
         <div class="content-metade">
@@ -39,7 +39,7 @@ get_header( 'home' ); ?>
 	<div class="direita">
     
 		<div class="header-sub-content">
-			<div class="titulo-header-metade"><h2><?php echo qtrans_use($q_config['language'], $quem_somos->post_title, true); ?></h2></div>
+			<div class="titulo-header-metade"><h2><?php echo apply_filters('the_title', $quem_somos->post_title); ?></h2></div>
 		</div>
         <?php $content_quem_somos = apply_filters('the_content', $quem_somos->post_content); ?>
         <div class="content-metade">
@@ -73,7 +73,7 @@ get_header( 'home' ); ?>
     
 		<div class="header-sub-content">
 			<div class="titulo-header-inteiro"><h2>
-			<?php echo qtrans_use($q_config['language'], $metodologia->post_title, true); ?></h2></div>
+			<?php echo apply_filters('the_title', $metodologia->post_title); ?></h2></div>
 		</div>
         <?php $content_metodologia = apply_filters('the_content', $metodologia->post_content); ?>
         <div class="content-nomeio">
@@ -96,7 +96,7 @@ get_header( 'home' ); ?>
     
 		<div class="header-sub-content">
 			<div class="titulo-header-inteiro"><h2>
-			<?php echo qtrans_use($q_config['language'], $jogos->post_title, true); ?></h2></div>
+			<?php echo apply_filters('the_title', $jogos->post_title); ?></h2></div>
 		</div>
         <?php $content_jogos = apply_filters('the_content', $jogos->post_content); ?>
         <div class="content-nomeio">
@@ -222,7 +222,7 @@ get_header( 'home' ); ?>
 	<div class="esquerda">
     
 		<div class="header-sub-content">
-			<div class="titulo-header-metade"><h2><?php echo qtrans_use($q_config['language'], $contatos->post_title, true); ?></h2></div>
+			<div class="titulo-header-metade"><h2><?php echo apply_filters('the_title',$contatos->post_title); ?></h2></div>
 		</div>
         <?php $content_contatos = apply_filters('the_content', $contatos->post_content); ?>
         <div class="content-metade">
@@ -237,7 +237,7 @@ get_header( 'home' ); ?>
 	<div class="direita">
     
 		<div class="header-sub-content">
-			<div class="titulo-header-metade"><h2><?php echo qtrans_use($q_config['language'], $tipos_contatos->post_title, true); ?></h2></div>
+			<div class="titulo-header-metade"><h2><?php echo apply_filters('the_title', $tipos_contatos->post_title); ?></h2></div>
 		</div>
         <?php $content_tipos_contatos = apply_filters('the_content', $tipos_contatos->post_content); ?>
         <div class="content-metade">
@@ -304,7 +304,7 @@ get_header( 'home' ); ?>
 					$attachment_parcerias = get_attachment_link($parcerias->ID);
 				?>  
 
-							<div class="titulo-header"><h2><?php echo qtrans_use($q_config['language'], $parcerias->post_title, true); ?></h2></div>
+							<div class="titulo-header"><h2><?php echo apply_filters('the_title', $parcerias->post_title); ?></h2></div>
 					</div>
 
 					                   
@@ -341,7 +341,7 @@ get_header( 'home' ); ?>
 			?>  
 
 			<div class="header-sub-content">
-					<div class="titulo-header"><h2><?php echo qtrans_use($q_config['language'], $apoiadores->post_title, true); ?></h2></div>
+					<div class="titulo-header"><h2><?php echo apply_filters('the_title', $apoiadores->post_title, true); ?></h2></div>
 			</div>
 
 					                   
